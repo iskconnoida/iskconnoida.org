@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "../assets/react.svg";
 import "./Home.css";
 
-const Home = () => {
+export default function Home() {
   const [count, setCount] = useState(0);
 
   return (
@@ -29,6 +29,4 @@ const Home = () => {
       </p>
     </>
   );
-};
-
-export default Home;
+}
