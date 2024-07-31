@@ -1,12 +1,14 @@
 import { useState } from "react";
 import reactLogo from "../assets/react.svg";
 import "./Home.css";
+import Hero from "../components/Hero";
 
 export default function Home() {
   const [count, setCount] = useState(0);
 
   return (
     <>
+    <Hero />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
