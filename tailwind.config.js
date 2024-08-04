@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-import plugin from "tailwindcss/plugin";
 import defaultTheme from "tailwindcss/defaultTheme";
+import plugin from "tailwindcss/plugin";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -13,21 +13,25 @@ export default {
         xl: "0 16px 32px var(--tw-shadow-color)",
         "2xl": "0 32px 64px var(--tw-shadow-color)",
       },
+      backgroundImage: {
+        "instagram-gradient":
+          "linear-gradient(to top left, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FCAF45, #FFDC80)",
+      },
       fontFamily: {
         sans: ["Quicksand", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         red: {
-          "50": "#ffebee",
-          "100": "#ffcdd2",
-          "200": "#ef9a9a",
-          "300": "#e57373",
-          "400": "#ef5350",
-          "500": "#f44336",
-          "600": "#e53935",
-          "700": "#d32f2f",
-          "800": "#c62828",
-          "900": "#b71c1c",
+          50: "#ffebee",
+          100: "#ffcdd2",
+          200: "#ef9a9a",
+          300: "#e57373",
+          400: "#ef5350",
+          500: "#f44336",
+          600: "#e53935",
+          700: "#d32f2f",
+          800: "#c62828",
+          900: "#b71c1c",
           "accent-100": "#ff8a80",
           "accent-200": "#ff5252",
           "accent-400": "#ff1744",
@@ -311,17 +315,17 @@ export default {
         },
       },
       spacing: {
-        "7": "1.75rem",
-        "9": "2.25rem",
-        "28": "7rem",
-        "80": "20rem",
-        "96": "24rem",
+        7: "1.75rem",
+        9: "2.25rem",
+        28: "7rem",
+        80: "20rem",
+        96: "24rem",
       },
       height: {
         "1/2": "50%",
       },
       scale: {
-        "30": ".3",
+        30: ".3",
       },
       boxShadow: {
         outline: "0 0 0 3px rgba(101, 31, 255, 0.4)",
