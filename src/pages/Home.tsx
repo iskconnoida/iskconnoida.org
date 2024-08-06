@@ -1,19 +1,28 @@
 import { useState } from "react";
-import "./Home.css";
 import Hero from "../components/Hero";
+import Events from "../components/Events";
+import Donate from "../components/Donate";
 
 export default function Home() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-    <Hero />
+      <Hero />
+      <Events />
+      <img src="/images/divider.svg" className="h-24 w-48 md:w-56 mt-2 md:mt-8" alt="Divider" />
+      <Donate />
+      <img src="/images/divider.svg" className="h-24 w-48 md:w-56 mt-2 md:mt-8" alt="Divider" />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/images/vite.svg" className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
-          <img src="/images/react.svg" className="logo react" alt="React logo" />
+          <img
+            src="/images/react.svg"
+            className="logo react"
+            alt="React logo"
+          />
         </a>
       </div>
       <h1>Vite + React</h1>

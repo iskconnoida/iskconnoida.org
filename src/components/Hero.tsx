@@ -41,9 +41,10 @@ export default function Hero() {
 
   return (
     <>
-      <div id="hero" className="h-screen flex w-screen bg-center bg-no-repeat bg-cover">
-        <div className="bg-gradient-to-b from-transparent to-gray-800 text-4xl font-bold text-rose-100 text-shadow-xl shadow-red-300 flex justify-center items-end mt-auto py-14 px-4 h-1/2 w-full">
+      <div id="hero" className="lg:mt-[3.5rem] h-[calc(100vh-3.5rem)] flex w-screen bg-center bg-no-repeat bg-cover">
+        <div className="bg-gradient-to-b from-transparent to-gray-800 text-4xl font-bold text-rose-100 text-shadow-xl shadow-red-300 flex  justify-center items-end mt-auto py-14 px-4 h-1/2 w-full">
           WELCOME TO SRI SRI RADHA GOVIND DEV JI TEMPLE
+        {/* <div className="bg-white w-1/3 h-full rounded-t-2xl"></div> */}
         </div>
       </div>
     </>
