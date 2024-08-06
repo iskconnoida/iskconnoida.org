@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="max-md:hidden h-16 w-full flex justify-between items-center px-4 lg:px-10 bg-white shadow-md rounded-b-lg bg-clip-padding border border-2 fixed top-0 left-0 right-0 z-10 backdrop-blur-sm">
+    <div className="max-md:hidden h-16 w-full flex justify-between items-center px-4 lg:px-10 bg-white shadow-md rounded-b-lg bg-clip-padding border-2 fixed top-0 left-0 right-0 z-10 backdrop-blur-sm">
       <img src="/images/logo.png" alt="logo" className="h-14" />
       <span className="flex w-[60%] items-center justify-evenly">
         <Link to='/' className="md:text-base lg:text-lg font-semibold text-gray-600 bg-white px-2 text-shadow-lg rounded-full">Home</Link>
