@@ -6,7 +6,6 @@ import {
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
-import IskconLogo from "../../public/images/IskconLogoForFooter.png";
 
 // export default function Footer() {
 //   return (
