@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        'xs': '320px',
+        'xs': '300px',
       },
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",
