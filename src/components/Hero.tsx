@@ -6,31 +6,31 @@ export default function Hero() {
     // uncalibrated placeholder images, subject to change
     case 0:
       imgURL =
-        "/images/sun.jpg";
+        "/images/sun.webp";
       break;
     case 1:
       imgURL =
-        "/images/mon.jpg";
+        "/images/mon.webp";
       break;
     case 2:
       imgURL =
-        "/images/tue.jpg";
+        "/images/tue.webp";
       break;
     case 3:
       imgURL =
-        "/images/wed.jpg";
+        "/images/wed.webp";
       break;
     case 4:
       imgURL =
-        "/images/thurs.jpg";
+        "/images/thu.webp";
       break;
     case 5:
       imgURL =
-        "/images/fri.jpg";
+        "/images/fri.webp";
       break;
     case 6:
       imgURL =
-        "/images/sat.jpg";
+        "/images/sat.webp";
       break;
   }
 

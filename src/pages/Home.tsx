@@ -2,6 +2,9 @@ import { useState } from "react";
 import Hero from "../components/Hero";
 import Events from "../components/Events";
 import Donate from "../components/Donate";
+import Services from "../components/Services";
+import Social from "../components/Social";
+import Prabhupada from "../components/Prabhupada";
 
 export default function Home() {
   const [count, setCount] = useState(0);
@@ -10,9 +13,25 @@ export default function Home() {
     <>
       <Hero />
       <Events />
-      <img src="/images/divider.svg" className="h-24 w-48 md:w-56 mt-2 md:mt-8" alt="Divider" />
+      <img
+        src="/images/divider.svg"
+        className="h-24 w-48 md:w-56 mt-2 md:mt-8"
+        alt="Divider"
+      />
       <Donate />
-      <img src="/images/divider.svg" className="h-24 w-48 md:w-56 mt-2 md:mt-8" alt="Divider" />
+      <img
+        src="/images/divider.svg"
+        className="h-24 w-48 md:w-56 mt-2 md:mt-8"
+        alt="Divider"
+      />
+      <Services />
+      {/* <img
+        src="/images/divider.svg"
+        className="h-24 w-48 md:w-56 mt-2 md:mt-8"
+        alt="Divider"
+      /> */}
+      <Social />
+      <Prabhupada />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/images/vite.svg" className="logo" alt="Vite logo" />

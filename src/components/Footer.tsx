@@ -9,7 +9,7 @@ export default function Footer() {
             title="ISKCON Noida"
             className="inline-flex items-center"
           >
-            <img src="/images/logo.png" />
+            <img src="/images/logo.webp" />
           </a>
           <div className="mt-4 lg:max-w-sm">
             <p className="text-sm text-gray-800">
