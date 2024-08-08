@@ -105,7 +105,7 @@ export default function Footer() {
           <div className="flex flex-col md:items-center">
             <div className="flex items-center mb-4">
               <img
-                src={IskconLogo}
+                src="/images/IskconLogoForFooter.png"
                 alt="Iskcon Noida"
                 className="w-[140px] h-[140px] mr-3"
               />
