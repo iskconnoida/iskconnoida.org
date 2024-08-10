@@ -102,50 +102,38 @@ export default function Footer() {
             <ul className="text-sm">
               <li className="mb-2 flex items-center">
                 <FaCheckCircle className="w-5 h-5 mr-2" />
-                <a href="/services/simple" className="hover:underline">
-                  Simple Living, High Thinking
+                <a href="/services" className="hover:underline">
+                  Gowmata Sewa
                 </a>
               </li>
               <li className="mb-2 flex items-center">
                 <FaCheckCircle className="w-5 h-5 mr-2" />
-                <a
-                  href="https://iskconvrindavanmart.com/pancagauda-das"
-                  className="hover:underline"
-                >
-                  Srila Prabhupada Audiobooks
+                <a href="/services" className="hover:underline">
+                  Food for Life
                 </a>
               </li>
               <li className="mb-2 flex items-center">
                 <FaCheckCircle className="w-5 h-5 mr-2" />
-                <a href="/services/life-membership" className="hover:underline">
-                  Life Membership
+                <a href="/services" className="hover:underline">
+                  LIFE Membership
                 </a>
               </li>
               <li className="mb-2 flex items-center">
                 <FaCheckCircle className="w-5 h-5 mr-2" />
-                <a
-                  href="/services/community-service-centre"
-                  className="hover:underline"
-                >
+                <a href="/services" className="hover:underline">
                   Community Service Centre
                 </a>
               </li>
               <li className="mb-2 flex items-center">
                 <FaCheckCircle className="w-5 h-5 mr-2" />
-                <a
-                  href="/services/gomata-and-bliss"
-                  className="hover:underline"
-                >
-                  Gomata Products
+                <a href="/services" className="hover:underline">
+                  Blissful Deity Worship
                 </a>
               </li>
               <li className="flex items-center">
                 <FaCheckCircle className="w-5 h-5 mr-2" />
-                <a
-                  href="https://iskconvrindavanmart.com"
-                  className="hover:underline"
-                >
-                  Buy Books Online
+                <a href="/services" className="hover:underline">
+                  Books Distribution
                 </a>
               </li>
             </ul>
