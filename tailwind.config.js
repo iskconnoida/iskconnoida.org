@@ -6,6 +6,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backdropBlur: {
+        'md': '10px',
+        'lg': '20px',
+        'xl': '30px',
+      },
       screens: {
         tablet: { min: "768px", max: "1000px" },
         desktop: "1001px",
@@ -341,6 +346,9 @@ export default {
     textColor: ["responsive", "hover", "focus", "group-hover"],
     opacity: ["responsive", "hover", "focus", "group-hover"],
     backgroundColor: ["responsive", "hover", "focus", "group-hover"],
+  },
+  extend: {
+    backdropBlur: ['responsive'],
   },
   plugins: [
     plugin(function ({ matchUtilities, theme }) {
