@@ -23,11 +23,6 @@ export default function Home() {
         alt="Divider"
       />
       <Services />
-      {/* <img
-        src="/images/divider.svg"
-        className="h-24 w-48 md:w-56 mt-2 md:mt-8"
-        alt="Divider"
-      /> */}
       <Facilities onHomePage={true} />
       <Social />
       <Prabhupada />
