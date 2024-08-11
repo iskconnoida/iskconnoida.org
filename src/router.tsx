@@ -1,11 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
+import EventsAndFestivals from "./pages/EventsAndFestivals";
+import { Facilities } from "./pages/Facilities";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Services from "./pages/Services";
-import Festivals from "./pages/Festivals";
-import Facilities from "./pages/Facilities";
-import Donate from "./pages/Donate";
+import { OurServices } from "./pages/OurServices";
+import RefundReturns from "./pages/RefundReturns";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 const router = createBrowserRouter([
   {
@@ -13,25 +14,29 @@ const router = createBrowserRouter([
     element: <App page={<Home />} />,
   },
   {
-    path: "/about",
-    element: <App page={<About />} />,
+    path: "/events",
+    element: <App page={<EventsAndFestivals />} />,
   },
   {
     path: "/services",
-    element: <App page={<Services />} />,
-  },
-  {
-    path: "/festivals",
-    element: <App page={<Festivals />} />,
+    element: <App page={<OurServices />} />,
   },
   {
     path: "/facilities",
-    element: <App page={<Facilities />} />,
+    element: <App page={<Facilities onHomePage={false} />} />,
   },
   {
-    path: "/donate",
-    element: <App page={<Donate />} />,
-  }
+    path: "/terms-conditions",
+    element: <App page={<TermsAndConditions />} />,
+  },
+  {
+    path: "/refund-returns-page",
+    element: <App page={<RefundReturns />} />,
+  },
+  {
+    path: "/about",
+    element: <App page={<About />} />,
+  },
 ]);
 
 export default router;

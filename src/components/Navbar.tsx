@@ -4,8 +4,8 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const isActive = (path:string) => location.pathname === path
   return (
-    <div className="max-md:hidden h-16 w-full flex justify-between items-center px-4 lg:px-10 bg-white shadow-md rounded-b-lg bg-clip-padding border-2 fixed top-0 left-0 right-0 z-10">
-      <img src="/images/logo.png" alt="logo" className="h-14" />
+    <div className="max-md:hidden h-16 w-full flex justify-between items-center px-4 lg:px-10 bg-white shadow-md rounded-b-lg bg-clip-padding border-2 fixed top-0 left-0 right-0 z-20">
+      <img src="/images/logo.webp" alt="logo" className="h-14" />
       <span className="flex w-[60%] items-center justify-evenly">
         <Link to='/' className={`md:text-base lg:text-lg font-semibold text-gray-600 px-2 py-1 text-shadow-lg rounded-full ${isActive('/')? "bg-gray-600 text-white" : "bg-white"}`}>Home</Link>
         <Link to='/about' className={`md:text-base lg:text-xl font-semibold text-gray-600  px-2 py-1 rounded-full text-shadow-lg shadow-purple-100 ${isActive('/about')? "bg-gray-600 text-white" : ""}`}>About</Link>
