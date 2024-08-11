@@ -18,7 +18,7 @@ function BottomBar() {
         <Link to='/' className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 rounded-lg xs:px-1 px-1 text-right ${isActive("/") ? "bg-gray-600 text-white" : "bg-white"}`}> <FaHome size={24} className="ml-1" /> Home </Link>
         <Link to='/services' className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600  rounded-lg xs:px-1 px-1 ${isActive("/services") ? "bg-gray-600 text-white" : "bg-white"}`}> <FaHandSparkles size={24} className="ml-2" /> Services</Link>
         <Link to='/donate' className={`xs:text-xs md:text-base lg:text-xl font-semibold text-shadow-lg px-2 py-1 rounded-lg shadow-lg border border-orange-300 ${isActive("/donate")? "bg-orange-500 text-white" : "text-orange-900 bg-yellow-500 shadow-orange-200"}`}> <TfiGift size={15} className="ml-3" /> Donate</Link>       
-        <Link to='/festivals' className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 rounded-lg xs:px-1 px-1 ${isActive("/festivals") ? "bg-gray-600 text-white" : "bg-white"}`}><BiDonateHeart size={24} className="ml-2" /> Festivals</Link>
+        <Link to='/events' className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 rounded-lg xs:px-1 px-1 ${isActive("/festivals") ? "bg-gray-600 text-white" : "bg-white"}`}><BiDonateHeart size={24} className="ml-2" /> Festivals</Link>
           <button
           onClick={togglePopup}
           className="xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full  text-shadow-lg">
