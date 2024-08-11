@@ -1,6 +1,7 @@
-import Card from "./Card";
+import Card from "../components/Card";
+import styles from "../components/Card.module.css";
 
-export default function Events() {
+export default function EventsAndFestivals() {
   const events = [
     {
       img: "/images/fri.webp",
@@ -28,36 +29,24 @@ export default function Events() {
     },
   ];
   return (
-    <>
-      <div className="hidden px-12 sm:flex w-full">
-        <div className="w-1/2 text-3xl font-bold py-14">
-          Events and Festivals
-        </div>
-        <div className="w-1/2 py-14 inline-flex justify-end">
-          <button className="border border-violet-700 rounded-lg bg-violet-600 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
-            <a href="/events">View More</a>
-          </button>
-        </div>
-      </div>
-      <div className="sm:hidden w-full text-3xl font-bold py-14 text-center">
-        Events and Festivals
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {events.map((event) => (
+    <div className="container mx-auto lg:px-10 md:px-4 px-6 my-14">
+      <h3 className="text-4xl font-semibold mb-10 mt-10">Our Festivals</h3>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {events.map((event, index) => (
           <Card
+            key={index}
             img={event.img}
             date={new Date()}
             title={event.title}
             article="link1"
             donate="link2"
+            imgClass={styles.customImgClass}
           >
             {event.content}
           </Card>
         ))}
       </div>
-      <button className="sm:hidden border border-violet-700 rounded-lg bg-violet-600 mt-14 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
-        <a href="/events">View More</a>
-      </button>
-    </>
+    </div>
   );
 }

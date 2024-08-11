@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Prabhupada from "../components/Prabhupada";
 import Services from "../components/Services";
 import Social from "../components/Social";
+import { Facilities } from "./Facilities";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         className="h-24 w-48 md:w-56 mt-2 md:mt-8"
         alt="Divider"
       /> */}
+      <Facilities onHomePage={true} />
       <Social />
       <Prabhupada />
     </>
