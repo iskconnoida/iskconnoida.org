@@ -43,7 +43,7 @@ export default function Card(props: {
           </p>
           <Link
             to={props.donate}
-            className="w-full justify-between inline-flex items-center px-6 py-4 text-sm font-medium text-center text-white bg-red-700 rounded-xl hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300"
+            className="w-full justify-between inline-flex items-center px-6 py-4 text-sm font-medium text-center text-white bg-violet-700 rounded-xl hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300"
           >
             Donate
             <svg
@@ -82,7 +82,7 @@ export default function Card(props: {
           <div className="flex justify-between">
             <Link
               to={props.article}
-              className="w-[47.5%] justify-between inline-flex items-center px-3 py-4 text-sm font-medium text-center text-white bg-blue-700 rounded-xl hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+              className="w-[47.5%] justify-between inline-flex items-center px-3 py-4 text-sm font-medium text-center text-white bg-violet-600 rounded-xl hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300"
             >
               Read more
               <svg
@@ -103,7 +103,7 @@ export default function Card(props: {
             </Link>
             <Link
               to={props.donate}
-              className="w-[47.5%] justify-between inline-flex items-center px-3 py-4 text-sm font-medium text-center text-white bg-red-700 rounded-xl hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300"
+              className="w-[47.5%] justify-between inline-flex items-center px-3 py-4 text-sm font-medium text-center text-white  bg-blue-700 rounded-xl hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
             >
               Donate
               <svg
