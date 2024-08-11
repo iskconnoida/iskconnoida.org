@@ -3,6 +3,7 @@ import App from "./App";
 import EventsAndFestivals from "./pages/EventsAndFestivals";
 import { Facilities } from "./pages/Facilities";
 import Home from "./pages/Home";
+import About from "./pages/About";
 import { OurServices } from "./pages/OurServices";
 import RefundReturns from "./pages/RefundReturns";
 import TermsAndConditions from "./pages/TermsAndConditions";
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/refund-returns-page",
     element: <App page={<RefundReturns />} />,
+  },
+  {
+    path: "/about",
+    element: <App page={<About />} />,
   },
 ]);
 
