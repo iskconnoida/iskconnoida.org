@@ -5,6 +5,7 @@ import { BiDonateHeart } from "react-icons/bi";
 import { useState } from "react";
 import { CiCircleMore } from "react-icons/ci";
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import { AnimatePresence, motion } from "framer-motion";
 
 function BottomBar() {
   const location = useLocation();
@@ -24,9 +25,14 @@ function BottomBar() {
           className="xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full  text-shadow-lg">
             <CiCircleMore size={24} className="ml-0"/> More
           </button>
-          </div>
+          <AnimatePresence>
           {isPopupVisible && (
-          <div className="fixed inset-0 flex items-end justify-center bg-opacity-0">
+            <motion.div 
+              initial={{ opacity: 0, y:50}}
+              animate={{ opacity: 1, y:0}}
+              exit={{ opacity: 0, y: 50}}
+              className="fixed inset-0 flex items-end justify-center bg-opacity-0"
+            >
             <div className="relative w-full bg-white rounded-t-3xl p-5 mb-14">
               <button
                 onClick={togglePopup}
@@ -40,8 +46,10 @@ function BottomBar() {
                 <Link to='/facilities' className="block px-4 py-2 text-black hover:bg-gray-200">Facilities</Link>
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
+        </AnimatePresence>
+        </div>
     </section>
   )
 }
