@@ -3,12 +3,13 @@ import App from "./App";
 import About from "./pages/About";
 import Donate from "./pages/Donate";
 import EventsAndFestivals from "./pages/EventsAndFestivals";
-import { Facilities } from "./pages/Facilities";
+import Facilities from "./pages/Facilities";
 import Home from "./pages/Home";
 import Media from "./pages/Media";
-import { OurServices } from "./pages/OurServices";
+import OurServices from "./pages/OurServices";
 import RefundReturns from "./pages/RefundReturns";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import EventInfo from "./pages/EventInfo";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +17,16 @@ const router = createBrowserRouter([
     element: <App page={<Home />} />,
   },
   {
+    path: "/about",
+    element: <App page={<About />} />,
+  },
+  {
     path: "/events",
     element: <App page={<EventsAndFestivals />} />,
+  },
+  {
+    path: "/events/:id",
+    element: <App page={<EventInfo />} />,
   },
   {
     path: "/services",
@@ -34,10 +43,6 @@ const router = createBrowserRouter([
   {
     path: "/refund-returns-page",
     element: <App page={<RefundReturns />} />,
-  },
-  {
-    path: "/about",
-    element: <App page={<About />} />,
   },
   {
     path: "/donate",

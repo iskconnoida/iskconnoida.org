@@ -1,8 +1,8 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
 import { useState } from "react";
 import { FaChevronDown, FaEnvelope, FaWhatsapp } from "react-icons/fa6";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.min.css";
+import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 export default function CTC() {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [buttonText, setButtonText] = useState("Submit");
@@ -53,6 +53,7 @@ export default function CTC() {
             }
           );
           resetForm();
+          setButtonText("Submit");
         } else if (response.data.status === "failed") {
           console.error(response.data.error);
           toast.error(
@@ -101,7 +102,7 @@ export default function CTC() {
   }
 
   return (
-    <div className="w-fit z-10 flex flex-col items-center fixed bottom-4 right-4 md:right-10">
+    <div className="w-fit z-10 flex flex-col items-center fixed bottom-20 md:bottom-4 right-4 md:right-10">
       <div className="w-12 h-12 text-white shadow-lg hover:shadow-xl bg-[#25D366] rounded-full">
         <a
           href="http://api.whatsapp.com/send/?phone=919319681501&text=Hare+Krishna"
@@ -120,8 +121,14 @@ export default function CTC() {
           <FaEnvelope size={32} />
         </button>
         {isPopupVisible && (
-          <div className="z-50 fixed mt-24 md:bottom-3 md:right-10 inset-0 flex items-end justify-end bg-opacity-0 px-6">
-            <div className="z-50 relative mt-auto w-full md:w-2/3 lg:w-1/3 bg-white rounded-lg p-6 mb-14 shadow-lg border-2 border-[#ffb01f] transition-opacity duration-300">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.4 }}
+            className="z-50 fixed md:mt-20 md:bottom-3 md:right-10 inset-0 flex md:items-end md:justify-end bg-opacity-0 px-6"
+          >
+            <div className="z-50 relative h-fit mt-auto mb-16 w-full md:w-2/3 lg:w-1/3 bg-white rounded-lg p-6 shadow-lg shadow-gray-400 border-2 border-[#ffb01f] transition-opacity duration-300">
               <button
                 onClick={() => setPopupVisible(!isPopupVisible)}
                 className="absolute top-4 right-4 text-gray-600 hover:bg-gray-100 hover:text-[#4d4330] hover:shadow-lg rounded-full p-2 transition-w transition-all duration-300"
@@ -246,21 +253,9 @@ export default function CTC() {
                 </form>
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
       </div>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={true}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        className="rounded-lg shadow-lg"
-      />
     </div>
   );
 }
