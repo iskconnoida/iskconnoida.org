@@ -2,7 +2,7 @@ export default function TermsAndConditions() {
   return (
     <div className="w-full px-8 lg:px-12 mt-12">
       <div className="flex flex-col gap-5 my-16">
-        <h1 className="text-4xl font-bold">Terms and Conditions</h1>
+        <h1 className="text-3xl font-bold">Terms and Conditions</h1>
         <p>Welcome to ISKCON NOIDA!</p>
         <p>
           These terms and conditions outline the rules and regulations for the

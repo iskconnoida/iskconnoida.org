@@ -41,26 +41,35 @@ const Navbar: React.FC = () => {
           <button className="md:text-base lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full  text-shadow-lg shadow-purple-100">
             Media
           </button>
-          <div className="absolute right-0 mt-2 w-48 bg-white  shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <Link
-              to="/media/article1"
-              className="block px-4 py-2 text-black hover:bg-gray-200"
-            >
-              Dhruv Trivedi
-            </Link>
-            <Link
-              to="/media/article2"
-              className="block px-4 py-2 text-black hover:bg-gray-200"
-            >
-              Vaid Prabhu
-            </Link>
-            <Link
-              to="/media/article3"
-              className="block px-4 py-2 text-black hover:bg-gray-200"
-            >
-              Shukla prabhu
-            </Link>
-          </div>
+          <AnimatePresence>
+            {isDropdownOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0}}
+                exit={{ opacity: 0, y: -10}}
+                className="absolute right-0 mt-2 w-48 bg-white shadow-lg"
+                >
+                  <Link
+                    to="/media/article1"
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
+                  >
+                    Dhruv Trivedi
+                  </Link>
+                  <Link
+                    to="/media/article2"
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
+                  >
+                    Vaid Prabhu
+                  </Link>
+                  <Link
+                    to="/media/article3"
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
+                  >
+                    Shukla prabhu
+                  </Link>
+                </motion.div>
+            )}
+          </AnimatePresence>
         </div>
         <Link
           to="/events"

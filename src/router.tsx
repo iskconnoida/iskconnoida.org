@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import OurServices from "./pages/OurServices";
 import RefundReturns from "./pages/RefundReturns";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import EventInfo from "./pages/EventInfo";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/events",
     element: <App page={<EventsAndFestivals />} />,
+  },
+  {
+    path: "/events/:id",
+    element: <App page={<EventInfo />} />,
   },
   {
     path: "/services",

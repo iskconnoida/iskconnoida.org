@@ -2,7 +2,7 @@ export default function RefundReturns() {
   return (
     <section className="w-full px-8 lg:px-12 mt-10">
       <div className="flex flex-col gap-5 my-16">
-        <h2 className="text-4xl font-bold text-gray-800">Overview</h2>
+        <h2 className="text-3xl font-bold">Overview</h2>
         <p>
           Our refund and returns policy lasts 30 days. If 30 days have passed
           since your purchase, we can’t offer you a full refund or exchange.
@@ -44,7 +44,7 @@ export default function RefundReturns() {
           <li>Any item that is returned more than 30 days after delivery</li>
         </ul>
 
-        <h2 className="text-3xl font-bold text-gray-800">Refunds</h2>
+        <h2 className="text-3xl font-bold">Refunds</h2>
         <p>
           Once your return is received and inspected, we will send you an email
           to notify you that we have received your returned item. We will also
@@ -56,7 +56,7 @@ export default function RefundReturns() {
           of payment, within a certain amount of days.
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800">
+        <h3 className="text-xl font-semibold">
           Late or missing refunds
         </h3>
         <p>
@@ -80,13 +80,13 @@ export default function RefundReturns() {
           .
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800">Sale items</h3>
+        <h3 className="text-xl font-semibold">Sale items</h3>
         <p>
           Only regular priced items may be refunded. Sale items cannot be
           refunded.
         </p>
 
-        <h2 className="text-3xl font-bold text-gray-800">Exchanges</h2>
+        <h2 className="text-3xl font-bold">Exchanges</h2>
         <p>
           We only replace items if they are defective or damaged. If you need to
           exchange it for the same item, send us an email at{" "}
@@ -96,7 +96,7 @@ export default function RefundReturns() {
           and send your item to: [physical address].
         </p>
 
-        <h2 className="text-3xl font-bold text-gray-800">Gifts</h2>
+        <h2 className="text-3xl font-bold">Gifts</h2>
         <p>
           If the item was marked as a gift when purchased and shipped directly
           to you, you’ll receive a gift credit for the value of your return.
@@ -109,7 +109,7 @@ export default function RefundReturns() {
           a refund to the gift giver and they will find out about your return.
         </p>
 
-        <h2 className="text-3xl font-bold text-gray-800">Shipping returns</h2>
+        <h2 className="text-3xl font-bold">Shipping returns</h2>
         <p>
           To return your product, you should mail your product to: [physical
           address].
@@ -130,7 +130,7 @@ export default function RefundReturns() {
           guarantee that we will receive your returned item.
         </p>
 
-        <h2 className="text-3xl font-bold text-gray-800">Need help?</h2>
+        <h2 className="text-3xl font-bold">Need help?</h2>
         <p>
           Contact us at{" "}
           <a href="mailto:connect@iskconnoida.org" className="text-blue-600">
