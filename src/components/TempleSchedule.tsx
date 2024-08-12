@@ -1,62 +1,150 @@
-// TempleSchedule.tsx
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 interface Schedule {
-  time: string;
+  startTime: string;
+  endTime: string;
   text: string;
 }
 
 const schedule: Schedule[] = [
-    { time: '04:30', text: 'OPEN - Ongoing Mangala arati' },
-    { time: '05:00', text: 'OPEN - Ongoing Tulsi-Puja' },
-    { time: '07:30', text: 'OPEN - Ongoing Sringar darshan' },
-    { time: '07:40', text: 'OPEN - Ongoing Guru puja' },
-    { time: '08:00', text: 'OPEN - Ongoing Bhagavatam class' },
-    { time: '12:30', text: 'OPEN - Ongoing Raj Bhoga arati' },
-    { time: '18:30', text: 'OPEN - Ongoing Sandhya arati' },
-    { time: '19:00', text: 'OPEN - Ongoing Bhagavad-gita discourse' },
-    { time: '20:15', text: 'OPEN - Ongoing Shayana arati' },
-    { time: '21:00', text: 'Temple is closed' },
-  ];
+  {
+    startTime: "04:15",
+    endTime: "05:00",
+    text: "Mangala aarti",
+  },
+  {
+    startTime: "05:00",
+    endTime: "05:20",
+    text: "Tulsi-Puja",
+  },
+  {
+    startTime: "07:30",
+    endTime: "07:40",
+    text: "Sringar darshan",
+  },
+  {
+    startTime: "07:40",
+    endTime: "08:00",
+    text: "Guru puja",
+  },
+  {
+    startTime: "08:00",
+    endTime: "09:00",
+    text: "Bhagavatam class",
+  },
+  {
+    startTime: "09:00",
+    endTime: "12:00",
+    text: "Darshan open",
+  },
+  {
+    startTime: "12:00",
+    endTime: "12:30",
+    text: "",
+  },
+  {
+    startTime: "12:30",
+    endTime: "13:00",
+    text: "Raj Bhoga aarti",
+  },
+  {
+    startTime: "16:30",
+    endTime: "18:00",
+    text: "Darshan Reopen",
+  },
+  {
+    startTime: "18:00",
+    endTime: "18:15",
+    text: "",
+  },
+  {
+    startTime: "18:15",
+    endTime: "19:00",
+    text: "Sandhya aarti",
+  },
+  {
+    startTime: "19:00",
+    endTime: "20:15",
+    text: "Bhagavad-gita discourse",
+  },
+  {
+    startTime: "20:15",
+    endTime: "20:30",
+    text: "Shayana aarti",
+  },
+];
 
 const TempleSchedule: React.FC = () => {
-  const [currentText, setCurrentText] = useState<string>('Temple is closed');
-
+  const [currentText, setCurrentText] = useState<string>("Temple is open");
+  const [nextText, setNextText] = useState<string>("");
+  const [isOpen, setIsOpen] = useState<boolean>(true);
   useEffect(() => {
-    const updateCurrentText = () => {
+    const updateText = () => {
       const now = new Date();
       const hours = now.getHours();
       const minutes = now.getMinutes();
-      const currentTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+      const currentTime = `${String(hours).padStart(2, "0")}:${String(
+        minutes
+      ).padStart(2, "0")}`;
 
       // Iterate through the schedule to find the correct time range
-      for (let i = 0; i < schedule.length - 1; i++) {
-        if (currentTime >= schedule[i].time && currentTime < schedule[i + 1].time) {
-          setCurrentText(schedule[i].text);
+      for (let i = 0; i < schedule.length; i++) {
+        if (
+          currentTime >= schedule[i].startTime &&
+          currentTime < schedule[i].endTime
+        ) {
+          if (schedule[i].text === "") {
+            setCurrentText("Temple is Open");
+          } else {
+            setCurrentText("Ongoing - " + schedule[i].text);
+          }
+          setIsOpen(true);
+          if (schedule[i + 1] !== undefined) {
+            if (schedule[i + 1].text === "") {
+              setNextText("");
+            } else {
+              setNextText(
+                schedule[i + 1].text + " @ " + schedule[i + 1].startTime
+              );
+            }
+          }
           return;
         }
       }
-      
+
       // Default to closed if the current time does not match any range
-      setCurrentText('Temple is closed');
+      setCurrentText("Temple is closed");
+      setIsOpen(false);
+      setNextText("");
     };
 
-    updateCurrentText();
-    const intervalId = setInterval(updateCurrentText, 60000); // Update every minute
+    updateText();
+    const intervalId = setInterval(updateText, 60000); // Update every minute
 
     return () => clearInterval(intervalId); // Cleanup on component unmount
   }, []);
 
   return (
-    <div className="text-center p-4">
-      <div className="flex items-center justify-center space-x-2 mb-2">
-        <span className="bg-green-500 w-3 h-3 rounded-full animate-pulse"></span>
-        <span className="text-lg sm:text-2xl text-center sm:text-left font-semibold">{currentText}</span>
+    <div className="text-center px-4 pt-2">
+      <div className="flex items-center space-x-2 justify-center mb-2">
+        <span
+          className={
+            "w-3 h-3 rounded-full animate-pulse" +
+            (isOpen ? " bg-green-500" : " bg-red-500")
+          }
+        ></span>
+        <span className="text-lg sm:text-2xl text-center sm:text-left font-semibold">
+          {isOpen ? "OPEN - " : "CLOSED - "}
+          {currentText}
+        </span>
+      </div>
+      <div className={"text-sm" + (nextText === "" ? " hidden" : " block")}>
+        Upcoming: {nextText}
       </div>
       <div className="text-center mt-2 text-sm sm:text-xl text-gray-500">
-          <p className="">Open all days from 4:30 am- 1 pm </p>
-          <p className="">4:15 pm - 9 pm IST</p>
-        </div>
+        <p className="">Open all days from 04:15AM - 01PM,</p>
+        <p className="">and 04:15PM - 09:00PM IST</p>
+      </div>
     </div>
   );
 };
