@@ -1,7 +1,7 @@
 const services = [
   {
     img: "/images/cow.webp",
-    title: "Gowmata Sewa",
+    title: "Gomata Sewa",
     link: "/services",
   },
   {
