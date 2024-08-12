@@ -1,8 +1,7 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
 import { useState } from "react";
 import { FaChevronDown, FaEnvelope, FaWhatsapp } from "react-icons/fa6";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.min.css";
+import { toast } from "react-toastify";
 export default function CTC() {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [buttonText, setButtonText] = useState("Submit");
@@ -53,6 +52,7 @@ export default function CTC() {
             }
           );
           resetForm();
+          setButtonText("Submit");
         } else if (response.data.status === "failed") {
           console.error(response.data.error);
           toast.error(
@@ -249,18 +249,6 @@ export default function CTC() {
           </div>
         )}
       </div>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={true}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        className="rounded-lg shadow-lg"
-      />
     </div>
   );
 }

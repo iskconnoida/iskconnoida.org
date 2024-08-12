@@ -31,27 +31,33 @@ const services = [
   },
 ];
 
-export const OurServices = () => (
+export default function OurServices() {
+  return (
   <div className="container mx-auto lg:px-10 md:px-4 px-6 my-14">
-    <h3 className="text-4xl font-semibold mb-10 mt-10">Our Services</h3>
+    <h3 className="text-4xl w-fit font-semibold mx-auto mb-10 mt-10">
+      Our Services
+    </h3>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
       {services.map((service, index) => (
-        <a key={index} href={service.link}>
-          <div className=" rounded-lg shadow-md overflow-hidden h-64 flex flex-col items-center justify-center">
-            <div className="w-full flex items-center justify-center bg-violet-200 border h-44 border-violet-50">
+        <div key={index}>
+          <div className="rounded-lg shadow-lg overflow-hidden h-60 flex flex-col">
+            <div className="rounded-lg w-full flex items-center justify-center bg-violet-200 border h-40 border-violet-50">
               <img
                 src={service.img}
                 alt={service.title}
-                className=" w-28 h-28"
+                className="w-28 h-28"
               />
             </div>
-            <div className="p-4 h-20">
-              <h5 className="text-xl font-semibold py-2">{service.title}</h5>
+            <div className="w-full p-2 h-20 flex flex-col items-center">
+              <h5 className="text-xl text-center font-semibold py-1 my-auto">
+                {service.title}
+              </h5>
             </div>
           </div>
-        </a>
+        </div>
       ))}
     </div>
   </div>
 );
+}
