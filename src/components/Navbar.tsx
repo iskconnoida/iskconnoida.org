@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
           Services
         </Link>
         <div className="relative group">
-          <button className="md:text-base lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full  text-shadow-lg shadow-purple-100">
+          <button className="md:text-base lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full  text-shadow-lg">
             Media
           </button>
           <div className="absolute right-0 mt-2 w-48 bg-white  shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
