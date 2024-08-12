@@ -48,7 +48,7 @@ const schedule: Schedule[] = [
     text: "Raj Bhoga aarti",
   },
   {
-    startTime: "16:30",
+    startTime: "16:15",
     endTime: "18:00",
     text: "Darshan Reopen",
   },
