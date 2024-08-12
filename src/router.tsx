@@ -1,9 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import About from "./pages/About";
+import Donate from "./pages/Donate";
 import EventsAndFestivals from "./pages/EventsAndFestivals";
 import Facilities from "./pages/Facilities";
 import Home from "./pages/Home";
+import Media from "./pages/Media";
 import OurServices from "./pages/OurServices";
 import RefundReturns from "./pages/RefundReturns";
 import TermsAndConditions from "./pages/TermsAndConditions";
@@ -41,6 +43,18 @@ const router = createBrowserRouter([
   {
     path: "/refund-returns-page",
     element: <App page={<RefundReturns />} />,
+  },
+  {
+    path: "/donate",
+    element: <App page={<Donate />} />,
+  },
+  {
+    path: "/media/gallery",
+    element: <App page={<Media mediaSection="gallery" />} />,
+  },
+  {
+    path: "/media/kirtans",
+    element: <App page={<Media mediaSection="kirtans" />} />,
   },
 ]);
 
