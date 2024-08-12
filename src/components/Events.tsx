@@ -1,32 +1,38 @@
 import Card from "./Card";
 
+interface Response {
+  [key: string]: {
+    id: string;
+    title: string;
+    img: string;
+    description: string;
+    date: string;
+  };
+}
+
 export default function Events() {
-  const events = [
-    {
-      img: "/images/fri.webp",
-      title: "Event 1",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  const res: Response = {
+    "festival_response": {
+      "id": "11",
+      "title": "Shri Krishna Janmashtami 2024",
+      "img":
+        "upload/catimg/6ea9ab1baa0efb9e19094440c317e21b.29_08_2021-krishna_30_2_21972025.jpg",
+      "description":
+        "Krishna Janmashtami, also known simply as Krishnashtami, Janmashtami, or Gokulashtami, is an annual Hindu festival that celebrates the birth of Krishna, the eighth avatar of Vishnu. In certain Hindu texts, such as the Gita Govinda, Krishna has been identified as supreme God and the source of all avatars.",
+      "date": "2024-08-26",
     },
-    {
-      img: "/images/fri.webp",
-      title: "Event 2",
-      content:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      img: "/images/fri.webp",
-      title: "Event 3",
-      content:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    },
-    {
-      img: "/images/fri.webp",
-      title: "Event 4",
-      content:
-        "Dictum tempus fusce dui cras tempor. Eros tincidunt dolor efficitur nascetur fermentum vivamus vehicula taciti.",
-    },
-  ];
+  };
+  const events: {
+    "id": string;
+    "title": string;
+    "img": string;
+    "description": string;
+    "date": string;
+  }[] = [];
+  for (const e in res) {
+    events.push(res[e]);
+  }
+
   return (
     <>
       <div className="hidden px-12 sm:flex w-full">
@@ -42,16 +48,16 @@ export default function Events() {
       <div className="sm:hidden w-full text-3xl font-bold py-14 text-center">
         Events and Festivals
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {events.map((event) => (
           <Card
-            img={event.img}
-            date={new Date()}
+            img={"https://iic.iskconnoida.org/" + event.img}
+            date={new Date(event.date)}
             title={event.title}
-            article="link1"
-            donate="link2"
+            article={"events/" + event.id}
+            donate="https://iic.iskconnoida.org/donate/SHRI_KRISHNA_JANMASHTAMI_2024,_NOIDA"
           >
-            {event.content}
+            {event.description}
           </Card>
         ))}
       </div>
