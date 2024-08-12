@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
         <Link
           to="/events"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 rounded-full px-2 py-1 text-shadow-lg shadow-purple-100 ${
-            isActive("/festivals") ? "bg-gray-600 text-white" : "bg-white"
+            isActive("/events") ? "bg-gray-600 text-white" : "bg-white"
           }`}
         >
           Festivals
