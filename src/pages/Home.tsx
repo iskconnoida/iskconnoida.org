@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import Prabhupada from "../components/Prabhupada";
 import Services from "../components/Services";
 import Social from "../components/Social";
-import { Facilities } from "./Facilities";
+import Facilities from "./Facilities";
 
 export default function Home() {
   return (

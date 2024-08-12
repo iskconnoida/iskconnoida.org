@@ -4,6 +4,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaWhatsapp,
+  FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
 
@@ -21,7 +22,7 @@ export default function Footer() {
               />
             </div>
             <p className="md:text-center mb-4">
-              A-5, Maharaja Agrasen Marg, <br />
+              ISKCON Noida, A-5, Maharaja Agrasen Marg, <br />
               Opposite NTPC office, Block A,
               <br />
               <span className="">Sector 33, Noida, Uttar Pradesh 201301</span>
@@ -29,7 +30,8 @@ export default function Footer() {
             <ul className="flex space-x-5">
               <li>
                 <a
-                  href="#"
+                  href="https://facebook.com/IskconTempleNoida"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="w-10 h-10 flex items-center justify-center hover:bg-[#316FF6] rounded-full"
                 >
@@ -38,7 +40,8 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/iskcon_noida"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="w-10 h-10 flex items-center justify-center hover:bg-instagram-gradient rounded-full"
                 >
@@ -47,7 +50,18 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://x.com/iskcon_noida"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="w-10 h-10 flex items-center justify-center hover:bg-black rounded-full"
+                >
+                  <FaXTwitter size={28} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://api.whatsapp.com/send/?phone=919319681501&text=Hare+Krishna"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="w-10 h-10 flex items-center justify-center hover:bg-[#25D366] rounded-full"
                 >
@@ -56,7 +70,8 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://youtube.com/@ISKCONNOIDAofficial"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="w-10 h-10 flex items-center justify-center hover:bg-[#FF0000] rounded-full"
                 >
@@ -68,11 +83,11 @@ export default function Footer() {
         </div>
         <div className="flex-grow mt-4 md:mt-0 flex flex-col md:flex-row justify-evenly">
           <div className="p-2">
-            <h3 className="mb-4 font-semibold text-xl">Timing</h3>
+            <h3 className="mb-4 font-semibold text-xl">Timings</h3>
             <ul className="text-sm">
               <li className="mb-2 flex items-center">
                 <FaClock className="w-5 h-5 mr-2" />
-                <span>MANGALA ARATI – 04:30AM</span>
+                <span>MANGALA ARATI – 04:15AM</span>
               </li>
               <li className="mb-2 flex items-center">
                 <FaClock className="w-5 h-5 mr-2" />
@@ -101,51 +116,27 @@ export default function Footer() {
             <ul className="text-sm">
               <li className="mb-2 flex items-center">
                 <FaCircleCheck className="w-5 h-5 mr-2" />
-                <a href="/services/simple" className="hover:underline">
-                  Simple Living, High Thinking
-                </a>
+                Simple Living, High Thinking
               </li>
               <li className="mb-2 flex items-center">
                 <FaCircleCheck className="w-5 h-5 mr-2" />
-                <a
-                  href="https://iskconvrindavanmart.com/pancagauda-das"
-                  className="hover:underline"
-                >
-                  Srila Prabhupada Audiobooks
-                </a>
+                Srila Prabhupada Books
               </li>
               <li className="mb-2 flex items-center">
                 <FaCircleCheck className="w-5 h-5 mr-2" />
-                <a href="/services/life-membership" className="hover:underline">
-                  Life Membership
-                </a>
+                LIFE Membership
               </li>
               <li className="mb-2 flex items-center">
                 <FaCircleCheck className="w-5 h-5 mr-2" />
-                <a
-                  href="/services/community-service-centre"
-                  className="hover:underline"
-                >
-                  Community Service Centre
-                </a>
+                Community Service Centre
               </li>
               <li className="mb-2 flex items-center">
                 <FaCircleCheck className="w-5 h-5 mr-2" />
-                <a
-                  href="/services/gomata-and-bliss"
-                  className="hover:underline"
-                >
-                  Gomata Products
-                </a>
+                Gomata Products
               </li>
               <li className="flex items-center">
                 <FaCircleCheck className="w-5 h-5 mr-2" />
-                <a
-                  href="https://iskconvrindavanmart.com"
-                  className="hover:underline"
-                >
-                  Buy Books Online
-                </a>
+                Free Library
               </li>
             </ul>
           </div>
@@ -153,11 +144,19 @@ export default function Footer() {
             <h3 className="mb-1 font-semibold text-xl">Contact Us</h3>
             <ul>
               <li className="mb-4 flex items-center">
+                Call us at:
                 <a
                   href="tel:+919319681501"
-                  className="hover:underline uppercase text-md"
+                  className="hover:underline uppercase text-md mx-1"
                 >
-                  Call at: 9319681501
+                  9319681501
+                </a>
+                or
+                <a
+                  href="tel:+919319681502"
+                  className="hover:underline uppercase text-md mx-1"
+                >
+                  9319681502
                 </a>
               </li>
               <li className="flex flex-col items-left">
@@ -173,7 +172,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex md:flex-row flex-col md:gap-0 gap-2 w-full justify-between items-baseline py-2 border-t border-gray-500/50 mt-6">
+      <div className="flex md:flex-row flex-col md:gap-0 gap-2 w-full justify-between items-baseline py-2 border-t border-gray-500/50 mt-6 pb-16 sm:pb-8 md:pb-0">
         <p className="text-sm flex md:justify-center">
           Copyright &copy; {new Date().getFullYear()} ISKCON Noida. All Rights
           Reserved.

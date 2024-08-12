@@ -45,9 +45,9 @@ function BottomBar() {
           <TfiGift size={15} className="ml-3" /> Donate
         </Link>
         <Link
-          to="/festivals"
+          to="/events"
           className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 rounded-lg xs:px-1 px-1 ${
-            isActive("/festivals") ? "bg-gray-600 text-white" : "bg-white"
+            isActive("/events") ? "bg-gray-600 text-white" : "bg-white"
           }`}
         >
           <BiDonateHeart size={24} className="ml-2" /> Festivals
