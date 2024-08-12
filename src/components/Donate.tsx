@@ -30,12 +30,10 @@ export default function Donate() {
   return (
     <>
       <div className="hidden px-12 sm:flex w-full">
-        <div className="w-1/2 text-3xl font-bold py-14">
-          Donate
-        </div>
+        <div className="w-1/2 text-3xl font-bold py-14">Donate</div>
         <div className="w-1/2 py-14 inline-flex justify-end">
           <button className="border border-violet-700 rounded-lg bg-violet-600 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
-            <a href="/link">View More</a>
+            <a href="/donate">View More</a>
           </button>
         </div>
       </div>
@@ -56,7 +54,7 @@ export default function Donate() {
         ))}
       </div>
       <button className="sm:hidden border border-violet-700 rounded-lg bg-violet-600 mt-14 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
-        <a href="/link">View More</a>
+        <a href="/donate">View More</a>
       </button>
     </>
   );
