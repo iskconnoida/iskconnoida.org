@@ -22,7 +22,7 @@ export default function Footer() {
               />
             </div>
             <p className="md:text-center mb-4">
-              A-5, Maharaja Agrasen Marg, <br />
+              ISKCON Noida, A-5, Maharaja Agrasen Marg, <br />
               Opposite NTPC office, Block A,
               <br />
               <span className="">Sector 33, Noida, Uttar Pradesh 201301</span>

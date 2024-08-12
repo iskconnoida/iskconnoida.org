@@ -1,7 +1,10 @@
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
   const isActive = (path: string) => location.pathname === path;
   return (
     <div className="h-16 w-full flex justify-between items-center px-4 lg:px-10 bg-white shadow-lg rounded-b-lg bg-clip-padding border-2 fixed top-0 left-0 right-0 z-20">
@@ -37,8 +40,11 @@ const Navbar: React.FC = () => {
         >
           Services
         </Link>
-        <div className="relative group">
-          <button className="md:text-base lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full  text-shadow-lg shadow-purple-100">
+        <div className="relative group" 
+        onMouseEnter={() => setDropdownOpen(true)}
+        onMouseLeave={() => setDropdownOpen(false)}
+        >
+          <button className="md:text-base lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full  text-shadow-lg">
             Media
           </button>
           <AnimatePresence>
@@ -74,7 +80,7 @@ const Navbar: React.FC = () => {
         <Link
           to="/events"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 rounded-full px-2 py-1 text-shadow-lg shadow-purple-100 ${
-            isActive("/festivals") ? "bg-gray-600 text-white" : "bg-white"
+            isActive("/events") ? "bg-gray-600 text-white" : "bg-white"
           }`}
         >
           Festivals
