@@ -53,7 +53,7 @@ export default function Hero() {
     <>
       <div
         id="hero"
-        className="lg:mt-[3.5rem] h-[calc(100vh-3.5rem)] flex flex-col w-screen bg-center bg-no-repeat bg-cover text-center"
+        className="lg:mt-[3.5rem] h-screen lg:h-[calc(100vh-3.5rem)] flex flex-col w-screen bg-center bg-no-repeat bg-cover text-center"
       >
         <div className="absolute bottom-0 left-0 right-0 h-full w-full bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-violet-500/50 via-violet-900/10 to-transparent z-0"></div>
         <div className="font-extrabold h-full w-full text-white pb-4 text-shadow shadow-gray-900 flex flex-col z-10">

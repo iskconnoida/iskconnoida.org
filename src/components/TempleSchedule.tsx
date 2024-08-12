@@ -75,7 +75,7 @@ const schedule: Schedule[] = [
 ];
 
 const TempleSchedule: React.FC = () => {
-  const [currentText, setCurrentText] = useState<string>("Temple is open");
+  const [currentText, setCurrentText] = useState<string>("Temple is Open");
   const [nextText, setNextText] = useState<string>("");
   const [isOpen, setIsOpen] = useState<boolean>(true);
   useEffect(() => {
@@ -113,7 +113,7 @@ const TempleSchedule: React.FC = () => {
       }
 
       // Default to closed if the current time does not match any range
-      setCurrentText("Temple is closed");
+      setCurrentText("Temple is Closed");
       setIsOpen(false);
       setNextText("");
     };
