@@ -8,6 +8,8 @@ import OurServices from "./pages/OurServices";
 import RefundReturns from "./pages/RefundReturns";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import EventInfo from "./pages/EventInfo";
+import Media from "./pages/Media";
+import Donate from "./pages/Donate";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +43,18 @@ const router = createBrowserRouter([
   {
     path: "/refund-returns-page",
     element: <App page={<RefundReturns />} />,
+  },
+  {
+    path: "/donate",
+    element: <App page={<Donate />} />,
+  },
+  {
+    path: "/media/gallery",
+    element: <App page={<Media mediaSection="gallery" />} />,
+  },
+  {
+    path: "/media/kirtans",
+    element: <App page={<Media mediaSection="kirtans" />} />,
   },
 ]);
 
