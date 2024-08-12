@@ -2,6 +2,7 @@ import axios, { AxiosError, AxiosResponse } from "axios";
 import { useState } from "react";
 import { FaChevronDown, FaEnvelope, FaWhatsapp } from "react-icons/fa6";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 export default function CTC() {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [buttonText, setButtonText] = useState("Submit");
@@ -120,7 +121,13 @@ export default function CTC() {
           <FaEnvelope size={32} />
         </button>
         {isPopupVisible && (
-          <div className="z-50 fixed md:mt-20 md:bottom-3 md:right-10 inset-0 flex md:;items-end md:justify-end bg-opacity-0 px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.4 }}
+            className="z-50 fixed md:mt-20 md:bottom-3 md:right-10 inset-0 flex md:items-end md:justify-end bg-opacity-0 px-6"
+          >
             <div className="z-50 relative h-fit mt-auto mb-16 w-full md:w-2/3 lg:w-1/3 bg-white rounded-lg p-6 shadow-lg border-2 border-[#ffb01f] transition-opacity duration-300">
               <button
                 onClick={() => setPopupVisible(!isPopupVisible)}
@@ -246,7 +253,7 @@ export default function CTC() {
                 </form>
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
       </div>
     </div>
