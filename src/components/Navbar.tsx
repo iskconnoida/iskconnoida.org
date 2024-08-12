@@ -1,7 +1,10 @@
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
   const isActive = (path: string) => location.pathname === path;
   return (
     <div className="h-16 w-full flex justify-between items-center px-4 lg:px-10 bg-white shadow-lg rounded-b-lg bg-clip-padding border-2 fixed top-0 left-0 right-0 z-20">
@@ -37,30 +40,42 @@ const Navbar: React.FC = () => {
         >
           Services
         </Link>
-        <div className="relative group">
-          <button className="md:text-base lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full  text-shadow-lg shadow-purple-100">
+        <div className="relative group" 
+        onMouseEnter={() => setDropdownOpen(true)}
+        onMouseLeave={() => setDropdownOpen(false)}
+        >
+          <button className="md:text-base lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full  text-shadow-lg">
             Media
           </button>
-          <div className="absolute right-0 mt-2 w-48 bg-white  shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <Link
-              to="/media/article1"
-              className="block px-4 py-2 text-black hover:bg-gray-200"
-            >
-              Dhruv Trivedi
-            </Link>
-            <Link
-              to="/media/article2"
-              className="block px-4 py-2 text-black hover:bg-gray-200"
-            >
-              Vaid Prabhu
-            </Link>
-            <Link
-              to="/media/article3"
-              className="block px-4 py-2 text-black hover:bg-gray-200"
-            >
-              Shukla prabhu
-            </Link>
-          </div>
+          <AnimatePresence>
+            {isDropdownOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0}}
+                exit={{ opacity: 0, y: -10}}
+                className="absolute right-0 mt-2 w-48 bg-white shadow-lg transition-opacity duration-300"
+                >
+                  <Link
+                    to="/media/article1"
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
+                  >
+                    Dhruv Trivedi
+                  </Link>
+                  <Link
+                    to="/media/article2"
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
+                  >
+                    Vaid Prabhu
+                  </Link>
+                  <Link
+                    to="/media/article3"
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
+                  >
+                    Shukla prabhu
+                  </Link>
+                </motion.div>
+            )}
+          </AnimatePresence>
         </div>
         <Link
           to="/events"
