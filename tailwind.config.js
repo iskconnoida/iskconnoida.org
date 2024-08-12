@@ -14,6 +14,7 @@ export default {
       screens: {
         tablet: { min: "768px", max: "1000px" },
         desktop: "1001px",
+        'xs': '300px',
       },
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",

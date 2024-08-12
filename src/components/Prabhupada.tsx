@@ -1,10 +1,10 @@
 export default function Prabhupada() {
   return (
     <>
-      <div className="bg-gray-400">
+      <div className="bg-yellow-100">
         <img
           src="/images/vector.webp"
-          className="h-96 w-96 -z-10 -mt-40 -mb-48 -ml-40 grayscale"
+          className="h-96 w-96 -z-10 -mt-40 -mb-56 -ml-40"
         />
         {screen.availWidth > 640 ? (
           <div className="w-full py-12 items-center flex justify-evenly">
@@ -23,7 +23,7 @@ export default function Prabhupada() {
             <img
               src="/images/prabhupada.webp"
               alt="prabhupada"
-              className="w-1/4 rounded-full border-4 border-white shadow-lg"
+              className="w-1/4 rounded-full border-4 border-white shadow-lg shadow-gray-500"
             />
           </div>
         ) : (
@@ -31,7 +31,7 @@ export default function Prabhupada() {
             <img
               src="/images/prabhupada.webp"
               alt="prabhupada"
-              className="w-2/3 rounded-full m-4 border-4 z-[3] border-white shadow-lg"
+              className="w-2/3 rounded-full m-4 border-4 z-[3] border-white shadow-lg shadow-gray-500"
             />
             <div className="z-[3] h-full w-full py-2 px-8 text-center">
               FOUNDER ACHARYA

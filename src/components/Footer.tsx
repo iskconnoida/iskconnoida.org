@@ -1,12 +1,11 @@
 import {
-  FaCheckCircle,
+  FaCircleCheck,
   FaClock,
   FaFacebookF,
   FaInstagram,
   FaWhatsapp,
   FaYoutube,
-} from "react-icons/fa";
-import IskconLogo from "../../public/images/IskconLogoForFooter.png";
+} from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -16,7 +15,7 @@ export default function Footer() {
           <div className="flex flex-col md:items-center">
             <div className="flex items-center mb-4">
               <img
-                src={IskconLogo}
+                src="/images/IskconLogoForFooter.png"
                 alt="Iskcon Noida"
                 className="w-[140px] h-[140px] mr-3"
               />
@@ -32,7 +31,7 @@ export default function Footer() {
                 <a
                   href="#"
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center bg-[#316FF6] rounded-full"
+                  className="w-10 h-10 flex items-center justify-center hover:bg-[#316FF6] rounded-full"
                 >
                   <FaFacebookF size={28} />
                 </a>
@@ -41,7 +40,7 @@ export default function Footer() {
                 <a
                   href="#"
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center bg-instagram-gradient rounded-full"
+                  className="w-10 h-10 flex items-center justify-center hover:bg-instagram-gradient rounded-full"
                 >
                   <FaInstagram size={28} />
                 </a>
@@ -50,7 +49,7 @@ export default function Footer() {
                 <a
                   href="#"
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center bg-[#25D366] rounded-full"
+                  className="w-10 h-10 flex items-center justify-center hover:bg-[#25D366] rounded-full"
                 >
                   <FaWhatsapp size={28} />
                 </a>
@@ -59,7 +58,7 @@ export default function Footer() {
                 <a
                   href="#"
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center bg-[#FF0000] rounded-full"
+                  className="w-10 h-10 flex items-center justify-center hover:bg-[#FF0000] rounded-full"
                 >
                   <FaYoutube size={28} />
                 </a>
@@ -101,13 +100,13 @@ export default function Footer() {
             <h3 className="mb-4 font-semibold text-xl">Our Services</h3>
             <ul className="text-sm">
               <li className="mb-2 flex items-center">
-                <FaCheckCircle className="w-5 h-5 mr-2" />
+                <FaCircleCheck className="w-5 h-5 mr-2" />
                 <a href="/services/simple" className="hover:underline">
                   Simple Living, High Thinking
                 </a>
               </li>
               <li className="mb-2 flex items-center">
-                <FaCheckCircle className="w-5 h-5 mr-2" />
+                <FaCircleCheck className="w-5 h-5 mr-2" />
                 <a
                   href="https://iskconvrindavanmart.com/pancagauda-das"
                   className="hover:underline"
@@ -116,13 +115,13 @@ export default function Footer() {
                 </a>
               </li>
               <li className="mb-2 flex items-center">
-                <FaCheckCircle className="w-5 h-5 mr-2" />
+                <FaCircleCheck className="w-5 h-5 mr-2" />
                 <a href="/services/life-membership" className="hover:underline">
                   Life Membership
                 </a>
               </li>
               <li className="mb-2 flex items-center">
-                <FaCheckCircle className="w-5 h-5 mr-2" />
+                <FaCircleCheck className="w-5 h-5 mr-2" />
                 <a
                   href="/services/community-service-centre"
                   className="hover:underline"
@@ -131,7 +130,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="mb-2 flex items-center">
-                <FaCheckCircle className="w-5 h-5 mr-2" />
+                <FaCircleCheck className="w-5 h-5 mr-2" />
                 <a
                   href="/services/gomata-and-bliss"
                   className="hover:underline"
@@ -140,7 +139,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center">
-                <FaCheckCircle className="w-5 h-5 mr-2" />
+                <FaCircleCheck className="w-5 h-5 mr-2" />
                 <a
                   href="https://iskconvrindavanmart.com"
                   className="hover:underline"

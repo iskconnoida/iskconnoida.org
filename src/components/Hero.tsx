@@ -14,7 +14,6 @@ export default function Hero() {
   };
   let imgURL: string = "";
   switch (new Date().getUTCDay()) {
-    // uncalibrated placeholder images, subject to change
     case 0:
       imgURL =
         "/images/sun.webp";
@@ -70,7 +69,6 @@ export default function Hero() {
         <TempleScheduleModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
         </div>
-        
         </div>
     </>
   );

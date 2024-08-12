@@ -6,8 +6,9 @@ export default function Card(props: {
   date?: Date;
   title: string;
   article: string;
-  donate: string;
+  donate?: string;
   children: string;
+  imgClass?: string;
 }) {
   let a: string = "th";
   switch (props.date?.toLocaleString("default", { day: "2-digit" })) {
@@ -24,7 +25,7 @@ export default function Card(props: {
   return (
     <Link
       to={props.article}
-      className="w-72 bg-white border border-gray-200 rounded-xl max-h-sm shadow-lg hover:shadow-xl"
+      className={`w-72 bg-white border border-gray-200 rounded-xl max-h-sm shadow-lg hover:shadow-xl ${props.imgClass}`}
     >
       <img
         className="rounded-xl max-h-48 min-w-full"
@@ -41,27 +42,29 @@ export default function Card(props: {
           <p className="mb-3 text-sm font-normal text-gray-700">
             {props.children.substring(0, 100) + "\u2026"}
           </p>
-          <Link
-            to={props.donate}
-            className="w-full justify-between inline-flex items-center px-6 py-4 text-sm font-medium text-center text-white bg-red-700 rounded-xl hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300"
-          >
-            Donate
-            <svg
-              className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 10"
+          {props.donate && (
+            <Link
+              to={props.donate}
+              className="w-full justify-between inline-flex items-center px-6 py-4 text-sm font-medium text-center text-white bg-red-700 rounded-xl hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300"
             >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 5h12m0 0L9 1m4 4L9 9"
-              />
-            </svg>
-          </Link>
+              Donate
+              <svg
+                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </Link>
+          )}
         </div>
       ) : (
         <div className="p-4 relative -top-14 -mb-14">
@@ -82,7 +85,7 @@ export default function Card(props: {
           <div className="flex justify-between">
             <Link
               to={props.article}
-              className="w-[47.5%] justify-between inline-flex items-center px-3 py-4 text-sm font-medium text-center text-white bg-blue-700 rounded-xl hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+              className="w-[47.5%] justify-between inline-flex items-center px-3 py-4 text-sm font-medium text-center text-white bg-violet-600 rounded-xl hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300"
             >
               Read more
               <svg
@@ -101,27 +104,29 @@ export default function Card(props: {
                 />
               </svg>
             </Link>
-            <Link
-              to={props.donate}
-              className="w-[47.5%] justify-between inline-flex items-center px-3 py-4 text-sm font-medium text-center text-white bg-red-700 rounded-xl hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300"
-            >
-              Donate
-              <svg
-                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
+            {props.donate && (
+              <Link
+                to={props.donate}
+                className="w-[47.5%] justify-between inline-flex items-center px-3 py-4 text-sm font-medium text-center text-white bg-red-700 rounded-xl hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300"
               >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </Link>
+                Donate
+                <svg
+                  className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+              </Link>
+            )}
           </div>
         </div>
       )}
