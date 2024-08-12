@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0}}
                 exit={{ opacity: 0, y: -10}}
-                className="absolute right-0 mt-2 w-48 bg-white shadow-lg transition-opacity duration-300"
+                className="absolute right-0 mt-2 w-48 bg-white shadow-lg"
                 >
                   <Link
                     to="/media/article1"
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
         <Link
           to="/events"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 rounded-full px-2 py-1 text-shadow-lg shadow-purple-100 ${
-            isActive("/festivals") ? "bg-gray-600 text-white" : "bg-white"
+            isActive("/events") ? "bg-gray-600 text-white" : "bg-white"
           }`}
         >
           Festivals
