@@ -121,7 +121,7 @@ export default function CTC() {
         </button>
         {isPopupVisible && (
           <div className="z-50 fixed md:mt-20 md:bottom-3 md:right-10 inset-0 flex md:;items-end md:justify-end bg-opacity-0 px-6">
-            <div className="z-50 relative h-fit mt-auto mb-16 w-full md:w-2/3 lg:w-1/3 bg-white rounded-lg p-6 shadow-lg border-2 border-[#ffb01f] transition-opacity duration-300">
+            <div className="z-50 relative h-fit mt-auto mb-16 w-full md:w-2/3 lg:w-1/3 bg-white rounded-lg p-6 shadow-lg shadow-gray-400 border-2 border-[#ffb01f] transition-opacity duration-300">
               <button
                 onClick={() => setPopupVisible(!isPopupVisible)}
                 className="absolute top-4 right-4 text-gray-600 hover:bg-gray-100 hover:text-[#4d4330] hover:shadow-lg rounded-full p-2 transition-w transition-all duration-300"
