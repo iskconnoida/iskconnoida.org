@@ -7,14 +7,14 @@ export default {
   theme: {
     extend: {
       backdropBlur: {
-        'md': '10px',
-        'lg': '20px',
-        'xl': '30px',
+        md: "10px",
+        lg: "20px",
+        xl: "30px",
       },
       screens: {
         tablet: { min: "768px", max: "1000px" },
         desktop: "1001px",
-        'xs': '300px',
+        xs: "300px",
       },
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",
@@ -349,7 +349,7 @@ export default {
     backgroundColor: ["responsive", "hover", "focus", "group-hover"],
   },
   extend: {
-    backdropBlur: ['responsive'],
+    backdropBlur: ["responsive"],
   },
   plugins: [
     plugin(function ({ matchUtilities, theme }) {
@@ -359,7 +359,7 @@ export default {
             textShadow: value,
           }),
         },
-        { values: theme("textShadow") }
+        { values: theme("textShadow") },
       );
     }),
   ],

@@ -84,7 +84,7 @@ const TempleSchedule: React.FC = () => {
       const hours = now.getHours();
       const minutes = now.getMinutes();
       const currentTime = `${String(hours).padStart(2, "0")}:${String(
-        minutes
+        minutes,
       ).padStart(2, "0")}`;
 
       // Iterate through the schedule to find the correct time range
@@ -104,7 +104,7 @@ const TempleSchedule: React.FC = () => {
               setNextText("");
             } else {
               setNextText(
-                schedule[i + 1].text + " @ " + schedule[i + 1].startTime
+                schedule[i + 1].text + " @ " + schedule[i + 1].startTime,
               );
             }
           }

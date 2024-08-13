@@ -56,9 +56,7 @@ export default function RefundReturns() {
           of payment, within a certain amount of days.
         </p>
 
-        <h3 className="text-xl font-semibold">
-          Late or missing refunds
-        </h3>
+        <h3 className="text-xl font-semibold">Late or missing refunds</h3>
         <p>
           If you haven’t received a refund yet, first check your bank account
           again.

@@ -51,7 +51,7 @@ export default function CTC() {
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-            }
+            },
           );
           resetForm();
           setButtonText("Submit");
@@ -74,7 +74,7 @@ export default function CTC() {
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-            }
+            },
           );
           setButtonText("Submit");
         }
@@ -95,7 +95,7 @@ export default function CTC() {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-          }
+          },
         );
         setButtonText("Submit");
         console.log(error.message);
