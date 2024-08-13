@@ -1,14 +1,12 @@
 import Card from "./Card";
 
-interface Response {
-  [key: string]: {
+type Response = Record<string, {
     id: string;
     title: string;
     img: string;
     description: string;
     date: string;
-  };
-}
+  }>;
 
 export default function Events() {
   const res: Response = {

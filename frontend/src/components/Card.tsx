@@ -10,7 +10,7 @@ export default function Card(props: {
   children: string;
   imgClass?: string;
 }) {
-  let a: string = "th";
+  let a = "th";
   switch (props.date?.toLocaleString("default", { day: "2-digit" })) {
     case "01":
       a = "st";

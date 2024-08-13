@@ -1,15 +1,13 @@
 import Card from "../components/Card";
 import styles from "../components/Card.module.css";
 
-interface Response {
-  [key: string]: {
+type Response = Record<string, {
     id: string;
     title: string;
     img: string;
     description: string;
     date: string;
-  };
-}
+  }>;
 
 export default function EventsAndFestivals() {
   const res: Response = {

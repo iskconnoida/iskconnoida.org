@@ -12,7 +12,7 @@ export default function Hero() {
   const closeModal = () => {
       setModalOpen(false);
   };
-  let imgURL: string = "";
+  let imgURL = "";
   switch (new Date().getUTCDay()) {
     case 0:
       imgURL =

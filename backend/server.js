@@ -1,8 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
-import mongoose, { get } from "mongoose";
+import mongoose from "mongoose";
 import cors from "cors";
-import env from "dotenv";
+import "dotenv/config";
 
 import { get404 } from "./controllers/error.js";
 
@@ -10,7 +10,6 @@ import mailRouter from "./routes/mail.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
-env.config();
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -28,7 +27,7 @@ mongoose
       useUnifiedTopology: true,
     }
   )
-  .then((result) => {
+  .then(() => {
     app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
       console.log("Connected to Database");

@@ -1,14 +1,12 @@
 import { useParams } from "react-router-dom";
 
-interface Response {
-  [key: string]: {
+type Response = Record<string, {
     id: string;
     title: string;
     img: string;
     description: string;
     date: string;
-  };
-}
+  }>;
 
 export default function EventInfo() {
   const { id } = useParams();
@@ -34,20 +32,20 @@ export default function EventInfo() {
     events.push(res[e]);
   }
   try {
-    const event = events.filter((event) => event.id === id)[0];
+    const event = events.find((event) => event.id === id);
     return (
       <section className="w-full px-8 lg:px-12 mt-10">
         <div className="flex flex-col gap-5 my-16">
-          <h2 className="text-3xl font-bold text-center">{event.title}</h2>
+          <h2 className="text-3xl font-bold text-center">{event!.title}</h2>
           <img
-            src={"https://iic.iskconnoida.org/" + event.img}
+            src={"https://iic.iskconnoida.org/" + event!.img}
             alt="event.img"
             className="rounded-lg shadow-lg"
           />
           <div className="font-bold">
-            Date: {new Date(event.date).toLocaleDateString()}
+            Date: {new Date(event!.date).toLocaleDateString()}
           </div>
-          <div>{event.description}</div>
+          <div>{event!.description}</div>
           <a
             href="https://iic.iskconnoida.org/donate/SHRI_KRISHNA_JANMASHTAMI_2024,_NOIDA"
             className="w-full justify-between font-bold inline-flex items-center px-6 py-4 text-sm text-center text-white bg-red-700 rounded-xl hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 shadow-lg shadow-red-200 hover:shadow-red-300"
@@ -71,7 +69,7 @@ export default function EventInfo() {
           </a>
         </div>
         <div className="text-gray-600 w-full py-2 text-right">
-          Event ID: {event.id}
+          Event ID: {event!.id}
         </div>
       </section>
     );
