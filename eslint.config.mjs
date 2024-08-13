@@ -24,6 +24,7 @@ export default [
     compat.extends(
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/stylistic",
       "plugin:react-hooks/recommended"
     )
   ),
@@ -31,15 +32,13 @@ export default [
     plugins: {
       "react-refresh": reactRefresh,
     },
-
     languageOptions: {
       globals: {
         ...globals.browser,
+        ...globals.node,
       },
-
       parser: tsParser,
     },
-
     rules: {
       "react-refresh/only-export-components": [
         "warn",

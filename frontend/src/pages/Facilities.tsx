@@ -4,14 +4,12 @@ interface FacilitiesProps {
   onHomePage: boolean;
 }
 
-interface Response {
-  [key: string]: {
+type Response = Record<string, {
     id: string;
     title: string;
     img: string;
     description: string;
-  };
-}
+  }>;
 
 const res: Response = {
   "facilities_response1": {

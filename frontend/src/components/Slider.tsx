@@ -12,9 +12,9 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
   const sliderRef = useRef<HTMLDivElement | null>(null);
 
   // Move to the next slide
-  const goToNextSlide = () => {
+  const goToNextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-  };
+  }, [setCurrentIndex, slides.length]);
 
   // Move to the previous slide
   const goToPrevSlide = () => {
@@ -58,7 +58,7 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
     }, 100);
 
     return () => clearInterval(interval);
-  }, [currentIndex, slides.length, onClose]);
+  }, [currentIndex, slides.length, onClose, goToNextSlide]);
 
   return (
     <div

@@ -17,7 +17,7 @@ export default function Services() {
           <div className="mx-auto bg-violet-200 border border-violet-500 w-fit rounded-full p-6">
             <img src="/images/cow.webp" className="h-24 w-24" alt="" />
           </div>
-          <div className="py-2 text-center">Gowmata Sewa</div>
+          <div className="py-2 text-center">Gomata Sewa</div>
         </div>
         <div className="items-center p-4">
           <div className="mx-auto bg-violet-200 border border-violet-500 w-fit rounded-full p-6">

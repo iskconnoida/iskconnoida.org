@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import About from "./pages/About";
+import Donate from "./pages/Donate";
 import EventsAndFestivals from "./pages/EventsAndFestivals";
 import Facilities from "./pages/Facilities";
 import Home from "./pages/Home";
+import Media from "./pages/Media";
 import OurServices from "./pages/OurServices";
 import RefundReturns from "./pages/RefundReturns";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import EventInfo from "./pages/EventInfo";
-import Media from "./pages/Media";
-import Donate from "./pages/Donate";
 
 const router = createBrowserRouter([
   {

@@ -12,7 +12,7 @@ export default function Hero() {
   const closeModal = () => {
       setModalOpen(false);
   };
-  let imgURL: string = "";
+  let imgURL = "";
   switch (new Date().getUTCDay()) {
     case 0:
       imgURL =
@@ -71,7 +71,7 @@ export default function Hero() {
             <div className="text-center mt-4">
               <button
                 onClick={openModal}
-                className="border border-violet-500 rounded-lg bg-violet-500 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl"
+                className="border border-violet-500 rounded-lg bg-violet-500 px-4 py-2 text-white font-semibold shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl"
               >
                 View Temple Schedule
               </button>
