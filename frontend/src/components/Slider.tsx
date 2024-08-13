@@ -19,7 +19,7 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
   // Move to the previous slide
   const goToPrevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
+      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length,
     );
   };
   const handleClickOutside = useCallback(
@@ -31,7 +31,7 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
         onClose();
       }
     },
-    [onClose]
+    [onClose],
   );
   useEffect(() => {
     document.addEventListener("mouseup", handleClickOutside);
@@ -111,8 +111,8 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
                 index < currentIndex
                   ? "#ffffff"
                   : index === currentIndex
-                  ? `linear-gradient(to right, #ffffff ${progress}%, #757578 ${progress}%)`
-                  : "#757578",
+                    ? `linear-gradient(to right, #ffffff ${progress}%, #757578 ${progress}%)`
+                    : "#757578",
               transition: "background 0.1s linear",
             }}
           />

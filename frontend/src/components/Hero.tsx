@@ -6,41 +6,34 @@ export default function Hero() {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-      setModalOpen(true);
+    setModalOpen(true);
   };
 
   const closeModal = () => {
-      setModalOpen(false);
+    setModalOpen(false);
   };
   let imgURL = "";
   switch (new Date().getUTCDay()) {
     case 0:
-      imgURL =
-        "/images/sun.webp";
+      imgURL = "/images/sun.webp";
       break;
     case 1:
-      imgURL =
-        "/images/mon.webp";
+      imgURL = "/images/mon.webp";
       break;
     case 2:
-      imgURL =
-        "/images/tue.webp";
+      imgURL = "/images/tue.webp";
       break;
     case 3:
-      imgURL =
-        "/images/wed.webp";
+      imgURL = "/images/wed.webp";
       break;
     case 4:
-      imgURL =
-        "/images/thu.webp";
+      imgURL = "/images/thu.webp";
       break;
     case 5:
-      imgURL =
-        "/images/fri.webp";
+      imgURL = "/images/fri.webp";
       break;
     case 6:
-      imgURL =
-        "/images/sat.webp";
+      imgURL = "/images/sat.webp";
       break;
   }
 

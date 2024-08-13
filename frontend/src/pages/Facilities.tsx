@@ -4,49 +4,56 @@ interface FacilitiesProps {
   onHomePage: boolean;
 }
 
-type Response = Record<string, {
+type Response = Record<
+  string,
+  {
     id: string;
     title: string;
     img: string;
     description: string;
-  }>;
+  }
+>;
 
 const res: Response = {
-  "facilities_response1": {
-        "id": "13",
-        "title": "Guest House",
-        "img": "https://iskconnoida.org/wp-content/uploads/2023/12/static-_1665002df6dabb1-Edited-scaled.jpeg",
-        "description": "Stay at ISKCON's BACK TO HOME Guest houses, get a chance to live close to temple and spend the time of your stay in complete Krishna Consciousness."
-    },
-    "facilities_response2": {
-        "id": "14",
-        "title": "Krishna Expo",
-        "img": "https://iskconnoida.org/wp-content/uploads/2023/12/1780066_10151922662621364_1967521465_o.jpg",
-        "description": "Explore Krishna's Leelas presented in a beautiful form, that is attractive to all."
-    },
-    "facilities_response3": {
-        "id": "15",
-        "title": "Function Halls",
-        "img": "https://iskconnoida.org/wp-content/uploads/2023/12/umage-1024x682-Edited.jpeg",
-        "description": "Celebrate your Family and Corporate functions with the auspicious blessings of Sri Sri Radha Govind Devji. With space"
-    },
-    "facilities_response4": {
-        "id": "16",
-        "title": "Govindas Restaurant",
-        "img": "https://iskconnoida.org/wp-content/uploads/2023/12/download-10.jpeg",
-        "description": "Dine a Pure Veg meal at the world famous ISKCON Govindas Restaurant and Bakery. Everything here from cakes and pastries to pastas and main course is Pure veg."
-    }
-  };
+  facilities_response1: {
+    id: "13",
+    title: "Guest House",
+    img: "https://iskconnoida.org/wp-content/uploads/2023/12/static-_1665002df6dabb1-Edited-scaled.jpeg",
+    description:
+      "Stay at ISKCON's BACK TO HOME Guest houses, get a chance to live close to temple and spend the time of your stay in complete Krishna Consciousness.",
+  },
+  facilities_response2: {
+    id: "14",
+    title: "Krishna Expo",
+    img: "https://iskconnoida.org/wp-content/uploads/2023/12/1780066_10151922662621364_1967521465_o.jpg",
+    description:
+      "Explore Krishna's Leelas presented in a beautiful form, that is attractive to all.",
+  },
+  facilities_response3: {
+    id: "15",
+    title: "Function Halls",
+    img: "https://iskconnoida.org/wp-content/uploads/2023/12/umage-1024x682-Edited.jpeg",
+    description:
+      "Celebrate your Family and Corporate functions with the auspicious blessings of Sri Sri Radha Govind Devji. With space",
+  },
+  facilities_response4: {
+    id: "16",
+    title: "Govindas Restaurant",
+    img: "https://iskconnoida.org/wp-content/uploads/2023/12/download-10.jpeg",
+    description:
+      "Dine a Pure Veg meal at the world famous ISKCON Govindas Restaurant and Bakery. Everything here from cakes and pastries to pastas and main course is Pure veg.",
+  },
+};
 
-  const facilities: {
-      "id": string;
-      "title": string;
-      "img": string;
-      "description": string;
-  }[] = [];
-  for (const facility in res) {
-facilities.push(res[facility])
-  }
+const facilities: {
+  id: string;
+  title: string;
+  img: string;
+  description: string;
+}[] = [];
+for (const facility in res) {
+  facilities.push(res[facility]);
+}
 
 export default function Facilities({ onHomePage }: FacilitiesProps) {
   return onHomePage ? (
@@ -64,11 +71,7 @@ export default function Facilities({ onHomePage }: FacilitiesProps) {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {facilities.map((facility) => (
-          <Card
-            img={facility.img}
-            dateless
-            title={facility.title}
-          >
+          <Card img={facility.img} dateless title={facility.title}>
             {facility.description}
           </Card>
         ))}
@@ -79,7 +82,9 @@ export default function Facilities({ onHomePage }: FacilitiesProps) {
     </>
   ) : (
     <div className="container mx-auto lg:px-10 md:px-4 my-14">
-      <h3 className="text-4xl text-center font-semibold mb-10 mt-10">Temple Facilities</h3>
+      <h3 className="text-4xl text-center font-semibold mb-10 mt-10">
+        Temple Facilities
+      </h3>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
         {facilities.map((facility, index) => (

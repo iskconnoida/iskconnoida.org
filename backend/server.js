@@ -25,7 +25,7 @@ mongoose
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-    }
+    },
   )
   .then(() => {
     app.listen(port, () => {

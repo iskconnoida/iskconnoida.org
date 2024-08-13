@@ -1,41 +1,43 @@
 import Card from "./Card";
 
-type Response = Record<string, {
+type Response = Record<
+  string,
+  {
     id: string;
     title: string;
     img: string;
     description: string;
-    "donation_link": string;
-  }>;
+    donation_link: string;
+  }
+>;
 
 export default function Donate() {
   const res: Response = {
-    "services_response1": {
-      "id": "12",
-      "title": "Anna Daan 2024",
-      "img": "upload/catimg/37693cfc748049e45d87b8c7d8b9aacd.Annadaan%201.png",
-      "description":
+    services_response1: {
+      id: "12",
+      title: "Anna Daan 2024",
+      img: "upload/catimg/37693cfc748049e45d87b8c7d8b9aacd.Annadaan%201.png",
+      description:
         "Anna daan is the act of donating food to the needy. In Vedic culture, it is considered one of the most pious and virtuous acts. Anna Daan is considered to be Mahadaan. It is believed that offering food to others is equivalent to offering it to God Himself.",
-      "donation_link": "https://iic.iskconnoida.org/donate/Anna_Daan_2024",
+      donation_link: "https://iic.iskconnoida.org/donate/Anna_Daan_2024",
     },
-    "services_response2": {
-      "id": "11",
-      "title": "Shri Krishna Janmashtami 2024",
-      "img":
-        "upload/catimg/f899139df5e1059396431415e770c6dd.janmashtami 2024_11zon.webp",
-      "description":
+    services_response2: {
+      id: "11",
+      title: "Shri Krishna Janmashtami 2024",
+      img: "upload/catimg/f899139df5e1059396431415e770c6dd.janmashtami 2024_11zon.webp",
+      description:
         "Krishna Janmashtami, also known simply as Krishnashtami, Janmashtami, or Gokulashtami, is an annual Hindu festival that celebrates the birth of Krishna, the eighth avatar of Vishnu. In certain Hindu texts, such as the Gita Govinda, Krishna has been identified as supreme God and the source of all avatars.",
-      "donation_link":
+      donation_link:
         "https://iic.iskconnoida.org/donate/SHRI_KRISHNA_JANMASHTAMI_2024,_NOIDA",
     },
   };
 
   const events: {
-    "id": string;
-    "title": string;
-    "img": string;
-    "description": string;
-    "donation_link": string;
+    id: string;
+    title: string;
+    img: string;
+    description: string;
+    donation_link: string;
   }[] = [];
   for (const e in res) {
     events.push(res[e]);

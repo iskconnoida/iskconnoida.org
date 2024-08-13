@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar: React.FC = () => {
   const location = useLocation();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const isActive = (path:  string) => location.pathname === path;;
+  const isActive = (path: string) => location.pathname === path;
   return (
     <div className="h-16 w-full flex justify-between items-center px-4 lg:px-10 bg-white shadow-lg rounded-b-lg bg-clip-padding border-2 fixed top-0 left-0 right-0 z-20">
       <a href="/" className="w-full h-full">
