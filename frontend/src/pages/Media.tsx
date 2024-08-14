@@ -148,7 +148,7 @@ export default function Media({ mediaSection }: MediaProps) {
                     <img
                       src={photo.img}
                       alt={photo.title}
-                      className="w-full h-80"
+                      className="w-full h-80 object-cover"
                     />
                   </div>
                   <div className="p-2 px-4 h-20">
