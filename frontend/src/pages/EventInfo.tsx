@@ -82,6 +82,9 @@ export default function EventInfo() {
         <h2 className="my-16 text-3xl font-bold text-center">
           Event Not Found
         </h2>
+        <div className="text-gray-600 w-full py-2 text-right">
+          Error: Invalid Event ID
+        </div>
       </section>
     );
   }

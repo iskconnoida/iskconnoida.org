@@ -1,8 +1,8 @@
-import express from "express";
 import bodyParser from "body-parser";
-import mongoose from "mongoose";
 import cors from "cors";
 import "dotenv/config";
+import express from "express";
+import mongoose from "mongoose";
 
 import { get404 } from "./controllers/error.js";
 
