@@ -1,8 +1,14 @@
+import { motion } from "framer-motion";
 import Writeup from "../components/Writeup";
 
 export default function About() {
   return (
-    <div className="h-full w-full mt-10 md:mt-6 pt-12 md:pt-16">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="h-full w-full mt-10 md:mt-6 pt-12 md:pt-16"
+    >
       <div id="about">
         <Writeup title="About ISKCON Noida">
           <img src="/images/temple.png" className="rounded-lg shadow-lg mb-6" />
@@ -221,6 +227,6 @@ export default function About() {
           </ul>
         </Writeup>
       </div>
-    </div>
+    </motion.div>
   );
 }

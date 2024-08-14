@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import Card from "../components/Card";
+import { motion } from "framer-motion";
 
 interface FacilitiesProps {
   onHomePage: boolean;
@@ -62,7 +64,7 @@ export default function Facilities({ onHomePage }: FacilitiesProps) {
         <div className="w-1/2 text-3xl font-bold py-14">Temple Facilities</div>
         <div className="w-1/2 py-14 inline-flex justify-end">
           <button className="border border-violet-700 rounded-lg bg-violet-600 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
-            <a href="/facilities">View More</a>
+            <Link to="/facilities">View More</Link>
           </button>
         </div>
       </div>
@@ -77,11 +79,16 @@ export default function Facilities({ onHomePage }: FacilitiesProps) {
         ))}
       </div>
       <button className="sm:hidden border border-violet-700 rounded-lg bg-violet-600 mt-14 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
-        <a href="/facilities">View More</a>
+        <Link to="/facilities">View More</Link>
       </button>
     </>
   ) : (
-    <div className="container mx-auto lg:px-10 md:px-4 my-14">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="container mx-auto lg:px-10 md:px-4 my-14"
+    >
       <h3 className="text-4xl text-center font-semibold mb-10 mt-10">
         Temple Facilities
       </h3>
@@ -107,6 +114,6 @@ export default function Facilities({ onHomePage }: FacilitiesProps) {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -2,6 +2,7 @@ import axios, { AxiosError, AxiosResponse } from "axios";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaChevronDown, FaEnvelope, FaWhatsapp } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 export default function CTC() {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -105,14 +106,14 @@ export default function CTC() {
   return (
     <div className="w-fit z-10 flex flex-col items-center fixed bottom-20 md:bottom-4 right-4 md:right-10">
       <div className="w-12 h-12 text-white shadow-lg hover:shadow-xl bg-[#25D366] rounded-full">
-        <a
-          href="http://api.whatsapp.com/send/?phone=919319681501&text=Hare+Krishna"
+        <Link
+          to="http://api.whatsapp.com/send/?phone=919319681501&text=Hare+Krishna"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full h-full inline-flex items-center justify-center"
         >
           <FaWhatsapp size={32} />
-        </a>
+        </Link>
       </div>
       <div className="w-12 h-12 mt-4 text-white shadow-lg hover:shadow-xl bg-[#ffb01f] rounded-full">
         <button
@@ -126,7 +127,7 @@ export default function CTC() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.4 }}
+            transition={{ type: "spring", duration: 0.4 }}
             className="z-50 fixed md:mt-20 md:bottom-3 md:right-10 inset-0 flex md:items-end md:justify-end bg-opacity-0 px-6"
           >
             <div className="z-50 relative h-fit mt-auto mb-16 w-full md:w-2/3 lg:w-1/3 bg-white rounded-lg p-6 shadow-lg shadow-gray-400 border-2 border-[#ffb01f] transition-opacity duration-300">
