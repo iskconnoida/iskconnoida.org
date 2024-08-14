@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Services() {
   return (
     <>
@@ -5,7 +7,7 @@ export default function Services() {
         <div className="w-1/2 text-3xl font-bold py-14">Services</div>
         <div className="w-1/2 py-14 inline-flex justify-end">
           <button className="border border-violet-700 rounded-lg bg-violet-600 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
-            <a href="/services">View More</a>
+            <Link to="/services">View More</Link>
           </button>
         </div>
       </div>
@@ -51,7 +53,7 @@ export default function Services() {
         </div>
       </div>
       <button className="sm:hidden border border-violet-700 rounded-lg bg-violet-600 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
-        <a href="/services">View More</a>
+        <Link to="/services">View More</Link>
       </button>
     </>
   );

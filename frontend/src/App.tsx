@@ -1,3 +1,4 @@
+import { ScrollRestoration } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import BottomBar from "./components/BottomBar";
@@ -13,6 +14,7 @@ export default function App(props: { page: JSX.Element }) {
       <CTC />
       <Footer />
       <BottomBar />
+      <ScrollRestoration />
       <ToastContainer
         position="top-center"
         autoClose={5000}

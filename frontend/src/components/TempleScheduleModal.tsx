@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -13,7 +15,11 @@ const TempleScheduleModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 50 }}
+      transition={{ type: "spring", duration: 0.5 }}
       className="fixed inset-0 bg-black/50 pt-36 flex items-center justify-center z-50"
       onClick={handleOverlayClick}
     >
@@ -99,7 +105,7 @@ const TempleScheduleModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

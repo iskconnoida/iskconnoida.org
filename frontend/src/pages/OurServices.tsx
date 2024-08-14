@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const services = [
   {
     img: "/images/cow.webp",
@@ -33,7 +35,12 @@ const services = [
 
 export default function OurServices() {
   return (
-    <div className="container mx-auto lg:px-10 md:px-4 px-6 my-14">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="container mx-auto lg:px-10 md:px-4 px-6 my-14"
+    >
       <h3 className="text-3xl w-fit font-semibold mx-auto mb-10 mt-10">
         Our Services
       </h3>
@@ -58,6 +65,6 @@ export default function OurServices() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

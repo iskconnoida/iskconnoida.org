@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 export default function RefundReturns() {
   return (
-    <section className="w-full px-8 lg:px-12 mt-10">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="w-full px-8 lg:px-12 mt-10"
+    >
       <div className="flex flex-col gap-5 my-16">
         <h2 className="text-3xl font-bold">Overview</h2>
         <p>
@@ -70,11 +78,11 @@ export default function RefundReturns() {
           refund is posted.
         </p>
         <p>
-          If you’ve done all of this and you still have not received your refund
-          yet, please contact us at{" "}
-          <a href="mailto:{email}" className="text-blue-600">
+          Link If you’ve done all of this and you still have not received your
+          refund yet, please contact us at{" "}
+          <Link to="mailto:{email}" className="text-blue-600">
             [email address]
-          </a>
+          </Link>
           .
         </p>
 
@@ -88,9 +96,9 @@ export default function RefundReturns() {
         <p>
           We only replace items if they are defective or damaged. If you need to
           exchange it for the same item, send us an email at{" "}
-          <a href="mailto:{email}" className="text-blue-600">
+          <Link to="mailto:{email}" className="text-blue-600">
             [email address]
-          </a>{" "}
+          </Link>{" "}
           and send your item to: [physical address].
         </p>
 
@@ -131,12 +139,12 @@ export default function RefundReturns() {
         <h2 className="text-3xl font-bold">Need help?</h2>
         <p>
           Contact us at{" "}
-          <a href="mailto:connect@iskconnoida.org" className="text-blue-600">
+          <Link to="mailto:connect@iskconnoida.org" className="text-blue-600">
             {"{email}"}
-          </a>{" "}
+          </Link>{" "}
           for questions related to refunds and returns.
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 }

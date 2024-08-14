@@ -7,6 +7,7 @@ import {
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -29,54 +30,54 @@ export default function Footer() {
             </p>
             <ul className="flex space-x-5">
               <li>
-                <a
-                  href="https://facebook.com/IskconTempleNoida"
+                <Link
+                  to="https://facebook.com/IskconTempleNoida"
                   rel="noopener noreferrer"
                   target="_blank"
                   className="w-10 h-10 flex items-center justify-center hover:bg-[#316FF6] rounded-full"
                 >
                   <FaFacebookF size={28} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://www.instagram.com/iskcon_noida"
+                <Link
+                  to="https://www.instagram.com/iskcon_noida"
                   rel="noopener noreferrer"
                   target="_blank"
                   className="w-10 h-10 flex items-center justify-center hover:bg-instagram-gradient rounded-full"
                 >
                   <FaInstagram size={28} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://x.com/iskcon_noida"
+                <Link
+                  to="https://x.com/iskcon_noida"
                   rel="noopener noreferrer"
                   target="_blank"
                   className="w-10 h-10 flex items-center justify-center hover:bg-black rounded-full"
                 >
                   <FaXTwitter size={28} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="http://api.whatsapp.com/send/?phone=919319681501&text=Hare+Krishna"
+                <Link
+                  to="http://api.whatsapp.com/send/?phone=919319681501&text=Hare+Krishna"
                   rel="noopener noreferrer"
                   target="_blank"
                   className="w-10 h-10 flex items-center justify-center hover:bg-[#25D366] rounded-full"
                 >
                   <FaWhatsapp size={28} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://youtube.com/@ISKCONNOIDAofficial"
+                <Link
+                  to="https://youtube.com/@ISKCONNOIDAofficial"
                   rel="noopener noreferrer"
                   target="_blank"
                   className="w-10 h-10 flex items-center justify-center hover:bg-[#FF0000] rounded-full"
                 >
                   <FaYoutube size={28} />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -145,28 +146,28 @@ export default function Footer() {
             <ul>
               <li className="mb-4 flex items-center">
                 Call us at:
-                <a
-                  href="tel:+919319681501"
+                <Link
+                  to="tel:+919319681501"
                   className="hover:underline uppercase text-md mx-1"
                 >
                   9319681501
-                </a>
+                </Link>
                 or
-                <a
-                  href="tel:+919319681502"
+                <Link
+                  to="tel:+919319681502"
                   className="hover:underline uppercase text-md mx-1"
                 >
                   9319681502
-                </a>
+                </Link>
               </li>
               <li className="flex flex-col items-left">
                 <span className="text-xl">Email Us At:</span>
-                <a
-                  href="mailto:connect@iskconnoida.org"
+                <Link
+                  to="mailto:connect@iskconnoida.org"
                   className="hover:underline text-lg"
                 >
                   connect@iskconnoida.org
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -179,14 +180,14 @@ export default function Footer() {
         </p>
 
         <span className="flex md:justify-center md:items-center lg:space-x-3 md:space-x-1 space-x-1 mb-2">
-          <a href="/terms-conditions" className="hover:underline">
+          <Link to="/terms-conditions" className="hover:underline">
             Terms and Conditions
-          </a>
+          </Link>
           <span>|</span>
           <span>
-            <a href="/refund-returns-page" className="hover:underline">
+            <Link to="/refund-returns-page" className="hover:underline">
               Refund and Returns Policy
-            </a>
+            </Link>
           </span>
         </span>
       </div>
