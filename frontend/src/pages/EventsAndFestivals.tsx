@@ -40,7 +40,7 @@ export default function EventsAndFestivals() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="container mx-auto lg:px-10 md:px-4 px-6 my-14"
+      className="container mx-auto w-full flex flex-col lg:px-10 md:px-4 my-14"
     >
       <h3 className="text-3xl text-center font-semibold mb-10 mt-10">
         Our Festivals

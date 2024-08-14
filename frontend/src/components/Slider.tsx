@@ -14,6 +14,7 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
   // Move to the next slide
   const goToNextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    setProgress(0);
   }, [setCurrentIndex, slides.length]);
 
   // Move to the previous slide
@@ -21,6 +22,7 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + slides.length) % slides.length,
     );
+    setProgress(0);
   };
   const handleClickOutside = useCallback(
     (event: MouseEvent) => {
@@ -53,9 +55,9 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
           goToNextSlide();
           return 0;
         }
-        return prevProgress + 100 / (slides.length * 5);
+        return prevProgress + 25 / (slides.length * 5);
       });
-    }, 100);
+    }, 50);
 
     return () => clearInterval(interval);
   }, [currentIndex, slides.length, onClose, goToNextSlide]);
@@ -63,7 +65,7 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
   return (
     <div
       ref={sliderRef}
-      className="relative flex flex-col bg-transparent w-[460px] h-screen mx-auto"
+      className="relative flex flex-col bg-transparent w-[460px] h-full mx-auto"
     >
       {/*Slide Title */}
       <div className="w-full flex text-gray-300 absolute top-8 left-8 text-base gap-1">
