@@ -79,7 +79,6 @@ function getGalleries(): GalleryItem[] {
     { img: "/images/fri.webp", title: "Mangal Darshan" },
     { img: "/images/sat.webp", title: "Mangal Darshan" },
     { img: "/images/sun.webp", title: "Mangal Darshan" },
-    { img: "/images/mon.webp", title: "Mangal Darshan" },
   ];
 
   const fullDates = galleries.map((_, index) => {
@@ -130,7 +129,7 @@ export default function Media({ mediaSection }: MediaProps) {
       exit={{ opacity: 0 }}
       className="container mx-auto lg:px-10 md:px-4 px-6 my-14"
     >
-      <h3 className="text-4xl font-semibold mb-10 mt-10">
+      <h3 className="text-3xl text-center font-semibold mb-10 mt-10">
         {mediaSection === "gallery"
           ? "Daily Darshan Gallery"
           : "Kirtans & Lectures"}

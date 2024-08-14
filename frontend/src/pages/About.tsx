@@ -11,7 +11,10 @@ export default function About() {
     >
       <div id="about">
         <Writeup title="About ISKCON Noida">
-          <img src="/images/temple.png" className="rounded-lg shadow-lg mb-6" />
+          <img
+            src="/images/temple.webp"
+            className="rounded-lg shadow-lg mb-6"
+          />
           <p>
             Welcome to ISKCON Noida Temple, a spiritual oasis nestled at A-5
             Maharaja Agrasen Marg, Noida Sector 33, 201301, UP. Our temple is a
@@ -66,7 +69,7 @@ export default function About() {
       <div id="prabhupada">
         <Writeup title="About Prabhupada">
           <img
-            src="/images/prabhupada-1.jpg"
+            src="/images/prabhupada-1.webp"
             className="rounded-lg shadow-lg mb-6"
           />
           <p>
