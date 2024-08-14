@@ -42,7 +42,9 @@ export default function EventsAndFestivals() {
       exit={{ opacity: 0 }}
       className="container mx-auto lg:px-10 md:px-4 px-6 my-14"
     >
-      <h3 className="text-4xl font-semibold mb-10 mt-10">Our Festivals</h3>
+      <h3 className="text-3xl text-center font-semibold mb-10 mt-10">
+        Our Festivals
+      </h3>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {events.map((event, index) => (
