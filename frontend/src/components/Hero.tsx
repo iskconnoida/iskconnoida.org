@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import TempleScheduleModal from "./TempleScheduleModal";
 import TempleSchedule from "./TempleSchedule";
+import TempleScheduleModal from "./TempleScheduleModal";
 
 export default function Hero() {
   const [isModalOpen, setModalOpen] = useState(false);

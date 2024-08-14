@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { BiDonateHeart } from "react-icons/bi";
 import { CiCircleMore } from "react-icons/ci";
@@ -5,7 +6,6 @@ import { FaHandSparkles, FaHome } from "react-icons/fa";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { TfiGift } from "react-icons/tfi";
 import { Link, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
 
 function BottomBar() {
   const location = useLocation();
