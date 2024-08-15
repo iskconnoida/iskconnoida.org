@@ -1,0 +1,32 @@
+###############################################################
+# (!) CAUTION: DO NOT ALTER THIS FILE
+###############################################################
+
+
+## Development Environment ##
+#######################################
+
+# Use an Node base image
+FROM node as frontend-development
+
+# Declaring env
+ENV NODE_ENV development
+
+# Setting up the work directory
+WORKDIR /iskconnoida.org
+
+# Copy your application code
+COPY . .
+
+# Install frontend dependencies
+RUN cd frontend && yarn install
+
+# Install backend dependencies
+RUN cd backend && yarn install
+
+# Expose Ports
+EXPOSE 3000 5173
+
+# RUN development Server
+ENTRYPOINT ["yarn", "run", "dev"]
+
