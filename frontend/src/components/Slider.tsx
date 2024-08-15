@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 
@@ -63,7 +64,11 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
   }, [currentIndex, slides.length, onClose, goToNextSlide]);
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ type: "spring", duration: 0.5 }}
       ref={sliderRef}
       className="relative flex flex-col bg-transparent w-[460px] h-full mx-auto"
     >
@@ -83,13 +88,13 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
       <div className="absolute inset-0 flex items-center justify-between px-4">
         <button
           onClick={goToPrevSlide}
-          className="bg-transparent h-full w-1/2 text-white p-2 rounded-full shadow-lg"
+          className="bg-transparent text-transparent h-full w-1/4"
         >
           &lt;
         </button>
         <button
           onClick={goToNextSlide}
-          className="bg-transparent h-full w-1/2 text-white p-2 rounded-full shadow-lg"
+          className="bg-transparent text-transparent h-full w-3/4"
         >
           &gt;
         </button>
@@ -97,13 +102,13 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
       {/* Close Button */}
       <button
         onClick={onClose}
-        className="absolute right-4 top-8 text-gray-300 shadow-lg"
+        className="absolute right-4 top-5 text-gray-300 shadow-lg shadow-black/30 bg-black/50 border-2 hover:bg-gray-600/70 p-3 rounded-full"
       >
         <FaXmark />
       </button>
 
       {/* Progress Bar */}
-      <div className="absolute top-1 left-0 right-0 flex h-1 gap-2">
+      <div className="absolute top-0 left-0 right-0 flex h-1 gap-2">
         {slides.map((_, index) => (
           <div
             key={index}
@@ -120,7 +125,7 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

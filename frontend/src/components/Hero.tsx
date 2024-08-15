@@ -74,7 +74,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            transition={{ type: "spring", duration: 0.5 }}
+            transition={{ type: "spring", duration: 0.75 }}
             className="bg-white sm:w-2/3 w-11/12 h-full rounded-t-2xl z-10 pt-4"
           >
             <TempleSchedule />

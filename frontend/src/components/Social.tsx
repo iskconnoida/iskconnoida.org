@@ -18,7 +18,7 @@ export default function Social() {
           <div className="rounded-xl flex flex-col md:bg-white md:shadow-lg mx-auto outline-none outline-0 w-fit h-fit md:w-[400px] md:h-[460px] lg:w-[500px] lg:h-[555px]">
             <Link
               to="https://youtube.com/@ISKCONNOIDAofficial"
-              className="p-6 flex md:h-[142px]"
+              className="p-6 hidden md:flex md:h-[142px]"
             >
               <img
                 src="https://yt3.googleusercontent.com/GedslwcJY8kiJgoFJfyjFaGrQtUsshA1dz6t1AU4NWUTXgi0Yg3QGiKXSn5c5xeYXkOPkY2e1wA=s160-c-k-c0x00ffffff-no-rj"

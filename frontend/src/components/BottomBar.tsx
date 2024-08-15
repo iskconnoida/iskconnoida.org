@@ -5,11 +5,12 @@ import { CiCircleMore } from "react-icons/ci";
 import { FaHandSparkles, FaHome } from "react-icons/fa";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { TfiGift } from "react-icons/tfi";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 function BottomBar() {
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
+  const { id } = useParams();
   const [isPopupVisible, setPopupVisible] = useState(false);
   const togglePopup = () => setPopupVisible(!isPopupVisible);
 
@@ -59,7 +60,8 @@ function BottomBar() {
           to="/events"
           onClick={() => setPopupVisible(false)}
           className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 rounded-lg xs:px-1 px-1 z-20 ${
-            isActive("/events") && !isPopupVisible
+            (isActive("/events") || isActive(`/events/${id}`)) &&
+            !isPopupVisible
               ? "text-violet-600"
               : "bg-white"
           }`}
