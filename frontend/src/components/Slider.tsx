@@ -85,7 +85,7 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
       />
 
       {/* Navigation Buttons */}
-      <div className="absolute inset-0 flex items-center justify-between px-4">
+      <div className="absolute inset-0 flex items-center justify-between">
         <button
           onClick={goToPrevSlide}
           className="bg-transparent text-transparent h-full w-1/4"

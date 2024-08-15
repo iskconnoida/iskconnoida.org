@@ -144,18 +144,19 @@ export default function Footer() {
           <div className="p-2">
             <h3 className="mb-1 font-semibold text-xl">Contact Us</h3>
             <ul>
-              <li className="mb-4 flex items-center">
-                Call us at:
+              <li className="mb-4 items-center">
+                <span className="text-xl">Call us at:</span>
+                <br />
                 <Link
                   to="tel:+919319681501"
-                  className="hover:underline uppercase text-md mx-1"
+                  className="hover:underline uppercase text-md mr-1"
                 >
                   9319681501
                 </Link>
                 or
                 <Link
                   to="tel:+919319681502"
-                  className="hover:underline uppercase text-md mx-1"
+                  className="hover:underline uppercase text-md ml-1"
                 >
                   9319681502
                 </Link>
@@ -164,7 +165,7 @@ export default function Footer() {
                 <span className="text-xl">Email Us At:</span>
                 <Link
                   to="mailto:connect@iskconnoida.org"
-                  className="hover:underline text-lg"
+                  className="hover:underline text-md"
                 >
                   connect@iskconnoida.org
                 </Link>
