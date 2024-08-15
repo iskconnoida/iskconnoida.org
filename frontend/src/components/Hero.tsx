@@ -59,12 +59,12 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.65 }}
-          className="font-extrabold h-full w-full text-white pb-4 text-shadow shadow-gray-900 flex flex-col z-10"
+          className="h-full w-full text-white pb-4 text-shadow shadow-gray-900 flex flex-col z-10"
         >
-          <h1 className="text-xl sm:text-2xl flex justify-center items-end mt-auto py-4 h-1/2">
+          <h1 className="text-xl sm:text-2xl font-semibold flex justify-center items-end mt-auto py-4 h-1/2">
             Welcome To
           </h1>
-          <h1 className="text-2xl sm:text-5xl font-bold flex justify-center items-end pb-2">
+          <h1 className="text-2xl sm:text-5xl font-semibold flex justify-center items-end pb-2">
             SRI SRI RADHA GOVIND DEV JI TEMPLE
           </h1>
         </motion.div>

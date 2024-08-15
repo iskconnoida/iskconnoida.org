@@ -45,7 +45,7 @@ const TempleScheduleModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
           <div>
             <p className="font-bold text-lg">05:00AM - 05:20AM</p>
-            <p>Tulasi-Puja</p>
+            <p>Tulasi Puja</p>
             <p className="text-sm text-gray-600">Honoring Tulasi devi</p>
           </div>
           <div>
@@ -91,7 +91,7 @@ const TempleScheduleModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
           <div>
             <p className="font-bold text-lg">07:00PM - 08:15PM</p>
-            <p>Bhagavad-gita discourse</p>
+            <p>Bhagavad Gita discourse</p>
             <p className="text-sm text-gray-600">
               Discourse from Vedic scripture
             </p>

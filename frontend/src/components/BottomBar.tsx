@@ -25,56 +25,56 @@ function BottomBar() {
         <Link
           to="/"
           onClick={() => setPopupVisible(false)}
-          className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 rounded-lg xs:px-1 px-1 text-right z-20 ${
+          className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 rounded-lg xs:px-1 px-1 text-center z-20 ${
             isActive("/") && !isPopupVisible ? "text-violet-600" : "bg-white"
           }`}
         >
           {" "}
-          <FaHome size={24} className="ml-1" /> Home{" "}
+          <FaHome size={24} className="mx-auto" /> Home{" "}
         </Link>
         <Link
           to="/services"
           onClick={() => setPopupVisible(false)}
-          className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600  rounded-lg xs:px-1 px-1 z-20 ${
+          className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 text-center rounded-lg xs:px-1 px-1 z-20 ${
             isActive("/services") && !isPopupVisible
               ? "text-violet-600"
               : "bg-white"
           }`}
         >
           {" "}
-          <FaHandSparkles size={24} className="ml-2" /> Services
+          <FaHandSparkles size={24} className="mx-auto" /> Services
         </Link>
         <Link
           to="/donate"
           onClick={() => setPopupVisible(false)}
-          className={`xs:text-xs md:text-base lg:text-xl font-semibold text-shadow-lg px-2 py-2 rounded-lg shadow-md border border-orange-300 z-20 ${
+          className={`xs:text-xs md:text-base lg:text-xl font-semibold text-shadow-lg text-center px-2 py-2 rounded-lg shadow-md border border-orange-300 z-20 ${
             isActive("/donate")
               ? "bg-orange-500 text-white"
               : "text-orange-900 bg-yellow-500 shadow-orange-200"
           }`}
         >
           {" "}
-          <TfiGift size={15} className="ml-3" /> Donate
+          <TfiGift size={15} className="mx-auto" /> Donate
         </Link>
         <Link
           to="/events"
           onClick={() => setPopupVisible(false)}
-          className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 rounded-lg xs:px-1 px-1 z-20 ${
+          className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 text-center rounded-lg xs:px-1 px-1 z-20 ${
             (isActive("/events") || isActive(`/events/${id}`)) &&
             !isPopupVisible
               ? "text-violet-600"
               : "bg-white"
           }`}
         >
-          <BiDonateHeart size={24} className="ml-2" /> Festivals
+          <BiDonateHeart size={24} className="mx-auto" /> Festivals
         </Link>
         <button
           onClick={togglePopup}
-          className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 rounded-lg xs:px-1 px-1 z-20 ${
+          className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 text-center rounded-lg xs:px-1 px-1 z-20 ${
             isPopupVisible ? "text-violet-600" : "bg-white"
           }`}
         >
-          <CiCircleMore size={24} className="ml-0" /> More
+          <CiCircleMore size={24} className="mx-auto" /> More
         </button>
         <AnimatePresence>
           {isPopupVisible && (

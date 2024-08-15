@@ -18,13 +18,13 @@ export default function Social() {
           <div className="rounded-xl flex flex-col md:bg-white md:shadow-lg mx-auto outline-none outline-0 w-fit h-fit md:w-[400px] md:h-[460px] lg:w-[500px] lg:h-[555px]">
             <Link
               to="https://youtube.com/@ISKCONNOIDAofficial"
-              className="p-6 hidden md:flex md:h-[142px]"
+              className="p-6 hidden md:flex md:h-[142px] lg:h-[157px]"
             >
               <img
                 src="https://yt3.googleusercontent.com/GedslwcJY8kiJgoFJfyjFaGrQtUsshA1dz6t1AU4NWUTXgi0Yg3QGiKXSn5c5xeYXkOPkY2e1wA=s160-c-k-c0x00ffffff-no-rj"
                 className="rounded-full border my-auto h-14 w-14 md:h-20 md:w-20 lg:h-24 lg:w-24"
               />
-              <div className="pl-2">
+              <div className="h-fit pl-2 my-auto">
                 <div className="font-bold">ISKCONNOIDAofficial</div>
                 <div className="text-sm">
                   "Enrich your spiritual journey at Govind Dham and
