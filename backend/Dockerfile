@@ -19,5 +19,5 @@ COPY . .
 RUN npm install
 
 # Start Server
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["yarn", "dev"]
 
