@@ -56,7 +56,7 @@ export default function Donate() {
         to="https://iic.iskconnoida.org/"
         className="w-full py-4 rounded-xl bg-orange-700 hover:bg-orange-800 text-white font-bold tracking-wide text-lg text-center shadow-lg shadow-orange-200 hover:shadow-orange-300 mb-10"
       >
-        Launch DMS Dashboard
+        Login to DMS
       </Link>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {events.map((donate, index) => (

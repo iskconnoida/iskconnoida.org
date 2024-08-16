@@ -73,7 +73,12 @@ export default function Facilities({ onHomePage }: FacilitiesProps) {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {facilities.map((facility) => (
-          <Card img={facility.img} dateless title={facility.title}>
+          <Card
+            key={facility.id}
+            img={facility.img}
+            dateless
+            title={facility.title}
+          >
             {facility.description}
           </Card>
         ))}
