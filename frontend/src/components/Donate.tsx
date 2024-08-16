@@ -59,6 +59,7 @@ export default function Donate() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {events.map((event) => (
           <Card
+            key={event.id}
             img={"https://iic.iskconnoida.org/" + event.img}
             dateless
             title={event.title}
