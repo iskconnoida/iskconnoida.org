@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -13,7 +15,11 @@ const TempleScheduleModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 50 }}
+      transition={{ type: "spring", duration: 0.5 }}
       className="fixed inset-0 bg-black/50 pt-36 flex items-center justify-center z-50"
       onClick={handleOverlayClick}
     >
@@ -39,7 +45,7 @@ const TempleScheduleModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
           <div>
             <p className="font-bold text-lg">05:00AM - 05:20AM</p>
-            <p>Tulasi-Puja</p>
+            <p>Tulasi Puja</p>
             <p className="text-sm text-gray-600">Honoring Tulasi devi</p>
           </div>
           <div>
@@ -85,7 +91,7 @@ const TempleScheduleModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
           <div>
             <p className="font-bold text-lg">07:00PM - 08:15PM</p>
-            <p>Bhagavad-gita discourse</p>
+            <p>Bhagavad Gita discourse</p>
             <p className="text-sm text-gray-600">
               Discourse from Vedic scripture
             </p>
@@ -99,7 +105,7 @@ const TempleScheduleModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

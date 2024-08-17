@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 export default function TermsAndConditions() {
   return (
-    <div className="w-full px-8 lg:px-12 mt-12">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="w-full px-8 lg:px-12 mt-12"
+    >
       <div className="flex flex-col gap-5 my-16">
         <h1 className="text-3xl font-bold">Terms and Conditions</h1>
         <p>Welcome to ISKCON NOIDA!</p>
@@ -62,12 +70,12 @@ export default function TermsAndConditions() {
         <p>
           This Agreement shall begin on the date hereof. Our Terms and
           Conditions were created with the help of the{" "}
-          <a
-            href="https://www.termsandconditionsgenerator.com/"
+          <Link
+            to="https://www.termsandconditionsgenerator.com/"
             className="text-blue-500 underline"
           >
             Free Terms and Conditions Generator
-          </a>
+          </Link>
           .
         </p>
         <p>
@@ -271,6 +279,6 @@ export default function TermsAndConditions() {
           damage of any nature.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
