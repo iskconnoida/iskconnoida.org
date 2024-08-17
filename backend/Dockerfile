@@ -18,6 +18,9 @@ COPY . .
 # Install dependencies
 RUN yarn install
 
+# Expose Port
+EXPOSE 3000
+
 # Start Server
 ENTRYPOINT ["yarn", "dev"]
 

@@ -46,6 +46,9 @@ COPY --from=frontend-builder /iskconnoida.org/dist/ .
 
 STOPSIGNAL SIGTERM
 
+# Expose Port
+EXPOSE 80
+
 # RUN nginx in daemon mode
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
 

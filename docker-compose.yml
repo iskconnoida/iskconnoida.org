@@ -10,8 +10,6 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    ports:
-      - '3000:3000'
     
     
   frontend:
@@ -21,8 +19,6 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    ports:
-      - '8000:80'
-      - '4430:443'
+
     
 
