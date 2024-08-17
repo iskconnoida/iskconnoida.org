@@ -20,6 +20,7 @@ export default function Footer() {
                 src="/images/IskconLogoForFooter.webp"
                 alt="Iskcon Noida"
                 className="w-[140px] h-[140px] mr-3"
+                loading="lazy"
               />
               <span>International Society for Krishna Consciousness</span>
             </div>

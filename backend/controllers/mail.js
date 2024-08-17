@@ -1,24 +1,27 @@
 import "dotenv/config";
 import nodemailer from "nodemailer";
 
-export async function sendEmail(req, res) {
-  const { name, email, message } = req.body;
-
-  console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
-
+async function sendEmail(req, res) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
+      user: process.env.SENDER_EMAIL,
+      pass: process.env.AUTH_TOKEN,
     },
   });
+
+  const { name, email, phone, message } = req.body;
+  console.log(
+    `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
+  );
+
   const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: email,
+    from: process.env.SENDER_EMAIL,
+    to: "connect@iskconnoida.org",
     subject: "New Message from Contact Form",
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
   };
+
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log("Error:", error);
@@ -35,3 +38,5 @@ export async function sendEmail(req, res) {
     }
   });
 }
+
+export default sendEmail;

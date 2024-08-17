@@ -6,21 +6,13 @@
     "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": [
-      "../eslint.config.mjs"
-    ],
-    "env": {
-      "node": true
-    }
-  },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "mongoose": "^8.5.2",
+    "mongoose": "^8.5.3",
     "nodemailer": "^6.9.14"
   },
   "devDependencies": {

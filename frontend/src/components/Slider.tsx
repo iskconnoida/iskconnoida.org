@@ -82,6 +82,7 @@ const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
         src={slides[currentIndex].img}
         alt={slides[currentIndex].title}
         className="w-full h-full object-cover"
+        loading="lazy"
       />
 
       {/* Navigation Buttons */}

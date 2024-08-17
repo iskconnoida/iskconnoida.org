@@ -18,7 +18,7 @@ WORKDIR /iskconnoida.org
 COPY . .
 
 # Install frontend dependencies
-RUN yarn install && npm run build
+RUN yarn install && yarn build
 
 
 

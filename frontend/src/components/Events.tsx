@@ -52,10 +52,11 @@ export default function Events() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {events.map((event) => (
           <Card
+            key={event.id}
             img={"https://iic.iskconnoida.org/" + event.img}
             date={new Date(event.date)}
             title={event.title}
-            article={"events/" + event.id}
+            article={"/events/" + event.id}
             donate="https://iic.iskconnoida.org/donate/SHRI_KRISHNA_JANMASHTAMI_2024,_NOIDA"
           >
             {event.description}
