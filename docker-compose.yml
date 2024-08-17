@@ -5,19 +5,40 @@
 
 version: '3.8'
 services:
-  backend:
-    container_name: isk-backend
+
+  ## Development Services ##
+  dev-backend:
+    container_name: isk-dev-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    profiles: [development]
+
+  dev-frontend:
+    depends_on:
+      - dev-backend
+    container_name: isk-dev-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    profiles: [development]
+  ## Development Services ##
+
+  ## Production Services ##
+  prd-backend:
+    container_name: isk-prd-backend
     build:
       context: ./backend
       dockerfile: Dockerfile
+    profiles: [production]
     
-    
-  frontend:
+  prd-frontend:
     depends_on:
-      - backend
-    container_name: isk-frontend
+      - prd-backend
+    container_name: isk-prd-frontend
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    
+    profiles: [production]
+  ## Production Services ##
 
