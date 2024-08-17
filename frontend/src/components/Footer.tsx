@@ -151,13 +151,13 @@ export default function Footer() {
                 <br />
                 <Link
                   to="tel:+919319681501"
-                  className="hover:underline uppercase text-md mr-1"
+                  className="hover:underline uppercase text-md"
                 >
                   9319681501
                 </Link>,
                 <Link
                   to="tel:+919319681502"
-                  className="hover:underline uppercase text-md ml-1"
+                  className="hover:underline uppercase text-md ml-1 mr-1"
                 >
                   9319681502
                 </Link>
