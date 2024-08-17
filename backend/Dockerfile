@@ -18,6 +18,9 @@ COPY . .
 # Install dependencies
 RUN npm install
 
+# Expose Port
+EXPOSE 3000
+
 # Start Server
 ENTRYPOINT ["npm", "start"]
 
