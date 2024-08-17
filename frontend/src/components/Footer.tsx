@@ -162,6 +162,13 @@ export default function Footer() {
                 >
                   9319681502
                 </Link>
+                or
+                <Link
+                  to="tel:+919319681516"
+                  className="hover:underline uppercase text-md ml-1"
+                >
+                  9319681516
+                </Link>
               </li>
               <li className="flex flex-col items-left">
                 <span className="text-xl">Email Us At:</span>
