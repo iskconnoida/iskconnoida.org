@@ -14,6 +14,7 @@ export default function About() {
           <img
             src="/images/temple.webp"
             className="rounded-lg shadow-lg mb-6"
+            loading="lazy"
           />
           <p>
             Welcome to ISKCON Noida Temple, a spiritual oasis nestled at A-5
@@ -71,6 +72,7 @@ export default function About() {
           <img
             src="/images/prabhupada-1.webp"
             className="rounded-lg shadow-lg mb-6"
+            loading="lazy"
           />
           <p>
             Srila Prabhupada, also known as His Divine Grace A.C. Bhaktivedanta

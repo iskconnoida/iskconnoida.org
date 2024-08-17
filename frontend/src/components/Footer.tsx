@@ -15,12 +15,14 @@ export default function Footer() {
       <div className="flex flex-col desktop:flex-row mb-3 desktop:items-center tablet:gap-4">
         <div className="flex-grow">
           <div className="flex flex-col md:items-center">
-            <div className="flex items-center mb-4">
+            <div className="flex flex-col gap-4 items-center text-center mb-4">
               <img
                 src="/images/IskconLogoForFooter.webp"
                 alt="Iskcon Noida"
                 className="w-[140px] h-[140px] mr-3"
+                loading="lazy"
               />
+              <span>International Society for Krishna Consciousness</span>
             </div>
             <p className="md:text-center mb-4">
               ISKCON Noida, A-5, Maharaja Agrasen Marg, <br />

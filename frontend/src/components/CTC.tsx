@@ -30,7 +30,7 @@ export default function CTC() {
     axios({
       method: "POST",
       // url: "/send",
-      url: "localhost:3000/send",
+      url: "http://localhost:3000/send",
       data: state,
     })
       .then((response: AxiosResponse) => {
@@ -153,6 +153,7 @@ export default function CTC() {
                       type="text"
                       className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-violet-400 focus:outline-none focus:shadow-outline"
                       id="name"
+                      pattern="([A-Z.a-z]{2,}\s?)+"
                       name="name"
                       value={state.name}
                       onChange={(e) =>
@@ -178,6 +179,7 @@ export default function CTC() {
                       type="email"
                       className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-violet-400 focus:outline-none focus:shadow-outline"
                       id="email"
+                      pattern="^[\w\.]+@([\w-]+\.)+[\w-]{2,5}$"
                       name="email"
                       value={state.email}
                       onChange={(e) =>
@@ -198,11 +200,12 @@ export default function CTC() {
                       Phone
                     </label>
                     <input
-                      placeholder="+91 123 456 7890"
+                      placeholder="+911234567890"
                       required
                       type="tel"
                       className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-violet-400 focus:outline-none focus:shadow-outline"
                       id="phone"
+                      pattern="[+]91(6|7|8|9)\d{9}$"
                       name="phone"
                       value={state.phone}
                       onChange={(e) =>

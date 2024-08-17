@@ -12,6 +12,7 @@ export default function Social() {
             src="https://www.instagram.com/iskcon_noida/embed/"
             className="rounded-xl shadow-lg mx-auto outline-none outline-0 w-[350px] h-[442px] md:w-[400px] md:h-[460px] lg:w-[500px] lg:h-[555px]"
             scrolling="no"
+            loading="lazy"
           />
         </div>
         <div className="md:mx-4 my-4 md:my-0 md:w-1/2 h-full flex justify-center">
@@ -23,6 +24,7 @@ export default function Social() {
               <img
                 src="https://yt3.googleusercontent.com/GedslwcJY8kiJgoFJfyjFaGrQtUsshA1dz6t1AU4NWUTXgi0Yg3QGiKXSn5c5xeYXkOPkY2e1wA=s160-c-k-c0x00ffffff-no-rj"
                 className="rounded-full border my-auto h-14 w-14 md:h-20 md:w-20 lg:h-24 lg:w-24"
+                loading="lazy"
               />
               <div className="h-fit pl-2 my-auto">
                 <div className="font-bold">ISKCONNOIDAofficial</div>
@@ -34,8 +36,9 @@ export default function Social() {
               </div>
             </Link>
             <iframe
-              src="https://www.youtube.com/embed?list=UULFuirvO7R7VK16rTwdgHR9fg"
+              src="https://www.youtube-nocookie.com/embed?list=UULFuirvO7R7VK16rTwdgHR9fg"
               className="rounded-xl md:rounded-none shadow-lg md:shadow-none mt-auto outline-none outline-0 w-[350px] h-[200px] md:w-[400px] md:h-[265px] lg:w-[500px] lg:h-[330px]"
+              loading="lazy"
             />
             <Link
               to="https://youtube.com/@ISKCONNOIDAofficial"

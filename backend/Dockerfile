@@ -16,8 +16,8 @@ WORKDIR /backend/server
 COPY . .
 
 # Install dependencies
-RUN npm install
+RUN yarn install
 
 # Start Server
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["yarn", "dev"]
 
