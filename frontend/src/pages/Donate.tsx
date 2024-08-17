@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
 import Card from "../components/Card";
 import styles from "../components/Card.module.css";
+import { Link } from "react-router-dom";
 
 type Response = Record<
   string,
@@ -43,13 +45,23 @@ export default function Donate() {
     events.push(res[e]);
   }
   return (
-    <div className="container mx-auto lg:px-10 md:px-4 px-6 my-14">
-      <h3 className="text-4xl font-semibold mb-10 mt-10">Donation</h3>
-
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="container flex flex-col w-full px-auto lg:px-10 md:px-4 my-14"
+    >
+      <h3 className="text-4xl text-center font-semibold mt-10 mb-5">Donate</h3>
+      <Link
+        to="https://iic.iskconnoida.org/"
+        className="w-full py-4 rounded-xl bg-orange-700 hover:bg-orange-800 text-white font-bold tracking-wide text-lg text-center shadow-lg shadow-orange-200 hover:shadow-orange-300 mb-10"
+      >
+        Login to DMS
+      </Link>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {events.map((donate, index) => (
+        {events.map((donate) => (
           <Card
-            key={index}
+            key={donate.id}
             img={"https://iic.iskconnoida.org/" + donate.img}
             dateless
             title={donate.title}
@@ -60,6 +72,6 @@ export default function Donate() {
           </Card>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

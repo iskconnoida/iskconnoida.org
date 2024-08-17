@@ -1,8 +1,9 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaChevronDown, FaEnvelope, FaWhatsapp } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import { motion } from "framer-motion";
 export default function CTC() {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [buttonText, setButtonText] = useState("Submit");
@@ -29,7 +30,7 @@ export default function CTC() {
     axios({
       method: "POST",
       // url: "/send",
-      url: "localhost:3000/send",
+      url: "http://localhost:3000/send",
       data: state,
     })
       .then((response: AxiosResponse) => {
@@ -105,14 +106,14 @@ export default function CTC() {
   return (
     <div className="w-fit z-10 flex flex-col items-center fixed bottom-20 md:bottom-4 right-4 md:right-10">
       <div className="w-12 h-12 text-white shadow-lg hover:shadow-xl bg-[#25D366] rounded-full">
-        <a
-          href="http://api.whatsapp.com/send/?phone=919319681501&text=Hare+Krishna"
+        <Link
+          to="http://api.whatsapp.com/send/?phone=919319681501&text=Hare+Krishna"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full h-full inline-flex items-center justify-center"
         >
           <FaWhatsapp size={32} />
-        </a>
+        </Link>
       </div>
       <div className="w-12 h-12 mt-4 text-white shadow-lg hover:shadow-xl bg-[#ffb01f] rounded-full">
         <button
@@ -126,7 +127,7 @@ export default function CTC() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.4 }}
+            transition={{ type: "spring", duration: 0.4 }}
             className="z-50 fixed md:mt-20 md:bottom-3 md:right-10 inset-0 flex md:items-end md:justify-end bg-opacity-0 px-6"
           >
             <div className="z-50 relative h-fit mt-auto mb-16 w-full md:w-2/3 lg:w-1/3 bg-white rounded-lg p-6 shadow-lg shadow-gray-400 border-2 border-[#ffb01f] transition-opacity duration-300">
@@ -152,6 +153,7 @@ export default function CTC() {
                       type="text"
                       className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-violet-400 focus:outline-none focus:shadow-outline"
                       id="name"
+                      pattern="([A-Z.a-z]{2,}\s?)+"
                       name="name"
                       value={state.name}
                       onChange={(e) =>
@@ -177,6 +179,7 @@ export default function CTC() {
                       type="email"
                       className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-violet-400 focus:outline-none focus:shadow-outline"
                       id="email"
+                      pattern="^[\w\.]+@([\w-]+\.)+[\w-]{2,5}$"
                       name="email"
                       value={state.email}
                       onChange={(e) =>
@@ -197,11 +200,12 @@ export default function CTC() {
                       Phone
                     </label>
                     <input
-                      placeholder="+91 123 456 7890"
+                      placeholder="+911234567890"
                       required
                       type="tel"
                       className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-violet-400 focus:outline-none focus:shadow-outline"
                       id="phone"
+                      pattern="[+]91(6|7|8|9)\d{9}$"
                       name="phone"
                       value={state.phone}
                       onChange={(e) =>

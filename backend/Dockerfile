@@ -16,11 +16,11 @@ WORKDIR /backend/server
 COPY . .
 
 # Install dependencies
-RUN npm install
+RUN yarn install
 
 # Expose Port
 EXPOSE 3000
 
 # Start Server
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["yarn", "dev"]
 

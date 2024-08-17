@@ -28,7 +28,8 @@ export default {
           "linear-gradient(to top left, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FCAF45, #FFDC80)",
       },
       fontFamily: {
-        sans: ["Quicksand", ...defaultTheme.fontFamily.sans],
+        sans: ["Geologica", ...defaultTheme.fontFamily.sans],
+        custom: ["Permanent Marker", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         red: {

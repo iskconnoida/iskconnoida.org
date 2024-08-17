@@ -11,19 +11,19 @@ export default function Prabhupada() {
             <div className="z-[3] h-full w-1/2 items-center text-center">
               FOUNDER ACHARYA
               <p className="text-4xl font-custom mb-4">
-                {/* TODO: Implement custom font */}
                 His Divine Grace A.C. Bhaktivedanta Swami Srila Prabhupada
               </p>
               <p>
                 The dear most friend and ever well wisher of one and all who
                 travelled the world to give the same trancendental bliss of
-                Kṛṣṇa Consciousness that he constantly relishes.
+                Krishna Consciousness that he constantly relishes.
               </p>
             </div>
             <img
               src="/images/prabhupada.webp"
               alt="prabhupada"
               className="w-1/4 rounded-full border-4 border-white shadow-lg shadow-gray-500"
+              loading="lazy"
             />
           </div>
         ) : (
@@ -32,6 +32,7 @@ export default function Prabhupada() {
               src="/images/prabhupada.webp"
               alt="prabhupada"
               className="w-2/3 rounded-full m-4 border-4 z-[3] border-white shadow-lg shadow-gray-500"
+              loading="lazy"
             />
             <div className="z-[3] h-full w-full py-2 px-8 text-center">
               FOUNDER ACHARYA
