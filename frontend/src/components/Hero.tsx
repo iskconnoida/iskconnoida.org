@@ -39,7 +39,6 @@ export default function Hero() {
   }
 
   useEffect(() => {
-    console.log(document.getElementById("hero"));
     document.getElementById("hero")!.style.backgroundImage = `url(${imgURL})`;
   }, [imgURL]);
 

@@ -59,9 +59,9 @@ export default function Donate() {
         Login to DMS
       </Link>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {events.map((donate, index) => (
+        {events.map((donate) => (
           <Card
-            key={index}
+            key={donate.id}
             img={"https://iic.iskconnoida.org/" + donate.img}
             dateless
             title={donate.title}

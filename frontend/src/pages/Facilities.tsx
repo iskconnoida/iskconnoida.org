@@ -20,28 +20,28 @@ const res: Response = {
   facilities_response1: {
     id: "13",
     title: "Guest House",
-    img: "https://iskconnoida.org/wp-content/uploads/2023/12/static-_1665002df6dabb1-Edited-scaled.jpeg",
+    img: "/images/static-_1665002df6dabb1-Edited-scaled.webp",
     description:
       "Stay at ISKCON's BACK TO HOME Guest houses, get a chance to live close to temple and spend the time of your stay in complete Krishna Consciousness.",
   },
   facilities_response2: {
     id: "14",
     title: "Krishna Expo",
-    img: "https://iskconnoida.org/wp-content/uploads/2023/12/1780066_10151922662621364_1967521465_o.jpg",
+    img: "/images/1780066_10151922662621364_1967521465_o.webp",
     description:
       "Explore Krishna's Leelas presented in a beautiful form, that is attractive to all.",
   },
   facilities_response3: {
     id: "15",
     title: "Function Halls",
-    img: "https://iskconnoida.org/wp-content/uploads/2023/12/umage-1024x682-Edited.jpeg",
+    img: "/images/umage-1024x682-Edited.webp",
     description:
-      "Celebrate your Family and Corporate functions with the auspicious blessings of Sri Sri Radha Govind Devji. With space",
+      "Celebrate your Family and Corporate functions with the auspicious blessings of Sri Sri Radha Govind Devji.",
   },
   facilities_response4: {
     id: "16",
     title: "Govindas Restaurant",
-    img: "https://iskconnoida.org/wp-content/uploads/2023/12/download-10.jpeg",
+    img: "/images/download-10.webp",
     description:
       "Dine a Pure Veg meal at the world famous ISKCON Govindas Restaurant and Bakery. Everything here from cakes and pastries to pastas and main course is Pure veg.",
   },
@@ -92,31 +92,23 @@ export default function Facilities({ onHomePage }: FacilitiesProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="container mx-auto lg:px-10 md:px-4 my-14"
+      className="w-full lg:px-10 md:px-4 my-14"
     >
       <h3 className="text-3xl text-center font-semibold mb-10 mt-10">
         Temple Facilities
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-        {facilities.map((facility, index) => (
-          <div key={index}>
-            <div className="rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
-              <div className="w-full flex items-center justify-center h-fit">
-                <img
-                  src={facility.img}
-                  alt={facility.title}
-                  className="w-full rounded-lg"
-                />
-              </div>
-              <div className="w-full h-full bg-white flex flex-col items-center justify-center p-6">
-                <h5 className="text-2xl text-center font-semibold">
-                  {facility.title}
-                </h5>
-                <p className="pt-2 text-center">{facility.description}</p>
-              </div>
-            </div>
-          </div>
+      <div className="items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {facilities.map((facility) => (
+          <Card
+            key={facility.id}
+            img={facility.img}
+            dateless
+            title={facility.title}
+            className="min-h-full"
+          >
+            {facility.description}
+          </Card>
         ))}
       </div>
     </motion.div>

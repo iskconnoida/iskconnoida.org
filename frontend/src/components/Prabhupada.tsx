@@ -23,6 +23,7 @@ export default function Prabhupada() {
               src="/images/prabhupada.webp"
               alt="prabhupada"
               className="w-1/4 rounded-full border-4 border-white shadow-lg shadow-gray-500"
+              loading="lazy"
             />
           </div>
         ) : (
@@ -31,6 +32,7 @@ export default function Prabhupada() {
               src="/images/prabhupada.webp"
               alt="prabhupada"
               className="w-2/3 rounded-full m-4 border-4 z-[3] border-white shadow-lg shadow-gray-500"
+              loading="lazy"
             />
             <div className="z-[3] h-full w-full py-2 px-8 text-center">
               FOUNDER ACHARYA

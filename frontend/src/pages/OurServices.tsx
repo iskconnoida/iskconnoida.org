@@ -54,6 +54,7 @@ export default function OurServices() {
                   src={service.img}
                   alt={service.title}
                   className="w-28 h-28"
+                  loading="lazy"
                 />
               </div>
               <div className="w-full p-2 h-20 flex flex-col items-center">

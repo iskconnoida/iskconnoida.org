@@ -16,23 +16,27 @@ interface Video {
 
 const videos = [
   {
-    kirtan: "https://www.youtube.com/embed/AJSa73dhroQ?si=UjEcenbJ9tTxW0Pl",
+    kirtan:
+      "https://www.youtube-nocookie.com/embed/AJSa73dhroQ?si=UjEcenbJ9tTxW0Pl",
     title:
       "75th Vyasa Puja of HH Jayapataka Swami Maharaj @ISKCONNOIDAofficial",
     date: "April 19, 2024",
   },
   {
-    kirtan: "https://www.youtube.com/embed/sqmIpsJZzNA?si=VDmwFrqrBo7m7Ehv",
+    kirtan:
+      "https://www.youtube-nocookie.com/embed/sqmIpsJZzNA?si=VDmwFrqrBo7m7Ehv",
     title: "Special Interaction Session with HH Guru Prasad Swami Maharaj",
     date: "April 07, 2024",
   },
   {
-    kirtan: "https://www.youtube.com/embed/AMA-cZXRczI?si=SLwgzHIQYfi2zdkA",
+    kirtan:
+      "https://www.youtube-nocookie.com/embed/AMA-cZXRczI?si=SLwgzHIQYfi2zdkA",
     title: "Special Brahmotsav Lecture by HH Lokanath Swami Maharaj",
     date: "March 31, 2024",
   },
   {
-    kirtan: "https://www.youtube.com/embed/e6rw0CUMU1I?si=YBWYeIEst2D77c4K",
+    kirtan:
+      "https://www.youtube-nocookie.com/embed/e6rw0CUMU1I?si=YBWYeIEst2D77c4K",
     title:
       "Chaitanya Charitamrita Adi lila 7.24 by HH Rup Rugnath swami Maharaj",
     date: "April 19, 2023",
@@ -190,7 +194,11 @@ export default function Media({ mediaSection }: MediaProps) {
               >
                 <div className="rounded-lg shadow-md overflow-hidden h-96 flex flex-col items-start justify-start">
                   <div className="w-full flex items-center justify-center h-80">
-                    <iframe className="w-full h-80" src={video.kirtan}></iframe>
+                    <iframe
+                      className="w-full h-80"
+                      src={video.kirtan}
+                      loading="lazy"
+                    />
                   </div>
                   <div className="p-2 px-4 h-20">
                     <h1 className="text-base font-semibold text-gray-800 line-clamp-1">
@@ -223,7 +231,8 @@ export default function Media({ mediaSection }: MediaProps) {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="no-referrer"
                   allowFullScreen
-                ></iframe>
+                  loading="lazy"
+                />
                 <div className="mt-4">
                   <h1 className="text-xl font-semibold text-gray-800">
                     {selectedVideo.title}
