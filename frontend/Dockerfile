@@ -1,5 +1,6 @@
 ###############################################################
-# (!) CAUTION: DO NOT ALTER THIS FILE
+# (!) CAUTION: PLEASE DO NOT ALTER THIS FILE BY YOURSELF!
+# IF WANT TO CHANGE ANYTHING THEN CONTACT TO THE ADMIN.
 ###############################################################
 
 
@@ -43,6 +44,9 @@ RUN rm -rf ./*
 
 # Copy build to nginx server
 COPY --from=frontend-builder /iskconnoida.org/dist/ .
+
+# Copy nginx conf to nginx server
+COPY ./deploy/default.conf /etc/nginx/conf.d/default.conf
 
 STOPSIGNAL SIGTERM
 
