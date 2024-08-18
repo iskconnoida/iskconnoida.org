@@ -32,7 +32,7 @@ export default function CTC() {
     axios({
       method: "POST",
       // url: "http://localhost:3000/send",
-      url: "api/v1/send",
+      url: "/api/v1/send",
       data: state,
     })
       .then((response: AxiosResponse) => {
