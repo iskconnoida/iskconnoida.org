@@ -10,11 +10,13 @@ const Navbar: React.FC = () => {
   return (
     <div className="h-16 w-full flex justify-between items-center px-4 lg:px-10 bg-white shadow-lg rounded-b-lg bg-clip-padding border-2 fixed top-0 left-0 right-0 z-20">
       <Link to="/" className="w-full h-full">
-        <img
-          src="/images/logo.webp"
-          alt="logo"
-          className="md:mx-0 mx-auto h-14"
-        />
+        <img src="/images/logo.webp" alt="logo" className="my-auto h-14" />
+      </Link>
+      <Link
+        to="https://iic.iskconnoida.org/"
+        className="md:hidden font-semibold text-gray-800"
+      >
+        Login
       </Link>
       <span className="md:flex w-[60%] items-center justify-evenly hidden">
         <Link
