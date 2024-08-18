@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 export default function CTC() {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [buttonText, setButtonText] = useState("Submit");
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const [state, setState] = useState({
     name: "",
@@ -26,9 +27,11 @@ export default function CTC() {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>): void {
     e.preventDefault();
+    setIsDisabled(true);
     setButtonText("Submitting...");
     axios({
       method: "POST",
+      // url: "http://localhost:3000/send",
       url: "api/v1/send",
       data: state,
     })
@@ -55,6 +58,7 @@ export default function CTC() {
           );
           resetForm();
           setButtonText("Submit");
+          setIsDisabled(false);
         } else if (response.data.status === "failed") {
           console.error(response.data.error);
           toast.error(
@@ -77,6 +81,7 @@ export default function CTC() {
             },
           );
           setButtonText("Submit");
+          // setIsDisabled(false);
         }
       })
       .catch((error: AxiosError) => {
@@ -98,6 +103,7 @@ export default function CTC() {
           },
         );
         setButtonText("Submit");
+        setIsDisabled(false);
         console.log(error.message);
       });
   }
@@ -245,7 +251,8 @@ export default function CTC() {
                     <button
                       type="submit"
                       id="submitButton"
-                      className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-lg shadow-md shadow-violet-200 hover:shadow-violet-500 bg-violet-500 hover:bg-violet-700 focus:shadow-outline focus:outline-none"
+                      className={`inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-lg shadow-md focus:shadow-outline focus:outline-none shadow-violet-200 bg-violet-500 ${isDisabled ? 'bg-violet-400 cursor-not-allowed' : 'hover:shadow-violet-500 hover:bg-violet-700'}`}
+                      disabled={isDisabled}
                     >
                       {buttonText}
                     </button>
