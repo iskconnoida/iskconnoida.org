@@ -12,8 +12,8 @@ services:
   dev-backend:
     container_name: isk-dev-backend
     environment:
-      - SENDER_EMAIL: $SENDER_EMAIL
-      - AUTH_TOKEN: $AUTH_TOKEN
+      SENDER_EMAIL: $SENDER_EMAIL
+      AUTH_TOKEN: $AUTH_TOKEN
     build:
       context: ./backend
       dockerfile: Dockerfile.dev
@@ -33,8 +33,8 @@ services:
   prd-backend:
     container_name: isk-prd-backend
     environment:
-      - SENDER_EMAIL: $SENDER_EMAIL
-      - AUTH_TOKEN: $AUTH_TOKEN
+      SENDER_EMAIL: $SENDER_EMAIL
+      AUTH_TOKEN: $AUTH_TOKEN
     build:
       context: ./backend
       dockerfile: Dockerfile
