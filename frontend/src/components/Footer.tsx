@@ -151,16 +151,22 @@ export default function Footer() {
                 <br />
                 <Link
                   to="tel:+919319681501"
-                  className="hover:underline uppercase text-md mr-1"
+                  className="hover:underline uppercase text-md"
                 >
                   9319681501
-                </Link>
-                or
+                </Link>,
                 <Link
                   to="tel:+919319681502"
-                  className="hover:underline uppercase text-md ml-1"
+                  className="hover:underline uppercase text-md ml-1 mr-1"
                 >
                   9319681502
+                </Link>
+                 or 
+                <Link
+                  to="tel:+919319681516"
+                  className="hover:underline uppercase text-md ml-1"
+                >
+                  9319681516
                 </Link>
               </li>
               <li className="flex flex-col items-left">

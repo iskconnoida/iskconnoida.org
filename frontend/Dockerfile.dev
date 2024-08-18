@@ -5,11 +5,11 @@
 
 #-------------------------------- Stage 1 --------------------------------
 
-## Frontend Builder ##
+## Frontend Dev Builder ##
 #######################################
 
 # Use an Node alpine base image
-FROM node:22-alpine as frontend-builder
+FROM node:22-alpine as frontend-dev-builder
 
 # Setting up the work directory
 WORKDIR /iskconnoida.org
@@ -18,17 +18,17 @@ WORKDIR /iskconnoida.org
 COPY . .
 
 # Install frontend dependencies
-RUN yarn install && yarn build
+RUN yarn install && npm run build
 
 
 
 #-------------------------------- Stage 2 --------------------------------
 
-## Frontend Server Setup ##
+## Frontend Dev Server Setup ##
 #######################################
 
 # Use an ubuntu base image
-FROM nginx:1.26 as frontend-server
+FROM nginx:1.26 as frontend-dev-server
 
 # Update package and install dependencies
 RUN apt update -y \
@@ -42,7 +42,7 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 
 # Copy build to nginx server
-COPY --from=frontend-builder /iskconnoida.org/dist/ .
+COPY --from=frontend-dev-builder /iskconnoida.org/dist/ .
 
 STOPSIGNAL SIGTERM
 
