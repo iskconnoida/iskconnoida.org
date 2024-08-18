@@ -31,8 +31,8 @@ export default function CTC() {
     setButtonText("Submitting...");
     axios({
       method: "POST",
-      // url: "api/v1/send",
-      url: "http://localhost:3000/send",
+      // url: "http://localhost:3000/send",
+      url: "api/v1/send",
       data: state,
     })
       .then((response: AxiosResponse) => {
