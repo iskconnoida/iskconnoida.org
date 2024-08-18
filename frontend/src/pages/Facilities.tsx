@@ -71,13 +71,14 @@ export default function Facilities({ onHomePage }: FacilitiesProps) {
       <div className="sm:hidden w-full text-3xl font-bold py-14 text-center">
         Temple Facilities
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="p-4 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {facilities.map((facility) => (
           <Card
             key={facility.id}
             img={facility.img}
             dateless
             title={facility.title}
+            className="mx-auto"
           >
             {facility.description}
           </Card>
@@ -98,14 +99,14 @@ export default function Facilities({ onHomePage }: FacilitiesProps) {
         Temple Facilities
       </h3>
 
-      <div className="items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="w-full items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {facilities.map((facility) => (
           <Card
             key={facility.id}
             img={facility.img}
             dateless
             title={facility.title}
-            className="min-h-full"
+            className="min-h-full mx-auto"
           >
             {facility.description}
           </Card>
