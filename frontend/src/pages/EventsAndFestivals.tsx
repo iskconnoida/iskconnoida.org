@@ -20,7 +20,7 @@ export default function EventsAndFestivals() {
       title: "Shri Krishna Janmashtami 2024",
       img: "upload/catimg/6ea9ab1baa0efb9e19094440c317e21b.29_08_2021-krishna_30_2_21972025.jpg",
       description:
-        "Hare Krishna",
+        "On the most auspicious occasion of 5251st Janmashtami Mahotsava of Lord Shri Krishna, may the Lordships Shri Shri Radha Govind Dev shower their love in your hearts. Feel free to donate on the occasion of Shri Krishna Janmashtami and be a part of this festivity. Hare Krishna.",
       date: "2024-08-26",
     },
   };
