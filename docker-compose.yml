@@ -1,5 +1,6 @@
 ###############################################################
-# (!) CAUTION: DO NOT ALTER THIS FILE
+# (!) CAUTION: PLEASE DO NOT ALTER THIS FILE BY YOURSELF!
+# IF WANT TO CHANGE ANYTHING THEN CONTACT TO THE ADMIN.
 ###############################################################
 
 
@@ -10,6 +11,9 @@ services:
   ## Development Services ##
   dev-backend:
     container_name: isk-dev-backend
+    environment:
+      SENDER_EMAIL: $SENDER_EMAIL
+      AUTH_TOKEN: $AUTH_TOKEN
     build:
       context: ./backend
       dockerfile: Dockerfile.dev
@@ -28,6 +32,9 @@ services:
   ## Production Services ##
   prd-backend:
     container_name: isk-prd-backend
+    environment:
+      SENDER_EMAIL: $SENDER_EMAIL
+      AUTH_TOKEN: $AUTH_TOKEN
     build:
       context: ./backend
       dockerfile: Dockerfile
