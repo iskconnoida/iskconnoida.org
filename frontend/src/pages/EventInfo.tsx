@@ -1,39 +1,9 @@
 import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
-
-type Response = Record<
-  string,
-  {
-    id: string;
-    title: string;
-    img: string;
-    description: string;
-    date: string;
-  }
->;
+import { events } from "../utils/handler";
 
 export default function EventInfo() {
   const { id } = useParams();
-  const res: Response = {
-    festival_response: {
-      id: "11",
-      title: "Shri Krishna Janmashtami 2024",
-      img: "upload/catimg/6ea9ab1baa0efb9e19094440c317e21b.29_08_2021-krishna_30_2_21972025.jpg",
-      description:
-        "On the most auspicious occasion of 5251st Janmashtami Mahotsava of Lord Shri Krishna, may the Lordships Shri Shri Radha Govind Dev shower their love in your hearts. Feel free to donate on the occasion of Shri Krishna Janmashtami and be a part of this festivity. Hare Krishna.",
-      date: "2024-08-26",
-    },
-  };
-  const events: {
-    id: string;
-    title: string;
-    img: string;
-    description: string;
-    date: string;
-  }[] = [];
-  for (const e in res) {
-    events.push(res[e]);
-  }
   try {
     const event = events.find((event) => event.id === id);
     return (
@@ -47,11 +17,11 @@ export default function EventInfo() {
           <h2 className="text-3xl font-bold text-center">{event!.title}</h2>
           <img
             src={"https://iic.iskconnoida.org/" + event!.img}
-            alt="event.img"
+            alt="event img"
             className="rounded-lg shadow-lg"
           />
           <div className="font-bold">
-            Date: {new Date(event!.date).toLocaleDateString()}
+            Date: {new Date(event!.date!).toLocaleDateString()}
           </div>
           <div>{event!.description}</div>
           <Link

@@ -179,12 +179,12 @@ export default function CTC() {
                       E-mail
                     </label>
                     <input
-                      placeholder="username@mail.com"
+                      placeholder="username@gmail.com"
                       required
                       type="email"
                       className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-violet-400 focus:outline-none focus:shadow-outline"
                       id="email"
-                      pattern="^[\w\.]+@([\w-]+\.)+[\w-]{2,5}$"
+                      pattern="^[\w\.]+@(gmail\.com|yahoo\.com|outlook\.com|icloud\.com)$"
                       name="email"
                       value={state.email}
                       onChange={(e) =>
@@ -251,7 +251,7 @@ export default function CTC() {
                     <button
                       type="submit"
                       id="submitButton"
-                      className={`inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-lg shadow-md focus:shadow-outline focus:outline-none shadow-violet-200 bg-violet-500 ${isDisabled ? 'bg-violet-400 cursor-not-allowed' : 'hover:shadow-violet-500 hover:bg-violet-700'}`}
+                      className={`inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-lg shadow-md focus:shadow-outline focus:outline-none shadow-violet-200 bg-violet-500 ${isDisabled ? "bg-violet-400 cursor-not-allowed" : "hover:shadow-violet-500 hover:bg-violet-700"}`}
                       disabled={isDisabled}
                     >
                       {buttonText}
