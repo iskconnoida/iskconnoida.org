@@ -251,7 +251,7 @@ export default function CTC() {
                     <button
                       type="submit"
                       id="submitButton"
-                      className={`inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-lg shadow-md focus:shadow-outline focus:outline-none shadow-violet-200 bg-violet-500 ${isDisabled ? 'bg-violet-400 cursor-not-allowed' : 'hover:shadow-violet-500 hover:bg-violet-700'}`}
+                      className={`inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-lg shadow-md focus:shadow-outline focus:outline-none shadow-violet-200 bg-violet-500 ${isDisabled ? "bg-violet-400 cursor-not-allowed" : "hover:shadow-violet-500 hover:bg-violet-700"}`}
                       disabled={isDisabled}
                     >
                       {buttonText}
