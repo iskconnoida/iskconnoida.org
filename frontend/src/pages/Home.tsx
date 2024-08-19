@@ -1,3 +1,4 @@
+import Campaign from "../components/Campaign";
 import Donate from "../components/Donate";
 import Events from "../components/Events";
 import Hero from "../components/Hero";
@@ -10,6 +11,10 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Campaign
+        img="/images/campaign.webp"
+        to="https://iic.iskconnoida.org/donate/Anna_Daan_2024"
+      />
       <Events />
       <img
         src="/images/divider.svg"
