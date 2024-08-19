@@ -20,6 +20,8 @@ app.use(
       "https://localhost:443",
       "http://prd.master.iskconnoida.org",
       "https://prd.master.iskconnoida.org",
+      "http://dev.env.iskconnoida.org",
+      "https://dev.env.iskconnoida.org",
       "http://iskconnoida.org",
       "https://iskconnoida.org",
     ],

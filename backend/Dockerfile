@@ -1,5 +1,6 @@
 ###############################################################
-# (!) CAUTION: DO NOT ALTER THIS FILE
+# (!) CAUTION: PLEASE DO NOT ALTER THIS FILE BY YOURSELF!
+# IF WANT TO CHANGE ANYTHING THEN CONTACT TO THE ADMIN.
 ###############################################################
 
 
@@ -22,5 +23,5 @@ RUN yarn install
 EXPOSE 3000
 
 # Start Server
-ENTRYPOINT ["yarn", "dev"]
+ENTRYPOINT ["yarn", "start"]
 

@@ -1,5 +1,6 @@
 ###############################################################
-# (!) CAUTION: DO NOT ALTER THIS FILE
+# (!) CAUTION: PLEASE DO NOT ALTER THIS FILE BY YOURSELF!
+# IF WANT TO CHANGE ANYTHING THEN CONTACT TO THE ADMIN.
 ###############################################################
 
 
@@ -16,11 +17,11 @@ WORKDIR /backend/server
 COPY . .
 
 # Install dependencies
-RUN npm install
+RUN yarn install
 
 # Expose Port
 EXPOSE 3000
 
 # Start Server
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["yarn", "start"]
 
