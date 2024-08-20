@@ -59,17 +59,18 @@ const Navbar: React.FC = () => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute right-0 mt-2 w-56 bg-white shadow-lg left-1/2 -translate-x-1/2"
+                className="absolute right-0 mt-2 w-56 bg-white shadow-lg left-0 rounded-lg shadow-gray-600 border"
               >
                 <Link
                   to="/media/gallery"
-                  className={`block px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") ? "text-violet-600" : "text-black"}`}
+                  className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") ? "text-violet-600" : "text-black"}`}
                 >
                   Daily Shri Krishna Darshan
                 </Link>
+                <hr className="mx-2" />
                 <Link
                   to="/media/kirtans"
-                  className={`block px-4 py-3 hover:bg-gray-200 ${isActive("/media/kirtans") ? "text-violet-600" : "text-black"}`}
+                  className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/kirtans") ? "text-violet-600" : "text-black"}`}
                 >
                   Kirtans & Lectures
                 </Link>

@@ -8,11 +8,20 @@ export default function Hero() {
 
   const openModal = () => {
     setModalOpen(true);
+    const sT = window.scrollY || document.documentElement.scrollTop;
+    const sL = window.scrollX || document.documentElement.scrollLeft;
+    window.onscroll = () => {
+      window.scrollTo({ top: sT, left: sL, behavior: "instant" });
+    };
   };
 
   const closeModal = () => {
     setModalOpen(false);
+    window.onscroll = () => {
+      return 0;
+    };
   };
+
   let imgURL = "";
   switch (new Date().getUTCDay()) {
     case 0:
