@@ -16,10 +16,10 @@ export default function Services() {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 md:gap-2 lg:gap-4">
         <div className="items-center p-4">
-          <div className="mx-auto bg-violet-200 border border-violet-500 w-fit rounded-full p-6">
+          <div className="mx-auto bg-violet-200 border-2 border-violet-500 w-fit rounded-full">
             <img
               src="/images/cow.webp"
-              className="h-24 w-24"
+              className="h-36 w-36 rounded-full"
               alt=""
               loading="lazy"
             />
@@ -27,10 +27,10 @@ export default function Services() {
           <div className="py-2 text-center">Gomata Sewa</div>
         </div>
         <div className="items-center p-4">
-          <div className="mx-auto bg-violet-200 border border-violet-500 w-fit rounded-full p-6">
+          <div className="mx-auto bg-violet-200 border-2 border-violet-500 w-fit rounded-full">
             <img
               src="/images/food.webp"
-              className="h-24 w-24"
+              className="h-36 w-36 rounded-full"
               alt=""
               loading="lazy"
             />
@@ -38,10 +38,10 @@ export default function Services() {
           <div className="py-2 text-center">Food for Life</div>
         </div>
         <div className="items-center p-4">
-          <div className="mx-auto bg-violet-200 border border-violet-500 w-fit rounded-full p-6">
+          <div className="mx-auto bg-violet-200 border-2 border-violet-500 w-fit rounded-full">
             <img
               src="/images/membership.webp"
-              className="h-24 w-24"
+              className="h-36 w-36 rounded-full"
               alt=""
               loading="lazy"
             />
@@ -49,10 +49,10 @@ export default function Services() {
           <div className="py-2 text-center">LIFE Membership</div>
         </div>
         <div className="items-center p-4">
-          <div className="mx-auto bg-violet-200 border border-violet-500 w-fit rounded-full p-6">
+          <div className="mx-auto bg-violet-200 border-2 border-violet-500 w-fit rounded-full">
             <img
               src="/images/people.webp"
-              className="h-24 w-24"
+              className="h-36 w-36 rounded-full"
               alt=""
               loading="lazy"
             />
@@ -60,10 +60,10 @@ export default function Services() {
           <div className="py-2 text-center">Community Service Centre</div>
         </div>
         <div className="items-center p-4">
-          <div className="mx-auto bg-violet-200 border border-violet-500 w-fit rounded-full p-6">
+          <div className="mx-auto bg-violet-200 border-2 border-violet-500 w-fit rounded-full">
             <img
               src="/images/happy.webp"
-              className="h-24 w-24"
+              className="h-36 w-36 rounded-full"
               alt=""
               loading="lazy"
             />
@@ -71,10 +71,10 @@ export default function Services() {
           <div className="py-2 text-center">Blissful Deity Worship</div>
         </div>
         <div className="items-center p-4">
-          <div className="mx-auto bg-violet-200 border border-violet-500 w-fit rounded-full p-6">
+          <div className="mx-auto bg-violet-200 border-2 border-violet-500 w-fit rounded-full">
             <img
               src="/images/book.webp"
-              className="h-24 w-24"
+              className="h-36 w-36 rounded-full"
               alt=""
               loading="lazy"
             />

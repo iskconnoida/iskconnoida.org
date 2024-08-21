@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
       >
         Login
       </Link>
-      <span className="md:flex w-[60%] items-center justify-evenly hidden">
+      <span className="md:flex w-3/4 items-center justify-evenly hidden">
         <Link
           to="/"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 px-2 py-1 rounded-full text-shadow-lg shadow-purple-100 ${
