@@ -15,7 +15,11 @@ export default function TermsAndConditions() {
         <p>
           These terms and conditions outline the rules and regulations for the
           use of International Society for Krishna Consciousness’s Website,
-          located at https://iskconnoida.org.
+          located at{" "}
+          <Link to="/" className="text-blue-600">
+            https://iskconnoida.org
+          </Link>
+          .
         </p>
         <p>
           By accessing this website we assume you accept these terms and
@@ -68,23 +72,12 @@ export default function TermsAndConditions() {
           <li>Redistribute content from ISKCON NOIDA</li>
         </ul>
         <p>
-          This Agreement shall begin on the date hereof. Our Terms and
-          Conditions were created with the help of the{" "}
-          <Link
-            to="https://www.termsandconditionsgenerator.com/"
-            className="text-blue-500 underline"
-          >
-            Free Terms and Conditions Generator
-          </Link>
-          .
-        </p>
-        <p>
           Parts of this website offer an opportunity for users to post and
           exchange opinions and information in certain areas of the website.
           International Society for Krishna Consciousness does not filter, edit,
           publish or review Comments prior to their presence on the website.
           Comments do not reflect the views and opinions of International
-          Society for Krishna Consciousness,its agents and/or affiliates.
+          Society for Krishna Consciousness, its agents and/or affiliates.
           Comments reflect the views and opinions of the person who post their
           views and opinions. To the extent permitted by applicable laws,
           International Society for Krishna Consciousness shall not be liable
