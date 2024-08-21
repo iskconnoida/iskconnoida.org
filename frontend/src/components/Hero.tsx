@@ -52,7 +52,7 @@ export default function Hero() {
   }, [imgURL]);
 
   return (
-    <>
+    <div className="mb-8">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -72,7 +72,7 @@ export default function Hero() {
           <h1 className="text-xl sm:text-2xl font-semibold flex justify-center items-end mt-auto py-4 h-1/2">
             Welcome To
           </h1>
-          <h1 className="text-2xl sm:text-5xl font-semibold flex justify-center items-end pb-2">
+          <h1 className="text-2xl sm:text-5xl font-semibold flex justify-center items-end px-4 pb-2">
             SRI SRI RADHA GOVIND DEV JI TEMPLE
           </h1>
         </motion.div>
@@ -98,6 +98,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </motion.div>
-    </>
+    </div>
   );
 }

@@ -104,7 +104,7 @@ function BottomBar() {
                   <Link
                     to="/media/gallery"
                     onClick={togglePopup}
-                    className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") ? "text-violet-600" : "text-black"}`}
+                    className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") || isActive("/media/kirtans") ? "text-violet-600" : "text-black"}`}
                   >
                     Media
                   </Link>

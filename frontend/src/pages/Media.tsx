@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaClock, FaXmark } from "react-icons/fa6";
 import Slider from "../components/Slider";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 interface GalleryItem {
   img: string;
@@ -76,13 +77,13 @@ function getFormattedDate(date: Date): string {
 function getGalleries(): GalleryItem[] {
   const startDate = getStartDate();
   const galleries = [
-    { img: "/images/mon.webp", title: "Mangal Darshan" },
-    { img: "/images/tue.webp", title: "Mangal Darshan" },
-    { img: "/images/wed.webp", title: "Mangal Darshan" },
-    { img: "/images/thu.webp", title: "Mangal Darshan" },
-    { img: "/images/fri.webp", title: "Mangal Darshan" },
-    { img: "/images/sat.webp", title: "Mangal Darshan" },
-    { img: "/images/sun.webp", title: "Mangal Darshan" },
+    { img: "/images/mon.webp", title: "Sringar Darshan" },
+    { img: "/images/tue.webp", title: "Sringar Darshan" },
+    { img: "/images/wed.webp", title: "Sringar Darshan" },
+    { img: "/images/thu.webp", title: "Sringar Darshan" },
+    { img: "/images/fri.webp", title: "Sringar Darshan" },
+    { img: "/images/sat.webp", title: "Sringar Darshan" },
+    { img: "/images/sun.webp", title: "Sringar Darshan" },
   ];
 
   const fullDates = galleries.map((_, index) => {
@@ -140,7 +141,7 @@ export default function Media({ mediaSection }: MediaProps) {
       </h3>
       {mediaSection === "gallery" && (
         <>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 pb-10">
             {galleryData.map((photo, index) => (
               <div
                 key={index}
@@ -168,6 +169,9 @@ export default function Media({ mediaSection }: MediaProps) {
               </div>
             ))}
           </div>
+          <button className="md:hidden w-full border border-violet-700 rounded-lg bg-violet-600 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
+            <Link to="/media/kirtans">View Lectures & Kirtans</Link>
+          </button>
 
           {showSlider && (
             <div className="fixed inset-0 top-0 bottom-0 bg-black flex items-center justify-center z-50">
@@ -185,17 +189,17 @@ export default function Media({ mediaSection }: MediaProps) {
       )}
       {mediaSection === "kirtans" && (
         <>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+          <div className="w-full md:px-4 lg:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 pb-10">
             {videos.map((video, index) => (
               <div
                 key={index}
-                className="cursor-pointer z-100"
+                className="cursor-pointer"
                 onClick={() => handleOpenModal(video)}
               >
                 <div className="rounded-lg shadow-md overflow-hidden h-96 flex flex-col items-start justify-start">
                   <div className="w-full flex items-center justify-center h-80">
                     <iframe
-                      className="w-full h-80"
+                      className="w-full h-80 md:pointer-events-none"
                       src={video.kirtan}
                       loading="lazy"
                     />
@@ -213,9 +217,12 @@ export default function Media({ mediaSection }: MediaProps) {
               </div>
             ))}
           </div>
+          <button className="md:hidden w-full border border-violet-700 rounded-lg bg-violet-600 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
+            <Link to="/media/gallery">View Darshan Gallery</Link>
+          </button>
 
           {selectedVideo && (
-            <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+            <div className="hidden fixed inset-0 bg-black bg-opacity-80 md:flex items-center justify-center z-50">
               <div className="relative bg-white p-4 rounded-lg shadow-lg">
                 <button
                   onClick={handleCloseModal}
@@ -224,7 +231,7 @@ export default function Media({ mediaSection }: MediaProps) {
                   <FaXmark />
                 </button>
                 <iframe
-                  width="800"
+                  width="725"
                   height="450"
                   src={selectedVideo.kirtan}
                   title="YouTube video player"

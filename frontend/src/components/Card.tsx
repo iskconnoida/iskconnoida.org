@@ -25,7 +25,7 @@ export default function Card(props: {
   }
   return (
     <button
-      className={`w-72 bg-white border border-gray-200 rounded-xl h-sm max-h-sm shadow-lg hover:shadow-xl flex flex-col ${props.className}`}
+      className={`w-full max-w-72 bg-white border border-gray-200 rounded-xl h-sm max-h-sm shadow-lg hover:shadow-xl flex flex-col ${props.className}`}
     >
       {props.donate && props.article ? (
         <Link to={props.article} className="h-full w-full">

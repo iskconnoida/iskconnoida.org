@@ -112,7 +112,7 @@ export default function CTC() {
     <div className="w-fit z-10 flex flex-col items-center fixed bottom-20 md:bottom-4 right-4 md:right-10">
       <div className="w-12 h-12 text-white shadow-lg hover:shadow-xl bg-[#25D366] rounded-full">
         <Link
-          to="http://api.whatsapp.com/send/?phone=919319681501&text=Hare+Krishna"
+          to="http://api.whatsapp.com/send/?phone=919319681516&text=Hare+Krishna"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full h-full inline-flex items-center justify-center"
