@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa6";
 import { Link, useLocation, useParams } from "react-router-dom";
 
 const Navbar: React.FC = () => {
@@ -49,9 +50,10 @@ const Navbar: React.FC = () => {
           onMouseLeave={() => setDropdownOpen(false)}
         >
           <button
-            className={`md:text-base lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full text-shadow-lg shadow-purple-100 ${isActive("/media/gallery") || isActive("/media/kirtans") ? "text-violet-600" : ""}`}
+            className={`md:text-base flex items-center lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full text-shadow-lg shadow-purple-100 ${isActive("/media/gallery") || isActive("/media/kirtans") ? "text-violet-600" : ""}`}
           >
             Media
+            <FaChevronDown size={12} className="mt-1 ml-1" />
           </button>
           <AnimatePresence>
             {isDropdownOpen && (
