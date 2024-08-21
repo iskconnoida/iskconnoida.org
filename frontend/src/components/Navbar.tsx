@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa6";
 import { Link, useLocation, useParams } from "react-router-dom";
 
 const Navbar: React.FC = () => {
@@ -18,7 +19,7 @@ const Navbar: React.FC = () => {
       >
         Login
       </Link>
-      <span className="md:flex w-[60%] items-center justify-evenly hidden">
+      <span className="md:flex w-3/4 items-center justify-evenly hidden">
         <Link
           to="/"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 px-2 py-1 rounded-full text-shadow-lg shadow-purple-100 ${
@@ -49,9 +50,10 @@ const Navbar: React.FC = () => {
           onMouseLeave={() => setDropdownOpen(false)}
         >
           <button
-            className={`md:text-base lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full text-shadow-lg shadow-purple-100 ${isActive("/media/gallery") || isActive("/media/kirtans") ? "text-violet-600" : ""}`}
+            className={`md:text-base flex items-center lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full text-shadow-lg shadow-purple-100 ${isActive("/media/gallery") || isActive("/media/kirtans") ? "text-violet-600" : ""}`}
           >
             Media
+            <FaChevronDown size={12} className="mt-1 ml-1" />
           </button>
           <AnimatePresence>
             {isDropdownOpen && (
@@ -59,17 +61,18 @@ const Navbar: React.FC = () => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute right-0 mt-2 w-56 bg-white shadow-lg left-1/2 -translate-x-1/2"
+                className="absolute right-0 mt-2 w-56 bg-white shadow-lg left-0 rounded-lg shadow-gray-600 border"
               >
                 <Link
                   to="/media/gallery"
-                  className={`block px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") ? "text-violet-600" : "text-black"}`}
+                  className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") ? "text-violet-600" : "text-black"}`}
                 >
                   Daily Shri Krishna Darshan
                 </Link>
+                <hr className="mx-2" />
                 <Link
                   to="/media/kirtans"
-                  className={`block px-4 py-3 hover:bg-gray-200 ${isActive("/media/kirtans") ? "text-violet-600" : "text-black"}`}
+                  className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/kirtans") ? "text-violet-600" : "text-black"}`}
                 >
                   Kirtans & Lectures
                 </Link>

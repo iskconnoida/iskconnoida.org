@@ -18,7 +18,7 @@ export default function Events() {
       <div className="sm:hidden w-full text-3xl font-bold py-14 text-center">
         Events and Festivals
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {events.map((event) => (
           <Card
             key={event.id}

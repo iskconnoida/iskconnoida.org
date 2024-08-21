@@ -80,8 +80,8 @@ export default function RefundReturns() {
         <p>
           Link If you’ve done all of this and you still have not received your
           refund yet, please contact us at{" "}
-          <Link to="mailto:{email}" className="text-blue-600">
-            [email address]
+          <Link to="mailto:connect@iskconnoida.org" className="text-blue-600">
+            connect@iskconnoida.org
           </Link>
           .
         </p>
@@ -96,10 +96,20 @@ export default function RefundReturns() {
         <p>
           We only replace items if they are defective or damaged. If you need to
           exchange it for the same item, send us an email at{" "}
-          <Link to="mailto:{email}" className="text-blue-600">
-            [email address]
+          <Link to="mailto:connect@iskconnoida.org" className="text-blue-600">
+            connect@iskconnoida.org
           </Link>{" "}
-          and send your item to: [physical address].
+          and send your item to:{" "}
+          <Link
+            to="https://maps.app.goo.gl/3HrCKhbJzf539YKZ6"
+            target="_blank"
+            rel="noopener norefferer"
+            className="text-blue-600"
+          >
+            ISKCON Noida, A-5, Maharaja Agrasen Marg, Opposite NTPC office,
+            Block A, Sector 33, Noida, 201301
+          </Link>
+          .
         </p>
 
         <h2 className="text-3xl font-bold">Gifts</h2>
@@ -117,8 +127,17 @@ export default function RefundReturns() {
 
         <h2 className="text-3xl font-bold">Shipping returns</h2>
         <p>
-          To return your product, you should mail your product to: [physical
-          address].
+          To return your product, you should mail your product to:{" "}
+          <Link
+            to="https://maps.app.goo.gl/3HrCKhbJzf539YKZ6"
+            target="_blank"
+            rel="noopener norefferer"
+            className="text-blue-600"
+          >
+            ISKCON Noida, A-5, Maharaja Agrasen Marg, Opposite NTPC office,
+            Block A, Sector 33, Noida, 201301
+          </Link>
+          .
         </p>
         <p>
           You will be responsible for paying for your own shipping costs for
@@ -140,7 +159,7 @@ export default function RefundReturns() {
         <p>
           Contact us at{" "}
           <Link to="mailto:connect@iskconnoida.org" className="text-blue-600">
-            {"{email}"}
+            connect@iskconnoida.org
           </Link>{" "}
           for questions related to refunds and returns.
         </p>

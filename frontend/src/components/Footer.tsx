@@ -25,10 +25,17 @@ export default function Footer() {
               <span>International Society for Krishna Consciousness</span>
             </div>
             <p className="md:text-center mb-4">
-              ISKCON Noida, A-5, Maharaja Agrasen Marg, <br />
-              Opposite NTPC office, Block A,
-              <br />
-              <span className="">Sector 33, Noida, Uttar Pradesh 201301</span>
+              <Link
+                to="https://maps.app.goo.gl/3HrCKhbJzf539YKZ6"
+                target="_blank"
+                rel="noopener norefferer"
+                className="hover:underline"
+              >
+                ISKCON Noida, A-5, Maharaja Agrasen Marg, <br />
+                Opposite NTPC office, Block A,
+                <br />
+                <span className="">Sector 33, Noida, Uttar Pradesh 201301</span>
+              </Link>
             </p>
             <ul className="flex space-x-5">
               <li>

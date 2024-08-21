@@ -27,6 +27,7 @@ export default function Donate() {
             dateless
             title={donate.title}
             donate={donate.donation_link!}
+            className="mx-auto"
             imgClass={styles.customImgClass}
           >
             {donate.description}
