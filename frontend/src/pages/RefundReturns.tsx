@@ -101,7 +101,7 @@ export default function RefundReturns() {
           </Link>{" "}
           and send your item to:{" "}
           <Link
-            to="https://maps.app.goo.gl/3HrCKhbJzf539YKZ6"
+            to="https://www.google.com/maps/place/ISKCON+Temple+Noida,+A-5,+Maharaja+Agrasen+Marg,+Opposite+Opposite+NTPC+office,+Block+A,+Sector+33,+Noida,+Uttar+Pradesh+201301/@28.5871507,77.350492,16z/data=!4m6!3m5!1s0x390ce5a12fee7d95:0x8bb417c53d8d172b!8m2!3d28.5868422!4d77.3503375!16s%2Fg%2F1wt3lsgf"
             target="_blank"
             rel="noopener norefferer"
             className="text-blue-600"
@@ -129,7 +129,7 @@ export default function RefundReturns() {
         <p>
           To return your product, you should mail your product to:{" "}
           <Link
-            to="https://maps.app.goo.gl/3HrCKhbJzf539YKZ6"
+            to="https://www.google.com/maps/place/ISKCON+Temple+Noida,+A-5,+Maharaja+Agrasen+Marg,+Opposite+Opposite+NTPC+office,+Block+A,+Sector+33,+Noida,+Uttar+Pradesh+201301/@28.5871507,77.350492,16z/data=!4m6!3m5!1s0x390ce5a12fee7d95:0x8bb417c53d8d172b!8m2!3d28.5868422!4d77.3503375!16s%2Fg%2F1wt3lsgf"
             target="_blank"
             rel="noopener norefferer"
             className="text-blue-600"
