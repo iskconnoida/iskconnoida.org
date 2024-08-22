@@ -1,16 +1,18 @@
+/* eslint-disable react-refresh/only-export-components */
+import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import About from "./pages/About";
-import Donate from "./pages/Donate";
-import EventInfo from "./pages/EventInfo";
-import EventsAndFestivals from "./pages/EventsAndFestivals";
-import Facilities from "./pages/Facilities";
-import FourZeroFour from "./pages/FourZeroFour";
-import Home from "./pages/Home";
-import Media from "./pages/Media";
-import OurServices from "./pages/OurServices";
-import RefundReturns from "./pages/RefundReturns";
-import TermsAndConditions from "./pages/TermsAndConditions";
+const About = lazy(() => import("./pages/About"));
+const Donate = lazy(() => import("./pages/Donate"));
+const EventInfo = lazy(() => import("./pages/EventInfo"));
+const EventsAndFestivals = lazy(() => import("./pages/EventsAndFestivals"));
+const Facilities = lazy(() => import("./pages/Facilities"));
+const FourZeroFour = lazy(() => import("./pages/FourZeroFour"));
+const Home = lazy(() => import("./pages/Home"));
+const Media = lazy(() => import("./pages/Media"));
+const OurServices = lazy(() => import("./pages/OurServices"));
+const RefundReturns = lazy(() => import("./pages/RefundReturns"));
+const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
 
 const router = createBrowserRouter([
   {
