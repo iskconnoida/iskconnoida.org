@@ -65,13 +65,15 @@ const Navbar: React.FC = () => {
               >
                 <Link
                   to="/media/gallery"
+                  onClick={() => setDropdownOpen(false)}
                   className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") ? "text-violet-600" : "text-black"}`}
                 >
-                  Daily Shri Krishna Darshan
+                  Darshan Gallery
                 </Link>
                 <hr className="mx-2" />
                 <Link
                   to="/media/kirtans"
+                  onClick={() => setDropdownOpen(false)}
                   className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/kirtans") ? "text-violet-600" : "text-black"}`}
                 >
                   Kirtans & Lectures
