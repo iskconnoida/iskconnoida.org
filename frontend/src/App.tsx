@@ -15,7 +15,7 @@ export default function App(props: { page: JSX.Element }) {
         fallback={
           <div
             role="status"
-            className="mt-28 mb-16 flex flex-col gap-2 w-full items-center text-center justify-center"
+            className="mt-28 mb-16 flex flex-col gap-2 w-full h-screen items-center text-center justify-center"
           >
             <svg
               aria-hidden="true"
