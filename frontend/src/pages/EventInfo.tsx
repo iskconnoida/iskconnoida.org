@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 import { events } from "../utils/handler";
 
@@ -7,7 +7,7 @@ export default function EventInfo() {
   try {
     const event = events.find((event) => event.id === id);
     return (
-      <motion.section
+      <m.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -53,7 +53,7 @@ export default function EventInfo() {
             </div>
           </div>
         </div>
-      </motion.section>
+      </m.section>
     );
   } catch (e) {
     console.log(e);

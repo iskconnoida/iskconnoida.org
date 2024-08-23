@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion";
 import { useState } from "react";
 import { BiDonateHeart } from "react-icons/bi";
 import { CiCircleMore } from "react-icons/ci";
@@ -78,47 +78,49 @@ function BottomBar() {
         </button>
         <AnimatePresence>
           {isPopupVisible && (
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 50 }}
-              transition={{ type: "spring", duration: 0.3 }}
-              className="fixed bottom-0 left-0 inset-0 w-full text-center flex items-end justify-center bg-opacity-0"
-            >
-              <div className="relative border-x-2 border-t-2 border-b border-gray-300 w-full bg-white rounded-t-3xl px-6 mb-16">
-                <button
-                  onClick={togglePopup}
-                  className="absolute top-4 right-4 text-gray-600 hover:bg-gray-100 hover:text-[#4d4330] hover:shadow-lg rounded-full p-2 transition-w transition-all duration-300"
-                >
-                  <IoMdCloseCircleOutline size={24} />
-                </button>
-                <div className="">
-                  <Link
-                    to="/about"
+            <LazyMotion features={domAnimation}>
+              <m.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 50 }}
+                transition={{ type: "spring", duration: 0.3 }}
+                className="fixed bottom-0 left-0 inset-0 w-full text-center flex items-end justify-center bg-opacity-0"
+              >
+                <div className="relative border-x-2 border-t-2 border-b border-gray-300 w-full bg-white rounded-t-3xl px-6 mb-16">
+                  <button
                     onClick={togglePopup}
-                    className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/about") ? "text-violet-600" : "text-black"}`}
+                    className="absolute top-4 right-4 text-gray-600 hover:bg-gray-100 hover:text-[#4d4330] hover:shadow-lg rounded-full p-2 transition-w transition-all duration-300"
                   >
-                    About
-                  </Link>
-                  <hr />
-                  <Link
-                    to="/media/gallery"
-                    onClick={togglePopup}
-                    className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") || isActive("/media/kirtans") ? "text-violet-600" : "text-black"}`}
-                  >
-                    Media
-                  </Link>
-                  <hr />
-                  <Link
-                    to="/facilities"
-                    onClick={togglePopup}
-                    className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/facilities") ? "text-violet-600" : "text-black"}`}
-                  >
-                    Facilities
-                  </Link>
+                    <IoMdCloseCircleOutline size={24} />
+                  </button>
+                  <div className="">
+                    <Link
+                      to="/about"
+                      onClick={togglePopup}
+                      className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/about") ? "text-violet-600" : "text-black"}`}
+                    >
+                      About
+                    </Link>
+                    <hr />
+                    <Link
+                      to="/media/gallery"
+                      onClick={togglePopup}
+                      className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") || isActive("/media/kirtans") ? "text-violet-600" : "text-black"}`}
+                    >
+                      Media
+                    </Link>
+                    <hr />
+                    <Link
+                      to="/facilities"
+                      onClick={togglePopup}
+                      className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/facilities") ? "text-violet-600" : "text-black"}`}
+                    >
+                      Facilities
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </m.div>
+            </LazyMotion>
           )}
         </AnimatePresence>
       </div>
