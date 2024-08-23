@@ -1,6 +1,6 @@
+import { domAnimation, LazyMotion, m } from "framer-motion";
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
-import { motion } from "framer-motion";
 import { facilities } from "../utils/handler";
 
 export default function Facilities(props: { onHomePage: boolean }) {
@@ -35,29 +35,31 @@ export default function Facilities(props: { onHomePage: boolean }) {
       </button>
     </>
   ) : (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="w-full lg:px-10 md:px-4 my-14"
-    >
-      <h3 className="text-3xl text-center font-semibold mb-10 mt-10">
-        Temple Facilities
-      </h3>
+    <LazyMotion features={domAnimation}>
+      <m.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="w-full lg:px-10 md:px-4 my-14"
+      >
+        <h3 className="text-3xl text-center font-semibold mb-10 mt-10">
+          Temple Facilities
+        </h3>
 
-      <div className="w-full items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {facilities.map((facility) => (
-          <Card
-            key={facility.id}
-            img={facility.img}
-            dateless
-            title={facility.title}
-            className="min-h-full mx-auto"
-          >
-            {facility.description}
-          </Card>
-        ))}
-      </div>
-    </motion.div>
+        <div className="w-full items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {facilities.map((facility) => (
+            <Card
+              key={facility.id}
+              img={facility.img}
+              dateless
+              title={facility.title}
+              className="min-h-full mx-auto"
+            >
+              {facility.description}
+            </Card>
+          ))}
+        </div>
+      </m.div>
+    </LazyMotion>
   );
 }
