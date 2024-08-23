@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, domAnimation, LazyMotion, m } from "framer-motion";
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
 import { Link, useLocation, useParams } from "react-router-dom";
@@ -57,28 +57,30 @@ const Navbar: React.FC = () => {
           </button>
           <AnimatePresence>
             {isDropdownOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="absolute right-0 mt-2 w-56 bg-white shadow-lg left-0 rounded-lg shadow-gray-600 border"
-              >
-                <Link
-                  to="/media/gallery"
-                  onClick={() => setDropdownOpen(false)}
-                  className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") ? "text-violet-600" : "text-black"}`}
+              <LazyMotion features={domAnimation}>
+                <m.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute right-0 mt-2 w-56 bg-white shadow-lg left-0 rounded-lg shadow-gray-600 border"
                 >
-                  Darshan Gallery
-                </Link>
-                <hr className="mx-2" />
-                <Link
-                  to="/media/kirtans"
-                  onClick={() => setDropdownOpen(false)}
-                  className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/kirtans") ? "text-violet-600" : "text-black"}`}
-                >
-                  Kirtans & Lectures
-                </Link>
-              </motion.div>
+                  <Link
+                    to="/media/gallery"
+                    onClick={() => setDropdownOpen(false)}
+                    className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") ? "text-violet-600" : "text-black"}`}
+                  >
+                    Darshan Gallery
+                  </Link>
+                  <hr className="mx-2" />
+                  <Link
+                    to="/media/kirtans"
+                    onClick={() => setDropdownOpen(false)}
+                    className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/kirtans") ? "text-violet-600" : "text-black"}`}
+                  >
+                    Kirtans & Lectures
+                  </Link>
+                </m.div>
+              </LazyMotion>
             )}
           </AnimatePresence>
         </div>

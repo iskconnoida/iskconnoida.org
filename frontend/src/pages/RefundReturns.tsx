@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default function RefundReturns() {
   return (
-    <motion.section
+    <m.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -164,6 +164,6 @@ export default function RefundReturns() {
           for questions related to refunds and returns.
         </p>
       </div>
-    </motion.section>
+    </m.section>
   );
 }
