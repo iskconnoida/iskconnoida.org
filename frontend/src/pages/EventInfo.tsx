@@ -1,6 +1,7 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 import { events } from "../utils/handler";
+import FourZeroFour from "./FourZeroFour";
 
 export default function EventInfo() {
   const { id } = useParams();
@@ -59,15 +60,6 @@ export default function EventInfo() {
     );
   } catch (e) {
     console.log(e);
-    return (
-      <section className="w-full px-8 lg:px-12 mt-10">
-        <h2 className="my-16 text-3xl font-bold text-center">
-          Event Not Found
-        </h2>
-        <div className="text-gray-600 w-full py-2 text-right">
-          Error: Invalid Event ID
-        </div>
-      </section>
-    );
+    return <FourZeroFour />;
   }
 }
