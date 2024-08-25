@@ -1,4 +1,4 @@
-import { m } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 import { events } from "../utils/handler";
 
@@ -7,6 +7,7 @@ export default function EventInfo() {
   try {
     const event = events.find((event) => event.id === id);
     return (
+      <LazyMotion features={domAnimation}>
       <m.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -54,6 +55,7 @@ export default function EventInfo() {
           </div>
         </div>
       </m.section>
+</LazyMotion>
     );
   } catch (e) {
     console.log(e);
