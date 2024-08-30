@@ -8,8 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.7.5",
-    "framer-motion": "^11.3.31",
+    "axios": "^1.7.4",
+    "framer-motion": "^11.3.28",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
@@ -26,7 +26,9 @@
     "sharp": "^0.33.5",
     "svgo": "^3.3.2",
     "tailwindcss": "^3.4.10",
-    "vite": "^5.4.2",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.1",
     "vite-plugin-image-optimizer": "^1.1.8"
-  }
+  },
+  "packageManager": "yarn@4.4.0"
 }
