@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import Card from "./Card";
 import { events } from "../utils/handler";
 
-export default function Events() {
+/**
+ *
+ *
+ * @return {JSX.Element} Events and Festivals section
+ */
+export default function Events(): JSX.Element {
   return (
     <>
       <div className="hidden px-12 sm:flex w-full">

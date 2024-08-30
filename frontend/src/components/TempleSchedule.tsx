@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
 
+/**
+ *
+ *
+ * @interface Schedule
+ */
 interface Schedule {
   startTime: string;
   endTime: string;
@@ -74,7 +79,12 @@ const schedule: Schedule[] = [
   },
 ];
 
-const TempleSchedule: React.FC = () => {
+/**
+ *
+ *
+ * @return {JSX.Element} lower segment of hero section
+ */
+export default function TempleSchedule(): JSX.Element {
   const [currentText, setCurrentText] = useState<string>("Temple is Open");
   const [nextText, setNextText] = useState<string>("");
   const [isOpen, setIsOpen] = useState<boolean>(true);
@@ -147,6 +157,4 @@ const TempleSchedule: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default TempleSchedule;
+}

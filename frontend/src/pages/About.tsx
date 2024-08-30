@@ -1,7 +1,12 @@
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import Writeup from "../components/Writeup";
 
-export default function About() {
+/**
+ *
+ *
+ * @return {JSX.Element} About page
+ */
+export default function About(): JSX.Element {
   return (
     <LazyMotion features={domAnimation}>
       <m.div

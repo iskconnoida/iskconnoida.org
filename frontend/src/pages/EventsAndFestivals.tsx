@@ -3,7 +3,12 @@ import Card from "../components/Card";
 import styles from "../components/Card.module.css";
 import { events } from "../utils/handler";
 
-export default function EventsAndFestivals() {
+/**
+ *
+ *
+ * @return {JSX.Element} Events and Festivals page
+ */
+export default function EventsAndFestivals(): JSX.Element {
   return (
     <LazyMotion features={domAnimation}>
       <m.div

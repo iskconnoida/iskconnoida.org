@@ -4,6 +4,12 @@ import { useState } from "react";
 import { FaChevronDown, FaEnvelope, FaWhatsapp } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+
+/**
+ *
+ *
+ * @return {JSX.Element} Click-to-call action buttons and the contact form
+ */
 export default function CTC() {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [buttonText, setButtonText] = useState("Submit");

@@ -2,6 +2,8 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
+
+/** lazy load pages to reduce page size */
 const About = lazy(() => import("./pages/About"));
 const Donate = lazy(() => import("./pages/Donate"));
 const EventInfo = lazy(() => import("./pages/EventInfo"));
@@ -14,6 +16,7 @@ const OurServices = lazy(() => import("./pages/OurServices"));
 const RefundReturns = lazy(() => import("./pages/RefundReturns"));
 const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
 
+/** Use react-router-dom to provide routes to react app */
 const router = createBrowserRouter([
   {
     path: "*",

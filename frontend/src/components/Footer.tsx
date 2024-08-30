@@ -9,7 +9,12 @@ import {
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-export default function Footer() {
+/**
+ *
+ *
+ * @return {JSX.Element} Footer
+ */
+export default function Footer(): JSX.Element {
   return (
     <footer className="pt-6 pb-2 bg-[#93282C] text-white w-full desktop:px-24 px-3 tablet:px-10">
       <div className="flex flex-col desktop:flex-row mb-3 desktop:items-center tablet:gap-4">

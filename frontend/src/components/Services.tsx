@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 
-export default function Services() {
+/**
+ *
+ *
+ * @return {JSX.Element} Services component
+ */
+export default function Services(): JSX.Element {
   return (
     <>
       <div className="hidden px-12 sm:flex w-full">

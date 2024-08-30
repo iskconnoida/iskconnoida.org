@@ -3,7 +3,12 @@ import { useEffect, useState } from "react";
 import TempleSchedule from "./TempleSchedule";
 import TempleScheduleModal from "./TempleScheduleModal";
 
-export default function Hero() {
+/**
+ *
+ *
+ * @return {JSX.Element} Hero section
+ */
+export default function Hero(): JSX.Element {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {

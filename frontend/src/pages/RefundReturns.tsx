@@ -1,7 +1,12 @@
 import { m } from "framer-motion";
 import { Link } from "react-router-dom";
 
-export default function RefundReturns() {
+/**
+ *
+ *
+ * @return {JSX.Element} Refunds and Returns page
+ */
+export default function RefundReturns(): JSX.Element {
   return (
     <m.section
       initial={{ opacity: 0 }}

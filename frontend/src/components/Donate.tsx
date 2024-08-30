@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import Card from "./Card";
 import { donations } from "../utils/handler";
 
-export default function Donate() {
+/**
+ *
+ *
+ * @return {JSX.Element} Donate section
+ */
+export default function Donate(): JSX.Element {
   return (
     <>
       <div className="hidden px-12 sm:flex w-full">

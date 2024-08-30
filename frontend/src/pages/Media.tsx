@@ -4,11 +4,22 @@ import { FaClock, FaXmark } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import Slider from "../components/Slider";
 
+/**
+ *
+ *
+ * @interface GalleryItem
+ */
 interface GalleryItem {
   img: string;
   title: string;
   date: string;
 }
+
+/**
+ *
+ *
+ * @interface Video
+ */
 interface Video {
   kirtan: string;
   title: string;
@@ -44,15 +55,31 @@ const videos = [
   },
 ];
 
+/**
+ *
+ *
+ * @interface MediaProps
+ */
 interface MediaProps {
   mediaSection: "gallery" | "kirtans";
 }
 
+/**
+ *
+ *
+ * @return {Date} start date of darshan gallery
+ */
 function getStartDate(): Date {
   const startDate = new Date(2024, 7, 5);
   return startDate;
 }
 
+/**
+ *
+ *
+ * @param {Date} date
+ * @return {string} date in format "month day, year"
+ */
 function getFormattedDate(date: Date): string {
   const day = String(date.getDate()).padStart(2, "0");
   const monthNames = [
@@ -74,6 +101,11 @@ function getFormattedDate(date: Date): string {
   return `${month} ${day}, ${year}`;
 }
 
+/**
+ *
+ *
+ * @return {GalleryItem[]} GalleryItem[]
+ */
 function getGalleries(): GalleryItem[] {
   const startDate = getStartDate();
   const galleries = [
@@ -98,7 +130,13 @@ function getGalleries(): GalleryItem[] {
   }));
 }
 
-export default function Media({ mediaSection }: MediaProps) {
+/**
+ *
+ *
+ * @param {MediaProps} mediaSection (gallery | kirtans)
+ * @return {JSX.Element} Media page
+ */
+export default function Media({ mediaSection }: MediaProps): JSX.Element {
   const [galleryData, setGalleryData] = useState<GalleryItem[]>([]);
   const [showSlider, setShowSlider] = useState<boolean>(false);
   const [currentSlides, setCurrentSlides] = useState<GalleryItem[]>([]);

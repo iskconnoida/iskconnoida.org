@@ -33,7 +33,12 @@ const services = [
   },
 ];
 
-export default function OurServices() {
+/**
+ *
+ *
+ * @return {JSX.Element} Services page
+ */
+export default function OurServices(): JSX.Element {
   return (
     <LazyMotion features={domAnimation}>
       <m.div
