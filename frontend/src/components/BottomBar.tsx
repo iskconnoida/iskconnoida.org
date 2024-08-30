@@ -7,7 +7,12 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 import { TfiGift } from "react-icons/tfi";
 import { Link, useLocation, useParams } from "react-router-dom";
 
-function BottomBar() {
+/**
+ *
+ *
+ * @return {JSX.Element} Bottom navigation bar
+ */
+export default function BottomBar() {
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
   const { id } = useParams();
@@ -127,5 +132,3 @@ function BottomBar() {
     </section>
   );
 }
-
-export default BottomBar;

@@ -1,7 +1,12 @@
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import { Link } from "react-router-dom";
 
-export default function TermsAndConditions() {
+/**
+ *
+ *
+ * @return {JSX.Element} Terms and Conditions page
+ */
+export default function TermsAndConditions(): JSX.Element {
   return (
     <LazyMotion features={domAnimation}>
       <m.div

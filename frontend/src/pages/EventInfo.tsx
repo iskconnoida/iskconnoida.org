@@ -3,6 +3,11 @@ import { Link, useParams } from "react-router-dom";
 import { events } from "../utils/handler";
 import FourZeroFour from "./FourZeroFour";
 
+/**
+ *
+ *
+ * @return The event information page
+ */
 export default function EventInfo() {
   const { id } = useParams();
   try {

@@ -4,7 +4,12 @@ import Card from "../components/Card";
 import styles from "../components/Card.module.css";
 import { donations } from "../utils/handler";
 
-export default function Donate() {
+/**
+ *
+ *
+ * @return {JSX.Element} Donate page
+ */
+export default function Donate(): JSX.Element {
   return (
     <LazyMotion features={domAnimation}>
       <m.div

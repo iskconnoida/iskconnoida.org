@@ -1,11 +1,25 @@
 import { domAnimation, LazyMotion, m } from "framer-motion";
 
+/**
+ *
+ *
+ * @interface ModalProps
+ */
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const TempleScheduleModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
+/**
+ *
+ *
+ * @param {ModalProps} { isOpen, onClose }
+ * @return {JSX.Element|null} temple schedule modal
+ */
+const TempleScheduleModal: React.FC<ModalProps> = ({
+  isOpen,
+  onClose,
+}: ModalProps): JSX.Element | null => {
   if (!isOpen) return null;
 
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {

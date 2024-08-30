@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 import Card from "../components/Card";
 import { facilities } from "../utils/handler";
 
-export default function Facilities(props: { onHomePage: boolean }) {
+/**
+ *
+ *
+ * @param {boolean} props.onHomePage
+ * @return {JSX.Element} Facilities page
+ */
+export default function Facilities(props: {
+  onHomePage: boolean;
+}): JSX.Element {
   return props.onHomePage ? (
     <>
       <div className="hidden px-12 sm:flex w-full">

@@ -2,12 +2,26 @@ import { domAnimation, LazyMotion, m } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 
+/**
+ *
+ *
+ * @interface SliderProps
+ */
 interface SliderProps {
   slides: { img: string; title: string; date: string }[];
   onClose: () => void; // Callback to handle closing the slider
 }
 
-const Slider: React.FC<SliderProps> = ({ slides, onClose }) => {
+/**
+ *
+ *
+ * @param {SliderProps} { slides, onClose }
+ * @return {JSX.Element} Instagram-like story darshan
+ */
+const Slider: React.FC<SliderProps> = ({
+  slides,
+  onClose,
+}: SliderProps): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const sliderRef = useRef<HTMLDivElement | null>(null);

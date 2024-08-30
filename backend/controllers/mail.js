@@ -1,7 +1,9 @@
 import "dotenv/config";
 import nodemailer from "nodemailer";
 
+/** mail sending controller */
 async function sendEmail(req, res) {
+  /** mail provider config */
   const transporter = nodemailer.createTransport({
     host: "smtp.hostinger.com",
     port: 465,
@@ -23,6 +25,7 @@ async function sendEmail(req, res) {
     text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
   };
 
+  /** send mail */
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log("Error:", error);

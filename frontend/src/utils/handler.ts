@@ -1,3 +1,8 @@
+/**
+ *
+ *
+ * @interface value
+ */
 interface value {
   id: string;
   title: string;
@@ -7,9 +12,16 @@ interface value {
   donation_link?: string;
 }
 
+/** @type Response */
 type Response = Record<string, value>;
 
-function handler(res: Response) {
+/**
+ *
+ *
+ * @param {Response} res
+ * @return {value[]} array of objects extracted from API response JSON
+ */
+function handler(res: Response): value[] {
   const data: value[] = [];
   for (const i in res) {
     data.push(res[i]);
@@ -17,6 +29,7 @@ function handler(res: Response) {
   return data;
 }
 
+/** @type Response */
 const eventsRes: Response = {
   festival_response: {
     id: "11",
@@ -28,6 +41,7 @@ const eventsRes: Response = {
   },
 };
 
+/** @type Response */
 const facilitiesRes: Response = {
   facilities_response1: {
     id: "13",
@@ -59,6 +73,7 @@ const facilitiesRes: Response = {
   },
 };
 
+/** @type Response */
 const donationsRes: Response = {
   services_response1: {
     id: "12",

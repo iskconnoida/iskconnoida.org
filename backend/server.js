@@ -9,6 +9,7 @@ import mailRouter from "./routes/mail.js";
 const app = express();
 const port = process.env.PORT || 3000;
 
+/** server configs */
 app.use(
   cors({
     origin: [
@@ -32,9 +33,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.json());
 
+/** handle endpoints */
 app.use(mailRouter);
 app.use(get404);
 
+/** connect to database */
 mongoose
   .connect(
     "mongodb+srv://ishu:lNwKH7FlCS8wwZBx@cluster0.bbugwp2.mongodb.net/?retryWrites=true&w=majority",
