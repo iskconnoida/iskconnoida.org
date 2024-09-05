@@ -136,10 +136,10 @@ export default function TempleSchedule(): JSX.Element {
 
   return (
     <div className="text-center px-4 pt-2">
-      <div className="flex items-center space-x-2 justify-center mb-2">
+      <div className="flex items-start space-x-2 justify-center mb-2">
         <span
           className={
-            "w-3 h-3 rounded-full animate-pulse" +
+            "min-w-3 min-h-3 mt-2 rounded-full animate-pulse" +
             (isOpen ? " bg-green-500" : " bg-red-500")
           }
         ></span>
