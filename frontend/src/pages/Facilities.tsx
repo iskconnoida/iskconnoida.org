@@ -17,7 +17,7 @@ export default function Facilities(props: {
       <div className="hidden px-12 sm:flex w-full">
         <div className="w-1/2 text-3xl font-bold py-14">Temple Facilities</div>
         <div className="w-1/2 py-14 inline-flex justify-end">
-          <button className="border border-violet-700 rounded-lg bg-violet-600 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
+          <button className="border border-primary-700 rounded-lg bg-primary-600 px-4 py-2 text-white shadow-lg shadow-primary-300 hover:shadow-primary-300 hover:shadow-xl">
             <Link to="/facilities">View More</Link>
           </button>
         </div>
@@ -38,7 +38,7 @@ export default function Facilities(props: {
           </Card>
         ))}
       </div>
-      <button className="sm:hidden border border-violet-700 rounded-lg bg-violet-600 mt-14 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
+      <button className="sm:hidden border border-primary-700 rounded-lg bg-primary-600 mt-14 px-4 py-2 text-white shadow-lg shadow-primary-300 hover:shadow-primary-300 hover:shadow-xl">
         <Link to="/facilities">View More</Link>
       </button>
     </>

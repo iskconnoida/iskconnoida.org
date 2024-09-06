@@ -208,7 +208,7 @@ export default function Media({ mediaSection }: MediaProps): JSX.Element {
                 </div>
               ))}
             </div>
-            <button className="md:hidden w-full border border-violet-700 rounded-lg bg-violet-600 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
+            <button className="md:hidden w-full border border-primary-700 rounded-lg bg-primary-600 px-4 py-2 text-white shadow-lg shadow-primary-300 hover:shadow-primary-300 hover:shadow-xl">
               <Link to="/media/kirtans">View Lectures & Kirtans</Link>
             </button>
 
@@ -256,7 +256,7 @@ export default function Media({ mediaSection }: MediaProps): JSX.Element {
                 </div>
               ))}
             </div>
-            <button className="md:hidden w-full border border-violet-700 rounded-lg bg-violet-600 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
+            <button className="md:hidden w-full border border-primary-700 rounded-lg bg-primary-600 px-4 py-2 text-white shadow-lg shadow-primary-300 hover:shadow-primary-300 hover:shadow-xl">
               <Link to="/media/gallery">View Darshan Gallery</Link>
             </button>
 
