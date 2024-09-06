@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Card from "./Card";
 import { donations } from "../utils/handler";
+import Card from "./Card";
 
 /**
  *
@@ -13,7 +13,7 @@ export default function Donate(): JSX.Element {
       <div className="hidden px-12 sm:flex w-full">
         <div className="w-1/2 text-3xl font-bold py-14">Donate</div>
         <div className="w-1/2 py-14 inline-flex justify-end">
-          <button className="border border-violet-700 rounded-lg bg-violet-600 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
+          <button className="border border-primary-700 rounded-lg bg-primary-600 px-4 py-2 text-white shadow-lg shadow-primary-300 hover:shadow-primary-300 hover:shadow-xl">
             <Link to="/donate">View More</Link>
           </button>
         </div>
@@ -34,7 +34,7 @@ export default function Donate(): JSX.Element {
           </Card>
         ))}
       </div>
-      <button className="sm:hidden border border-violet-700 rounded-lg bg-violet-600 mt-14 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
+      <button className="sm:hidden border border-primary-700 rounded-lg bg-primary-600 mt-14 px-4 py-2 text-white shadow-lg shadow-primary-300 hover:shadow-primary-300 hover:shadow-xl">
         <Link to="/donate">View More</Link>
       </button>
     </>

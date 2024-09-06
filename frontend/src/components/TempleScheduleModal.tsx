@@ -40,12 +40,12 @@ const TempleScheduleModal: React.FC<ModalProps> = ({
       >
         <div className="bg-white w-full max-w-lg flex flex-col py-6 px-4 rounded-lg max-h-[80vh] overflow-y-auto">
           <button
-            className="w-10 h-10 ml-auto -mb-10 sticky top-0 text-gray-600 hover:text-gray-800 rounded-full shadow-lg p-2 bg-violet-100 hover:bg-violet-200 border border-violet-300 hover:border-violet-400"
+            className="w-10 h-10 ml-auto -mb-10 sticky top-0 text-gray-600 hover:text-gray-800 rounded-full shadow-lg p-2 bg-primary-100 hover:bg-primary-200 border border-primary-300 hover:border-primary-400"
             onClick={onClose}
           >
             &#x2715; {/* This is the X (close) icon */}
           </button>
-          <h2 className="text-2xl w-full font-bold text-violet-600 mt-2 mb-4 px-10 md:px-0 text-shadow shadow-violet-200">
+          <h2 className="text-2xl w-full font-bold text-primary-600 mt-2 mb-4 px-10 md:px-0 text-shadow shadow-primary-200">
             Temple timings | Open all days
           </h2>
           <p className="text-sm text-gray-600 mb-6">

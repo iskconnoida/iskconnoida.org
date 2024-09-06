@@ -26,7 +26,7 @@ export default function App(props: { page: JSX.Element }): JSX.Element {
           >
             <svg
               aria-hidden="true"
-              className="w-8 h-8 text-gray-200 animate-spin fill-violet-500"
+              className="w-8 h-8 text-gray-200 animate-spin fill-primary-500"
               viewBox="0 0 100 101"
               fill="none"
             >
