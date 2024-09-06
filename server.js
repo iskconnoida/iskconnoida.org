@@ -7,6 +7,7 @@ import env from "dotenv";
 import { get404 } from "./controllers/error.js";
 
 import mailRouter from "./routes/mail.js";
+import colourRouter from "./routes/colours.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -18,11 +19,12 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use(mailRouter);
+app.use(colourRouter);
 app.use(get404);
 
 mongoose
   .connect(
-    "mongodb+srv://ishu:lNwKH7FlCS8wwZBx@cluster0.bbugwp2.mongodb.net/?retryWrites=true&w=majority",
+    `mongodb+srv://ishu:${process.env.MONGO_KEY}@cluster0.bbugwp2.mongodb.net/?retryWrites=true&w=majority`,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
