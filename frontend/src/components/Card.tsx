@@ -1,5 +1,19 @@
 import { Link } from "react-router-dom";
 
+/**
+ *
+ *
+ * @param {string} props.img header image URI
+ * @param {string} props.title card title
+ * @param {string} props.children card content
+ * @param {boolean} props.dateless show date on card
+ * @param {Date} props.date date
+ * @param {string} props.article "Read More" button URI
+ * @param {string} props.donate "Donate" button URI
+ * @param {string} props.className additional classNames for the card
+ * @param {string} props.imgClass additional classNames for the header image
+ * @return {JSX.Element} Card element
+ */
 export default function Card(props: {
   img: string;
   dateless?: boolean;
@@ -10,7 +24,7 @@ export default function Card(props: {
   children: string;
   className?: string;
   imgClass?: string;
-}) {
+}): JSX.Element {
   let a = "th";
   switch (props.date?.toLocaleString("default", { day: "2-digit" })) {
     case "01":

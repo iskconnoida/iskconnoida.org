@@ -1,4 +1,9 @@
-export default function Prabhupada() {
+/**
+ *
+ *
+ * @return {JSX.Element} Prabhupada section
+ */
+export default function Prabhupada(): JSX.Element {
   return (
     <>
       <div className="bg-yellow-100">

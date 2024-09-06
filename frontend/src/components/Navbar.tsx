@@ -3,7 +3,12 @@ import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
 import { Link, useLocation, useParams } from "react-router-dom";
 
-const Navbar: React.FC = () => {
+/**
+ *
+ *
+ * @return {JSX.Element} Navbar
+ */
+export default function Navbar(): JSX.Element {
   const location = useLocation();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const isActive = (path: string) => location.pathname === path;
@@ -115,6 +120,4 @@ const Navbar: React.FC = () => {
       </span>
     </div>
   );
-};
-
-export default Navbar;
+}

@@ -1,3 +1,4 @@
+// App.tsx
 import { Suspense } from "react";
 import { ScrollRestoration } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -7,7 +8,13 @@ import CTC from "./components/CTC";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
-export default function App(props: { page: JSX.Element }) {
+/**
+ *
+ *
+ * @param {JSX.Element} props.page the page to be covered with navbar, bottombar, CTC and footer
+ * @return {JSX.Element} App container
+ */
+export default function App(props: { page: JSX.Element }): JSX.Element {
   return (
     <>
       <Navbar />

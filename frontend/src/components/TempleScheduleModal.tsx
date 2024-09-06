@@ -1,11 +1,25 @@
 import { domAnimation, LazyMotion, m } from "framer-motion";
 
+/**
+ *
+ *
+ * @interface ModalProps
+ */
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const TempleScheduleModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
+/**
+ *
+ *
+ * @param {ModalProps} { isOpen, onClose }
+ * @return {JSX.Element|null} temple schedule modal
+ */
+const TempleScheduleModal: React.FC<ModalProps> = ({
+  isOpen,
+  onClose,
+}: ModalProps): JSX.Element | null => {
   if (!isOpen) return null;
 
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -24,14 +38,14 @@ const TempleScheduleModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         className="fixed inset-0 bg-black/50 pt-36 flex items-center justify-center z-50"
         onClick={handleOverlayClick}
       >
-        <div className="bg-white w-full max-w-lg py-8 px-4 rounded-lg relative max-h-[80vh] overflow-y-auto">
+        <div className="bg-white w-full max-w-lg flex flex-col py-6 px-4 rounded-lg max-h-[80vh] overflow-y-auto">
           <button
-            className="absolute top-4 right-4 text-gray-600 hover:text-gray-700"
+            className="w-10 h-10 ml-auto -mb-10 sticky top-0 text-gray-600 hover:text-gray-800 rounded-full shadow-lg p-2 bg-violet-100 hover:bg-violet-200 border border-violet-300 hover:border-violet-400"
             onClick={onClose}
           >
             &#x2715; {/* This is the X (close) icon */}
           </button>
-          <h2 className="text-2xl font-bold text-violet-600 mb-4 text-shadow shadow-violet-200">
+          <h2 className="text-2xl w-full font-bold text-violet-600 mt-2 mb-4 px-10 md:px-0 text-shadow shadow-violet-200">
             Temple timings | Open all days
           </h2>
           <p className="text-sm text-gray-600 mb-6">

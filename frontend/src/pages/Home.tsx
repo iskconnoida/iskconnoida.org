@@ -7,7 +7,12 @@ import Services from "../components/Services";
 import Social from "../components/Social";
 import Facilities from "./Facilities";
 
-export default function Home() {
+/**
+ *
+ *
+ * @return {JSX.Element} Home page
+ */
+export default function Home(): JSX.Element {
   return (
     <>
       <Hero />

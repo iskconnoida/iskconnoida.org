@@ -2,7 +2,12 @@ import { domAnimation, LazyMotion, m } from "framer-motion";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function FourZeroFour() {
+/**
+ *
+ *
+ * @return {JSX.Element} 404 page
+ */
+export default function FourZeroFour(): JSX.Element {
   const navigate = useNavigate();
   useEffect(() => {
     navigate("/donate");
