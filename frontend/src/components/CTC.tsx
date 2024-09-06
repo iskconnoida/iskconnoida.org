@@ -167,7 +167,7 @@ export default function CTC() {
                           placeholder="John Doe"
                           required
                           type="text"
-                          className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-violet-400 focus:outline-none focus:shadow-outline"
+                          className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-primary-400 focus:outline-none focus:shadow-outline"
                           id="name"
                           pattern="([A-Z.a-z]{2,}\s?)+"
                           name="name"
@@ -193,7 +193,7 @@ export default function CTC() {
                           placeholder="username@gmail.com"
                           required
                           type="email"
-                          className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-violet-400 focus:outline-none focus:shadow-outline"
+                          className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-primary-400 focus:outline-none focus:shadow-outline"
                           id="email"
                           pattern="^[\w\.]+@(gmail\.com|yahoo\.com|outlook\.com|icloud\.com)$"
                           name="email"
@@ -219,7 +219,7 @@ export default function CTC() {
                           placeholder="+911234567890"
                           required
                           type="tel"
-                          className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-violet-400 focus:outline-none focus:shadow-outline"
+                          className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-primary-400 focus:outline-none focus:shadow-outline"
                           id="phone"
                           pattern="[+]91(6|7|8|9)\d{9}$"
                           name="phone"
@@ -244,7 +244,7 @@ export default function CTC() {
                         <textarea
                           required
                           placeholder="Type your message/query here"
-                          className="flex-grow w-full px-4 py-3 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-violet-400 focus:outline-none focus:shadow-outline"
+                          className="flex-grow w-full px-4 py-3 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-primary-400 focus:outline-none focus:shadow-outline"
                           id="message"
                           name="message"
                           value={state.message}
@@ -262,7 +262,7 @@ export default function CTC() {
                         <button
                           type="submit"
                           id="submitButton"
-                          className={`inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-lg shadow-md focus:shadow-outline focus:outline-none shadow-violet-200 bg-violet-500 ${isDisabled ? "bg-violet-400 cursor-not-allowed" : "hover:shadow-violet-500 hover:bg-violet-700"}`}
+                          className={`inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-lg shadow-md focus:shadow-outline focus:outline-none shadow-primary-200 bg-primary-500 ${isDisabled ? "bg-primary-400 cursor-not-allowed" : "hover:shadow-primary-500 hover:bg-primary-700"}`}
                           disabled={isDisabled}
                         >
                           {buttonText}

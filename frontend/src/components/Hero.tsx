@@ -67,7 +67,7 @@ export default function Hero(): JSX.Element {
           id="hero"
           className="lg:mt-[3.5rem] h-screen lg:h-[calc(100vh-3.5rem)] flex flex-col w-screen bg-center bg-no-repeat bg-cover text-center"
         >
-          <div className="absolute bottom-0 left-0 right-0 h-full w-full bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-violet-500/50 via-violet-900/10 to-transparent z-0"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-full w-full bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-primary-500/50 via-primary-900/10 to-transparent z-0"></div>
           <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -95,7 +95,7 @@ export default function Hero(): JSX.Element {
               <div className="text-center mt-4">
                 <button
                   onClick={openModal}
-                  className="border border-violet-500 rounded-lg bg-violet-500 px-4 py-2 text-white font-semibold shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl"
+                  className="border border-primary-500 rounded-lg bg-primary-500 px-4 py-2 text-white font-semibold shadow-lg shadow-primary-300 hover:shadow-primary-300 hover:shadow-xl"
                 >
                   View Temple Schedule
                 </button>

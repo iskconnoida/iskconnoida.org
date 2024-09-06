@@ -1,10 +1,16 @@
 /** @type {import('tailwindcss').Config} */
+import color from "./src/utils/color";
+import defaultColors from "tailwindcss/colors";
 import defaultTheme from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    colors: {
+      primary: color,
+      ...defaultColors,
+    },
     extend: {
       backdropBlur: {
         md: "10px",
@@ -144,22 +150,6 @@ export default {
           "accent-400": "#2979ff",
           "accent-700": "#2962ff",
         },
-        "light-blue": {
-          50: "#e1f5fe",
-          100: "#b3e5fc",
-          200: "#81d4fa",
-          300: "#4fc3f7",
-          400: "#29b6f6",
-          500: "#03a9f4",
-          600: "#039be5",
-          700: "#0288d1",
-          800: "#0277bd",
-          900: "#01579b",
-          "accent-100": "#80d8ff",
-          "accent-200": "#40c4ff",
-          "accent-400": "#00b0ff",
-          "accent-700": "#0091ea",
-        },
         cyan: {
           50: "#e0f7fa",
           100: "#b2ebf2",
@@ -187,18 +177,6 @@ export default {
           700: "#616161",
           800: "#424242",
           900: "#212121",
-        },
-        "blue-gray": {
-          50: "#eceff1",
-          100: "#cfd8dc",
-          200: "#b0bec5",
-          300: "#90a4ae",
-          400: "#78909c",
-          500: "#607d8b",
-          600: "#546e7a",
-          700: "#455a64",
-          800: "#37474f",
-          900: "#263238",
         },
         green: {
           50: "#e8f5e9",

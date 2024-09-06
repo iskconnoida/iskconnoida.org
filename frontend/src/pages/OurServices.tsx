@@ -55,7 +55,7 @@ export default function OurServices(): JSX.Element {
           {services.map((service, index) => (
             <div key={index}>
               <div className="rounded-lg shadow-lg overflow-hidden flex flex-col">
-                <div className="rounded-lg w-full flex items-center justify-center bg-violet-200 border h-auto border-violet-50">
+                <div className="rounded-lg w-full flex items-center justify-center bg-primary-200 border h-auto border-primary-50">
                   <img
                     src={service.img}
                     alt={service.title}
