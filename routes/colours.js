@@ -4,6 +4,6 @@ import { getColour } from "../controllers/colours.js";
 
 const router = Router();
 
-router.post("/colour", getColour);
+router.get("/colour", getColour);
 
 export default router;

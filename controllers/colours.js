@@ -2,12 +2,11 @@ import { Colour } from "../models/colours.js";
 
 export async function getColour(req, res) {
   try {
-    const name = req.body.name;
-    const colour = await Colour.findOne({ name: name });
-    if (!colour) {
-      res.status(404).send("Colour not found");
+    const colours = await Colour.find();
+    if (!colours) {
+      res.status(404).send("Colours not found");
     } else {
-      res.status(200).json(colour.shades);
+      res.status(200).json(colours);
     }
   } catch (err) {
     console.log(`Error - ${err}`);
