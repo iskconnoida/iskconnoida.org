@@ -4,9 +4,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "build": "yarn workspace frontend build",
     "dev:frontend": "yarn workspace frontend dev --host",
     "dev:backend": "yarn workspace backend dev",
     "dev": "concurrently -n FRONTEND,BACKEND -c magenta,green \"yarn dev:frontend\" \"yarn dev:backend\"",
+    "start": "yarn workspace backend start",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0"
   },
   "workspaces": [
@@ -26,7 +28,8 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.11",
     "globals": "^15.9.0",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
   },
-  "packageManager": "yarn@4.4.0"
+  "packageManager": "yarn@4.4.1"
 }
