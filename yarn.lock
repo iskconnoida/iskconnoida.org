@@ -2463,6 +2463,7 @@ __metadata:
     sharp: "npm:^0.33.5"
     svgo: "npm:^3.3.2"
     tailwindcss: "npm:^3.4.10"
+    typescript: "npm:^5.5.4"
     vite: "npm:^5.4.2"
     vite-plugin-image-optimizer: "npm:^1.1.8"
   languageName: unknown
@@ -4414,7 +4415,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.33.5":
+"sharp@npm:*, sharp@npm:^0.33.5":
   version: 0.33.5
   resolution: "sharp@npm:0.33.5"
   dependencies:
@@ -4739,7 +4740,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo@npm:^3.3.2":
+"svgo@npm:*, svgo@npm:^3.3.2":
   version: 3.3.2
   resolution: "svgo@npm:3.3.2"
   dependencies:

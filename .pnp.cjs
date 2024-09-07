@@ -3067,6 +3067,7 @@ const RAW_RUNTIME_STATE =
           ["sharp", "npm:0.33.5"],\
           ["svgo", "npm:3.3.2"],\
           ["tailwindcss", "npm:3.4.10"],\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
           ["vite", "virtual:129c180801e06ed395e4da371c76ab19371e66a3c2230c25e2f8aa53715d8f66998096a34403ac325c10f7034d54eaa1a82bf612b0d4bf56a1d1943388d98f11#npm:5.4.2"],\
           ["vite-plugin-image-optimizer", "virtual:129c180801e06ed395e4da371c76ab19371e66a3c2230c25e2f8aa53715d8f66998096a34403ac325c10f7034d54eaa1a82bf612b0d4bf56a1d1943388d98f11#npm:1.1.8"]\
         ],\
@@ -6024,6 +6025,8 @@ const RAW_RUNTIME_STATE =
           ["@types/vite", null],\
           ["ansi-colors", "npm:4.1.3"],\
           ["pathe", "npm:1.1.2"],\
+          ["sharp", "npm:0.33.5"],\
+          ["svgo", "npm:3.3.2"],\
           ["vite", "virtual:129c180801e06ed395e4da371c76ab19371e66a3c2230c25e2f8aa53715d8f66998096a34403ac325c10f7034d54eaa1a82bf612b0d4bf56a1d1943388d98f11#npm:5.4.2"]\
         ],\
         "packagePeers": [\

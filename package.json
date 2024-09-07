@@ -4,10 +4,12 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "build": "yarn workspace frontend build",
     "dev:frontend": "yarn workspace frontend dev --host",
     "dev:backend": "yarn workspace backend dev",
     "dev": "concurrently -n FRONTEND,BACKEND -c magenta,green \"yarn dev:frontend\" \"yarn dev:backend\"",
-    "lint": "eslint . --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "start": "yarn workspace backend start"
   },
   "workspaces": [
     "frontend",
