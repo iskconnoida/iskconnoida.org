@@ -32,12 +32,13 @@ function handler(res: Response): value[] {
 /** @type Response */
 const eventsRes: Response = {
   festival_response: {
-    id: "11",
-    title: "Shri Krishna Janmashtami 2024",
-    img: "upload/catimg/6ea9ab1baa0efb9e19094440c317e21b.29_08_2021-krishna_30_2_21972025.jpg",
+    id: "110",
+    title: "Shri Radhashtami 2024",
+    img: "upload/catimg/14bfa6bb14875e45bba028a21ed38046.radhaashtami.jpg",
     description:
-      "On the most auspicious occasion of 5251st Janmashtami Mahotsava of Lord Shri Krishna, may the Lordships Shri Shri Radha Govind Dev shower their love in your hearts. Feel free to donate on the occasion of Shri Krishna Janmashtami and be a part of this festivity. Hare Krishna.",
-    date: "2024-08-26",
+      "11th September, Wednesday marks the Auspicious Appearance Day of Srimati Radharani. The day will be celebrated in the temple with the following events:\n10 am - Kirtan\n11 am - Abhishek\n12 noon - Special Discourse\n1 pm - Prasadam\n4:30 pm - Special Flower Dress Darshan\nSPECIAL: For the first time ISKCON NOIDA invites everyone to perform Abhishek / Aarti of Shrimati Radharani",
+    donation_link: "https://iic.iskconnoida.org/donate/SHRI_radhashtami_2024",
+    date: "2024-09-11",
   },
 };
 
@@ -84,13 +85,13 @@ const donationsRes: Response = {
     donation_link: "https://iic.iskconnoida.org/donate/Anna_Daan_2024",
   },
   services_response2: {
-    id: "11",
-    title: "Shri Krishna Janmashtami 2024",
-    img: "upload/catimg/f899139df5e1059396431415e770c6dd.janmashtami 2024_11zon.webp",
+    id: "110",
+    title: "Shri Radhashtami 2024",
+    img: "upload/catimg/14bfa6bb14875e45bba028a21ed38046.radhaashtami.jpg",
     description:
-      "On the most auspicious occasion of 5251st Janmashtami Mahotsava of Lord Shri Krishna, may the Lordships Shri Shri Radha Govind Dev shower their love in your hearts. Feel free to donate on the occasion of Shri Krishna Janmashtami and be a part of this festivity. Hare Krishna.",
-    donation_link:
-      "https://iic.iskconnoida.org/donate/SHRI_KRISHNA_JANMASHTAMI_2024,_NOIDA",
+      "11th September, Wednesday marks the Auspicious Appearance Day of Srimati Radharani. The day will be celebrated in the temple with the following events:\n10 am - Kirtan\n11 am - Abhishek\n12 noon - Special Discourse\n1 pm - Prasadam\n4:30 pm - Special Flower Dress Darshan\nSPECIAL: For the first time ISKCON NOIDA invites everyone to perform Abhishek / Aarti of Shrimati Radharani",
+    donation_link: "https://iic.iskconnoida.org/donate/SHRI_radhashtami_2024",
+    date: "2024-09-11",
   },
 };
 
