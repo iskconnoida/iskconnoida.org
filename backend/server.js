@@ -42,8 +42,6 @@ const con = mysql.createConnection({
   user: process.env.MYSQL_USER,
   password: process.env.MYSQL_PASSWORD,
 });
-MYSQL_USER = "root"
-MYSQL_PASSWORD = "password"
 
 con.connect((err) => {
   if (err) console.error(err);
