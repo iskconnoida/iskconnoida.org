@@ -27,7 +27,7 @@ export default function EventInfo() {
             <img
               src={"https://iic.iskconnoida.org/" + event!.img}
               alt="event img"
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg lg:w-1/2"
             />
             <div className="flex flex-col gap-5">
               <div className="font-bold">
@@ -35,7 +35,7 @@ export default function EventInfo() {
               </div>
               <div>{event!.description}</div>
               <Link
-                to="https://iic.iskconnoida.org/donate/SHRI_KRISHNA_JANMASHTAMI_2024,_NOIDA"
+                to={event!.donation_link!}
                 className="w-full justify-between font-bold inline-flex items-center px-6 py-4 text-sm text-center text-white bg-red-700 rounded-xl hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 shadow-lg shadow-red-200 hover:shadow-red-300"
               >
                 DONATE NOW
