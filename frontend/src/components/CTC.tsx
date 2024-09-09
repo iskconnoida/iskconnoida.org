@@ -195,7 +195,7 @@ export default function CTC() {
                           type="email"
                           className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-primary-400 focus:outline-none focus:shadow-outline"
                           id="email"
-                          pattern="^[\w\.]+@(gmail\.com|yahoo\.com|outlook\.com|icloud\.com)$"
+                          pattern="^[\w.]+@(gmail\.com|yahoo\.com|outlook\.com|icloud\.com)$"
                           name="email"
                           value={state.email}
                           onChange={(e) =>
@@ -221,7 +221,7 @@ export default function CTC() {
                           type="tel"
                           className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none focus:border-primary-400 focus:outline-none focus:shadow-outline"
                           id="phone"
-                          pattern="[+]91(6|7|8|9)\d{9}$"
+                          pattern="\+91(6|7|8|9)\d{9}$"
                           name="phone"
                           value={state.phone}
                           onChange={(e) =>
