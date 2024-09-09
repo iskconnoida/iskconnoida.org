@@ -2,7 +2,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import "dotenv/config";
 import express from "express";
-import mongoose from "mongoose";
+import mysql from "mysql";
 import { get404 } from "./controllers/error.js";
 import mailRouter from "./routes/mail.js";
 
@@ -37,21 +37,20 @@ app.use(express.json());
 app.use(mailRouter);
 app.use(get404);
 
-/** connect to database */
-mongoose
-  .connect(
-    "mongodb+srv://ishu:lNwKH7FlCS8wwZBx@cluster0.bbugwp2.mongodb.net/?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    },
-  )
-  .then(() => {
-    app.listen(port, () => {
-      console.log(`Server is running on port ${port}`);
-      console.log("Connected to Database");
-    });
-  })
-  .catch((err) => {
-    console.log(err);
+const con = mysql.createConnection({
+  host: "localhost",
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+});
+
+con.connect((err) => {
+  if (err) console.error(err);
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+    console.log("Connected to Database");
   });
+  // con.query("select * from Loans", (err, res) => {
+  //   if (err) console.error(err);
+  //   console.log(res);
+  // });
+});
