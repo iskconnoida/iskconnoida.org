@@ -32,13 +32,13 @@ function handler(res: Response): value[] {
 /** @type Response */
 const eventsRes: Response = {
   festival_response: {
-    id: "110",
-    title: "Shri Radhashtami 2024",
-    img: "upload/catimg/14bfa6bb14875e45bba028a21ed38046.radhaashtami.jpg",
+    id: "89",
+    title: "Ekadashi Seva",
+    img: "upload/catimg/c7e1249ffc03eb9ded908c236bd1996d.ekadashi%20poster%20webp.webp",
     description:
-      "11th September, Wednesday marks the Auspicious Appearance Day of Srimati Radharani. The day will be celebrated in the temple with the following events:\n10 am - Kirtan\n11 am - Abhishek\n12 noon - Special Discourse\n1 pm - Prasadam\n4:30 pm - Special Flower Dress Darshan\nSPECIAL: For the first time ISKCON NOIDA invites everyone to perform Abhishek / Aarti of Shrimati Radharani",
-    donation_link: "https://iic.iskconnoida.org/donate/SHRI_radhashtami_2024",
-    date: "2024-09-11",
+      "This Ekadashi you can choose to selfessly contribute your services to the Lordships, Sri Sri radha Govind Devji and Vaishnavas.",
+    donation_link: "https://iic.iskconnoida.org/donate/EKADASHI_SEVA",
+    date: "2024-09-14",
   },
 };
 
@@ -85,13 +85,13 @@ const donationsRes: Response = {
     donation_link: "https://iic.iskconnoida.org/donate/Anna_Daan_2024",
   },
   services_response2: {
-    id: "110",
-    title: "Shri Radhashtami 2024",
-    img: "upload/catimg/14bfa6bb14875e45bba028a21ed38046.radhaashtami.jpg",
+    id: "89",
+    title: "Ekadashi Seva",
+    img: "upload/catimg/c7e1249ffc03eb9ded908c236bd1996d.ekadashi%20poster%20webp.webp",
     description:
-      "11th September, Wednesday marks the Auspicious Appearance Day of Srimati Radharani. The day will be celebrated in the temple with the following events:\n10 am - Kirtan\n11 am - Abhishek\n12 noon - Special Discourse\n1 pm - Prasadam\n4:30 pm - Special Flower Dress Darshan\nSPECIAL: For the first time ISKCON NOIDA invites everyone to perform Abhishek / Aarti of Shrimati Radharani",
-    donation_link: "https://iic.iskconnoida.org/donate/SHRI_radhashtami_2024",
-    date: "2024-09-11",
+      "This Ekadashi you can choose to selfessly contribute your services to the Lordships, Sri Sri radha Govind Devji and Vaishnavas.",
+    donation_link: "https://iic.iskconnoida.org/donate/EKADASHI_SEVA",
+    date: "2024-09-14",
   },
 };
 
