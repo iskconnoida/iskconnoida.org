@@ -1,4 +1,3 @@
-// App.tsx
 import { Suspense } from "react";
 import { ScrollRestoration } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
