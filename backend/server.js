@@ -2,9 +2,10 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import "dotenv/config";
 import express from "express";
-import mysql from "mysql";
-import { get404 } from "./controllers/error.js";
+import get404 from "./controllers/error.js";
+import colorRouter from "./routes/colors.js";
 import mailRouter from "./routes/mail.js";
+import db from "./utils/db.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -34,23 +35,16 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 /** handle endpoints */
+app.use(colorRouter);
 app.use(mailRouter);
 app.use(get404);
 
-const con = mysql.createConnection({
-  host: "localhost",
-  user: process.env.MYSQL_USER,
-  password: process.env.MYSQL_PASSWORD,
-});
-
-con.connect((err) => {
-  if (err) console.error(err);
+try {
+  await db.authenticate();
   app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-    console.log("Connected to Database");
+    console.log(`Server running on port ${port}.`);
+    console.log("Connected to Database!");
   });
-  // con.query("select * from Loans", (err, res) => {
-  //   if (err) console.error(err);
-  //   console.log(res);
-  // });
-});
+} catch (error) {
+  console.error(`Unable to connect to database: ${error}`);
+}

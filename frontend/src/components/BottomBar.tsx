@@ -12,7 +12,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
  *
  * @return {JSX.Element} Bottom navigation bar
  */
-export default function BottomBar() {
+export default function BottomBar(): JSX.Element {
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
   const { id } = useParams();
