@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
  *
  * @return {JSX.Element} Click-to-call action buttons and the contact form
  */
-export default function CTC() {
+export default function CTC(): JSX.Element {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [buttonText, setButtonText] = useState("Submit");
   const [isDisabled, setIsDisabled] = useState(false);
