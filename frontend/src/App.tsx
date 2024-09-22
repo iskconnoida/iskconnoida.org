@@ -6,14 +6,18 @@ import CTC from "./components/CTC";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
-export default function App(props: { page: JSX.Element }) {
+export default function App(props: {
+  page: JSX.Element;
+  hideLayout?: boolean;
+}) {
+  const { hideLayout, page } = props;
   return (
     <>
-      <Navbar />
-      {props.page}
-      <CTC />
-      <Footer />
-      <BottomBar />
+      {!hideLayout && <Navbar />}
+      {page}
+      {!hideLayout && <CTC />}
+      {!hideLayout && <Footer />}
+      {!hideLayout && <BottomBar />}
       <ScrollRestoration />
       <ToastContainer
         position="top-center"

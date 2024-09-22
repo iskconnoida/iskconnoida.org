@@ -11,6 +11,7 @@ import Media from "./pages/Media";
 import OurServices from "./pages/OurServices";
 import RefundReturns from "./pages/RefundReturns";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import Admin from "./pages/adminPage/Admin";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
   {
     path: "/media/kirtans",
     element: <App page={<Media mediaSection="kirtans" />} />,
+  },
+  {
+    path: "/admin",
+    element: <App page={<Admin />} hideLayout={true} />,
   },
 ]);
 

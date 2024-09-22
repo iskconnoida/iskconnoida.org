@@ -8,6 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.8",
+    "@heroicons/react": "^2.1.5",
     "axios": "^1.7.4",
     "framer-motion": "^11.3.28",
     "react": "^18.3.1",

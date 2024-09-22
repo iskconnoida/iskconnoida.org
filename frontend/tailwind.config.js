@@ -3,6 +3,7 @@ import defaultTheme from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -360,7 +361,7 @@ export default {
             textShadow: value,
           }),
         },
-        { values: theme("textShadow") },
+        { values: theme("textShadow") }
       );
     }),
   ],
