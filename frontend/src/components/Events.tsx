@@ -31,7 +31,7 @@ export default function Events(): JSX.Element {
             date={new Date(event.date!)}
             title={event.title}
             article={"/events/" + event.id}
-            donate="https://iic.iskconnoida.org/donate/SHRI_KRISHNA_JANMASHTAMI_2024,_NOIDA"
+            donate={event.donation_link!}
           >
             {event.description}
           </Card>
