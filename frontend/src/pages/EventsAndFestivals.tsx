@@ -28,7 +28,7 @@ export default function EventsAndFestivals(): JSX.Element {
               date={new Date(event.date!)}
               title={event.title}
               article={event.id!}
-              donate="https://iic.iskconnoida.org/donate/SHRI_KRISHNA_JANMASHTAMI_2024,_NOIDA"
+              donate={event.donation_link!}
               imgClass={styles.customImgClass}
             >
               {event.description}
