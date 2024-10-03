@@ -31,7 +31,7 @@ export default function BottomBar(): JSX.Element {
           to="/"
           onClick={() => setPopupVisible(false)}
           className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 rounded-lg xs:px-1 px-1 text-center z-20 ${
-            isActive("/") && !isPopupVisible ? "text-primary-600" : "bg-white"
+            isActive("/") && !isPopupVisible ? "text-primary600" : "bg-white"
           }`}
         >
           {" "}
@@ -42,7 +42,7 @@ export default function BottomBar(): JSX.Element {
           onClick={() => setPopupVisible(false)}
           className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 text-center rounded-lg xs:px-1 px-1 z-20 ${
             isActive("/services") && !isPopupVisible
-              ? "text-primary-600"
+              ? "text-primary600"
               : "bg-white"
           }`}
         >
@@ -67,7 +67,7 @@ export default function BottomBar(): JSX.Element {
           className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 text-center rounded-lg xs:px-1 px-1 z-20 ${
             (isActive("/events") || isActive(`/events/${id}`)) &&
             !isPopupVisible
-              ? "text-primary-600"
+              ? "text-primary600"
               : "bg-white"
           }`}
         >
@@ -76,7 +76,7 @@ export default function BottomBar(): JSX.Element {
         <button
           onClick={togglePopup}
           className={`xs:text-xs md:text-base lg:text-xl font-semibold text-gray-600 text-center rounded-lg xs:px-1 px-1 z-20 ${
-            isPopupVisible ? "text-primary-600" : "bg-white"
+            isPopupVisible ? "text-primary600" : "bg-white"
           }`}
         >
           <CiCircleMore size={24} className="mx-auto" /> More
@@ -102,7 +102,7 @@ export default function BottomBar(): JSX.Element {
                     <Link
                       to="/about"
                       onClick={togglePopup}
-                      className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/about") ? "text-primary-600" : "text-black"}`}
+                      className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/about") ? "text-primary600" : "text-black"}`}
                     >
                       About
                     </Link>
@@ -110,7 +110,7 @@ export default function BottomBar(): JSX.Element {
                     <Link
                       to="/media/gallery"
                       onClick={togglePopup}
-                      className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") || isActive("/media/kirtans") ? "text-primary-600" : "text-black"}`}
+                      className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") || isActive("/media/kirtans") ? "text-primary600" : "text-black"}`}
                     >
                       Media
                     </Link>
@@ -118,7 +118,7 @@ export default function BottomBar(): JSX.Element {
                     <Link
                       to="/facilities"
                       onClick={togglePopup}
-                      className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/facilities") ? "text-primary-600" : "text-black"}`}
+                      className={`block rounded-md px-4 py-3 hover:bg-gray-200 ${isActive("/facilities") ? "text-primary600" : "text-black"}`}
                     >
                       Facilities
                     </Link>

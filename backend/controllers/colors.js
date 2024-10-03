@@ -2,7 +2,7 @@ import Color from "../models/color.js";
 
 export default async function getColors(req, res) {
   try {
-    const colors = await Color.findAll();
+    const colors = await Color.findOne({ where: { selected: true } });
     if (colors) {
       res.status(200).json(colors);
     } else {

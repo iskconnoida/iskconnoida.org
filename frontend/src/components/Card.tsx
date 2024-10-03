@@ -122,7 +122,7 @@ export default function Card(props: {
       ) : (
         <div className="p-4 relative -top-14 -mb-14 h-full flex flex-col">
           <Link to={props.article!}>
-            <div className="flex items-center justify-center flex-col bg-primary-500 w-20 h-20 rounded-xl text-white font-semibold border border-white shadow-md shadow-slate-300">
+            <div className="flex items-center justify-center flex-col bg-primary500 w-20 h-20 rounded-xl text-white font-semibold border border-white shadow-md shadow-slate-300">
               <span className="text-2xl">
                 {props.date?.toLocaleString("default", { day: "2-digit" }) + a}
               </span>
@@ -138,7 +138,7 @@ export default function Card(props: {
           <div className="mt-auto flex justify-between">
             <Link
               to={props.article!}
-              className="w-[47.5%] justify-between inline-flex items-center px-3 py-4 text-sm font-medium text-center text-white bg-primary-600 rounded-xl hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+              className="w-[47.5%] justify-between inline-flex items-center px-3 py-4 text-sm font-medium text-center text-white bg-primary600 rounded-xl hover:bg-primary800 focus:ring-4 focus:outline-none focus:ring-primary300"
             >
               Read more
               <svg

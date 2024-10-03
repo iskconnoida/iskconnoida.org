@@ -16,13 +16,20 @@ const Color = db.define("colors", {
       notEmpty: true,
     },
   },
+  selected: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+    validate: {
+      notEmpty: true,
+    },
+  },
 });
 
 try {
   db.sync();
-  console.log('"colors" table created successfully!');
+  console.log('"colors" table connected successfully!');
 } catch (error) {
-  console.log(`Unable to create table colors: ${error.message}`);
+  console.log(`Unable to connect to table "colors": ${error.message}`);
 }
 
 export default Color;

@@ -28,7 +28,7 @@ export default function Navbar(): JSX.Element {
         <Link
           to="/"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 px-2 py-1 rounded-full text-shadow-lg shadow-purple-100 ${
-            isActive("/") ? "text-primary-600" : ""
+            isActive("/") ? "text-primary600" : ""
           }`}
         >
           Home
@@ -36,7 +36,7 @@ export default function Navbar(): JSX.Element {
         <Link
           to="/about"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 px-2 py-1 rounded-full text-shadow-lg shadow-purple-100 ${
-            isActive("/about") ? "text-primary-600" : ""
+            isActive("/about") ? "text-primary600" : ""
           }`}
         >
           About
@@ -44,7 +44,7 @@ export default function Navbar(): JSX.Element {
         <Link
           to="/services"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 px-2 py-1 rounded-full text-shadow-lg shadow-purple-100 ${
-            isActive("/services") ? "text-primary-600" : ""
+            isActive("/services") ? "text-primary600" : ""
           }`}
         >
           Services
@@ -55,7 +55,7 @@ export default function Navbar(): JSX.Element {
           onMouseLeave={() => setDropdownOpen(false)}
         >
           <button
-            className={`md:text-base flex items-center lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full text-shadow-lg shadow-purple-100 ${isActive("/media/gallery") || isActive("/media/kirtans") ? "text-primary-600" : ""}`}
+            className={`md:text-base flex items-center lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full text-shadow-lg shadow-purple-100 ${isActive("/media/gallery") || isActive("/media/kirtans") ? "text-primary600" : ""}`}
           >
             Media
             <FaChevronDown size={12} className="mt-1 ml-1" />
@@ -72,7 +72,7 @@ export default function Navbar(): JSX.Element {
                   <Link
                     to="/media/gallery"
                     onClick={() => setDropdownOpen(false)}
-                    className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") ? "text-primary-600" : "text-black"}`}
+                    className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") ? "text-primary600" : "text-black"}`}
                   >
                     Darshan Gallery
                   </Link>
@@ -80,7 +80,7 @@ export default function Navbar(): JSX.Element {
                   <Link
                     to="/media/kirtans"
                     onClick={() => setDropdownOpen(false)}
-                    className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/kirtans") ? "text-primary-600" : "text-black"}`}
+                    className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/kirtans") ? "text-primary600" : "text-black"}`}
                   >
                     Kirtans & Lectures
                   </Link>
@@ -93,7 +93,7 @@ export default function Navbar(): JSX.Element {
           to="/events"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 rounded-full px-2 py-1 text-shadow-lg shadow-purple-100 ${
             isActive("/events") || isActive(`/events/${id}`)
-              ? "text-primary-600"
+              ? "text-primary600"
               : ""
           }`}
         >
@@ -102,7 +102,7 @@ export default function Navbar(): JSX.Element {
         <Link
           to="/facilities"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 rounded-full px-2 py-1 text-shadow-lg shadow-purple-100 ${
-            isActive("/facilities") ? "text-primary-600" : ""
+            isActive("/facilities") ? "text-primary600" : ""
           }`}
         >
           Facilities

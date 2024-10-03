@@ -1,16 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-import color from "./src/utils/color";
-import defaultColors from "tailwindcss/colors";
 import defaultTheme from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {
-      primary: color,
-      ...defaultColors,
-    },
     extend: {
       backdropBlur: {
         md: "10px",
@@ -38,6 +32,16 @@ export default {
         custom: ["Permanent Marker", ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        primary50: "var(--primary-50)",
+        primary100: "var(--primary-100)",
+        primary200: "var(--primary-200)",
+        primary300: "var(--primary-300)",
+        primary400: "var(--primary-400)",
+        primary500: "var(--primary-500)",
+        primary600: "var(--primary-600)",
+        primary700: "var(--primary-700)",
+        primary800: "var(--primary-800)",
+        primary900: "var(--primary-900)",
         red: {
           50: "#ffebee",
           100: "#ffcdd2",
@@ -70,7 +74,7 @@ export default {
           "accent-400": "#d500f9",
           "accent-700": "#aa00ff",
         },
-        "deep-purple": {
+        deeppurple: {
           50: "#ede7f6",
           100: "#d1c4e9",
           200: "#b39ddb",
@@ -194,7 +198,7 @@ export default {
           "accent-400": "#00e676",
           "accent-700": "#00c853",
         },
-        "light-green": {
+        lightgreen: {
           50: "#f1f8e9",
           100: "#dcedc8",
           200: "#c5e1a5",
@@ -274,7 +278,7 @@ export default {
           "accent-400": "#ff9100",
           "accent-700": "#ff6d00",
         },
-        "deep-orange": {
+        deeporange: {
           50: "#fbe9e7",
           100: "#ffccbc",
           200: "#ffab91",
