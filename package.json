@@ -1,12 +1,13 @@
 {
   "name": "iskconnoida.org",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "dev:frontend": "yarn workspace frontend dev --host",
     "dev:backend": "yarn workspace backend dev",
     "dev": "concurrently -n FRONTEND,BACKEND -c magenta,green \"yarn dev:frontend\" \"yarn dev:backend\"",
+    "initialize": "yarn workspace backend initialize",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0"
   },
   "workspaces": [
@@ -28,5 +29,5 @@
     "globals": "^15.10.0",
     "prettier": "^3.3.3"
   },
-  "packageManager": "yarn@4.4.0"
+  "packageManager": "yarn@4.5.0"
 }

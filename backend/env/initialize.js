@@ -1,26 +1,41 @@
-//NOTE: UNFINISHED FILE, PROCEED WITH CAUTION
 import Color from "../models/color.js";
+import db from "../utils/db.js";
+import colors from "./colors.js";
 
-export default async function initialize() {
+async function initialize() {
   try {
-    Color.create({
-      name: "red",
-      shades: {
-        fifty: "#ffebee",
-        hundred: "#ffcdd2",
-        twoHundred: "#ef9a9a",
-        threeHundred: "#e57373",
-        fourHundred: "#ef5350",
-        fiveHundred: "#f44336",
-        sixHundred: "#e53935",
-        sevenHundred: "#d32f2f",
-        eightHundred: "#c62828",
-        nineHundred: "#b71c1c",
-      },
-      selected: true,
-    });
-    console.log("Red color object created successfully!");
+    db.sync();
+    console.log("\x1b[36m%s\x1b[0m", "Database connected successfully!");
+    for (let color of colors) {
+      Color.create({
+        name: color.name,
+        shades: {
+          fifty: color.fifty,
+          hundred: color.hundred,
+          twoHundred: color.twoHundred,
+          threeHundred: color.threeHundred,
+          fourHundred: color.fourHundred,
+          fiveHundred: color.fiveHundred,
+          sixHundred: color.sixHundred,
+          sevenHundred: color.sevenHundred,
+          eightHundred: color.eightHundred,
+          nineHundred: color.nineHundred,
+        },
+        selected: false,
+      });
+      console.log(
+        "\x1b[36m%s\x1b[0m",
+        `"${color.name}" color object created successfully!`,
+      );
+    }
+    await Color.update({ selected: true }, { where: { name: "violet" } });
+    console.log(
+      "\x1b[36m%s\x1b[0m",
+      `"violet" color object selected as default!`,
+    );
   } catch (error) {
     console.log(`Unable to create colors: ${error.message}`);
   }
 }
+
+initialize();
