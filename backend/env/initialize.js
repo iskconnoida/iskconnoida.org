@@ -7,7 +7,7 @@ async function initialize() {
     db.sync();
     console.log("\x1b[36m%s\x1b[0m", "Database connected successfully!");
     for (let color of colors) {
-      Color.create({
+      await Color.create({
         name: color.name,
         shades: {
           fifty: color.fifty,
