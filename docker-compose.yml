@@ -14,6 +14,10 @@ services:
     environment:
       SENDER_EMAIL: $SENDER_EMAIL
       AUTH_TOKEN: $AUTH_TOKEN
+      MYSQL_HOST: $MYSQL_HOST
+      MYSQL_DB: $MYSQL_DB
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
     build:
       context: ./backend
       dockerfile: Dockerfile.dev
@@ -35,6 +39,10 @@ services:
     environment:
       SENDER_EMAIL: $SENDER_EMAIL
       AUTH_TOKEN: $AUTH_TOKEN
+      MYSQL_HOST: $MYSQL_HOST
+      MYSQL_DB: $MYSQL_DB
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
     build:
       context: ./backend
       dockerfile: Dockerfile
