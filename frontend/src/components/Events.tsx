@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
-import Card from "./Card";
 import { events } from "../utils/handler";
+import Card from "./Card";
 
-export default function Events() {
+/**
+ *
+ *
+ * @return {JSX.Element} Events and Festivals section
+ */
+export default function Events(): JSX.Element {
   return (
     <>
       <div className="hidden px-12 sm:flex w-full">
@@ -10,7 +15,7 @@ export default function Events() {
           Events and Festivals
         </div>
         <div className="w-1/2 py-14 inline-flex justify-end">
-          <button className="border border-violet-700 rounded-lg bg-violet-600 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
+          <button className="border border-primary700 rounded-lg bg-primary600 px-4 py-2 text-white shadow-lg shadow-primary300 hover:shadow-primary300 hover:shadow-xl">
             <Link to="/events">View More</Link>
           </button>
         </div>
@@ -18,7 +23,7 @@ export default function Events() {
       <div className="sm:hidden w-full text-3xl font-bold py-14 text-center">
         Events and Festivals
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {events.map((event) => (
           <Card
             key={event.id}
@@ -26,13 +31,13 @@ export default function Events() {
             date={new Date(event.date!)}
             title={event.title}
             article={"/events/" + event.id}
-            donate="https://iic.iskconnoida.org/donate/SHRI_KRISHNA_JANMASHTAMI_2024,_NOIDA"
+            donate={event.donation_link!}
           >
             {event.description}
           </Card>
         ))}
       </div>
-      <button className="sm:hidden border border-violet-700 rounded-lg bg-violet-600 mt-14 px-4 py-2 text-white shadow-lg shadow-violet-300 hover:shadow-violet-300 hover:shadow-xl">
+      <button className="sm:hidden border border-primary700 rounded-lg bg-primary600 mt-14 px-4 py-2 text-white shadow-lg shadow-primary300 hover:shadow-primary300 hover:shadow-xl">
         <Link to="/events">View More</Link>
       </button>
     </>

@@ -33,6 +33,16 @@ export default {
         custom: ["Permanent Marker", ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        primary50: "var(--primary-50)",
+        primary100: "var(--primary-100)",
+        primary200: "var(--primary-200)",
+        primary300: "var(--primary-300)",
+        primary400: "var(--primary-400)",
+        primary500: "var(--primary-500)",
+        primary600: "var(--primary-600)",
+        primary700: "var(--primary-700)",
+        primary800: "var(--primary-800)",
+        primary900: "var(--primary-900)",
         red: {
           50: "#ffebee",
           100: "#ffcdd2",
@@ -65,7 +75,7 @@ export default {
           "accent-400": "#d500f9",
           "accent-700": "#aa00ff",
         },
-        "deep-purple": {
+        deeppurple: {
           50: "#ede7f6",
           100: "#d1c4e9",
           200: "#b39ddb",
@@ -145,22 +155,6 @@ export default {
           "accent-400": "#2979ff",
           "accent-700": "#2962ff",
         },
-        "light-blue": {
-          50: "#e1f5fe",
-          100: "#b3e5fc",
-          200: "#81d4fa",
-          300: "#4fc3f7",
-          400: "#29b6f6",
-          500: "#03a9f4",
-          600: "#039be5",
-          700: "#0288d1",
-          800: "#0277bd",
-          900: "#01579b",
-          "accent-100": "#80d8ff",
-          "accent-200": "#40c4ff",
-          "accent-400": "#00b0ff",
-          "accent-700": "#0091ea",
-        },
         cyan: {
           50: "#e0f7fa",
           100: "#b2ebf2",
@@ -189,18 +183,6 @@ export default {
           800: "#424242",
           900: "#212121",
         },
-        "blue-gray": {
-          50: "#eceff1",
-          100: "#cfd8dc",
-          200: "#b0bec5",
-          300: "#90a4ae",
-          400: "#78909c",
-          500: "#607d8b",
-          600: "#546e7a",
-          700: "#455a64",
-          800: "#37474f",
-          900: "#263238",
-        },
         green: {
           50: "#e8f5e9",
           100: "#c8e6c9",
@@ -217,7 +199,7 @@ export default {
           "accent-400": "#00e676",
           "accent-700": "#00c853",
         },
-        "light-green": {
+        lightgreen: {
           50: "#f1f8e9",
           100: "#dcedc8",
           200: "#c5e1a5",
@@ -297,7 +279,7 @@ export default {
           "accent-400": "#ff9100",
           "accent-700": "#ff6d00",
         },
-        "deep-orange": {
+        deeporange: {
           50: "#fbe9e7",
           100: "#ffccbc",
           200: "#ffab91",

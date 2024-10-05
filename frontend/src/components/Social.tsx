@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 
-export default function Social() {
+/**
+ *
+ *
+ * @return {JSX.Element} social media container
+ */
+export default function Social(): JSX.Element {
   return (
-    <div className="w-full mt-12 py-12 z-[5] rounded-t-lg bg-violet-600">
+    <div className="w-full mt-12 py-12 z-[5] rounded-t-lg bg-primary600">
       <div className="text-center text-3xl font-bold text-white pb-12">
         Stay In Touch
       </div>

@@ -1,3 +1,8 @@
+/**
+ *
+ *
+ * @interface value
+ */
 interface value {
   id: string;
   title: string;
@@ -7,9 +12,16 @@ interface value {
   donation_link?: string;
 }
 
+/** @type Response */
 type Response = Record<string, value>;
 
-function handler(res: Response) {
+/**
+ *
+ *
+ * @param {Response} res
+ * @return {value[]} array of objects extracted from API response JSON
+ */
+function handler(res: Response): value[] {
   const data: value[] = [];
   for (const i in res) {
     data.push(res[i]);
@@ -17,17 +29,20 @@ function handler(res: Response) {
   return data;
 }
 
+/** @type Response */
 const eventsRes: Response = {
   festival_response: {
-    id: "11",
-    title: "Shri Krishna Janmashtami 2024",
-    img: "upload/catimg/6ea9ab1baa0efb9e19094440c317e21b.29_08_2021-krishna_30_2_21972025.jpg",
+    id: "89",
+    title: "Ekadashi Seva",
+    img: "upload/catimg/c7e1249ffc03eb9ded908c236bd1996d.ekadashi%20poster%20webp.webp",
     description:
-      "On the most auspicious occasion of 5251st Janmashtami Mahotsava of Lord Shri Krishna, may the Lordships Shri Shri Radha Govind Dev shower their love in your hearts. Feel free to donate on the occasion of Shri Krishna Janmashtami and be a part of this festivity. Hare Krishna.",
-    date: "2024-08-26",
+      "This Ekadashi you can choose to selfessly contribute your services to the Lordships, Sri Sri radha Govind Devji and Vaishnavas.",
+    donation_link: "https://iic.iskconnoida.org/donate/EKADASHI_SEVA",
+    date: "2024-09-14",
   },
 };
 
+/** @type Response */
 const facilitiesRes: Response = {
   facilities_response1: {
     id: "13",
@@ -59,6 +74,7 @@ const facilitiesRes: Response = {
   },
 };
 
+/** @type Response */
 const donationsRes: Response = {
   services_response1: {
     id: "12",
@@ -69,13 +85,13 @@ const donationsRes: Response = {
     donation_link: "https://iic.iskconnoida.org/donate/Anna_Daan_2024",
   },
   services_response2: {
-    id: "11",
-    title: "Shri Krishna Janmashtami 2024",
-    img: "upload/catimg/f899139df5e1059396431415e770c6dd.janmashtami 2024_11zon.webp",
+    id: "89",
+    title: "Ekadashi Seva",
+    img: "upload/catimg/c7e1249ffc03eb9ded908c236bd1996d.ekadashi%20poster%20webp.webp",
     description:
-      "On the most auspicious occasion of 5251st Janmashtami Mahotsava of Lord Shri Krishna, may the Lordships Shri Shri Radha Govind Dev shower their love in your hearts. Feel free to donate on the occasion of Shri Krishna Janmashtami and be a part of this festivity. Hare Krishna.",
-    donation_link:
-      "https://iic.iskconnoida.org/donate/SHRI_KRISHNA_JANMASHTAMI_2024,_NOIDA",
+      "This Ekadashi you can choose to selfessly contribute your services to the Lordships, Sri Sri radha Govind Devji and Vaishnavas.",
+    donation_link: "https://iic.iskconnoida.org/donate/EKADASHI_SEVA",
+    date: "2024-09-14",
   },
 };
 

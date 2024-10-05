@@ -9,7 +9,12 @@ import {
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-export default function Footer() {
+/**
+ *
+ *
+ * @return {JSX.Element} Footer
+ */
+export default function Footer(): JSX.Element {
   return (
     <footer className="pt-6 pb-2 bg-[#93282C] text-white w-full desktop:px-24 px-3 tablet:px-10">
       <div className="flex flex-col desktop:flex-row mb-3 desktop:items-center tablet:gap-4">
@@ -25,10 +30,17 @@ export default function Footer() {
               <span>International Society for Krishna Consciousness</span>
             </div>
             <p className="md:text-center mb-4">
-              ISKCON Noida, A-5, Maharaja Agrasen Marg, <br />
-              Opposite NTPC office, Block A,
-              <br />
-              <span className="">Sector 33, Noida, Uttar Pradesh 201301</span>
+              <Link
+                to="https://www.google.com/maps/place/ISKCON+Temple+Noida,+A-5,+Maharaja+Agrasen+Marg,+Opposite+Opposite+NTPC+office,+Block+A,+Sector+33,+Noida,+Uttar+Pradesh+201301/@28.5871507,77.350492,16z/data=!4m6!3m5!1s0x390ce5a12fee7d95:0x8bb417c53d8d172b!8m2!3d28.5868422!4d77.3503375!16s%2Fg%2F1wt3lsgf"
+                target="_blank"
+                rel="noopener norefferer"
+                className="hover:underline"
+              >
+                ISKCON Noida, A-5, Maharaja Agrasen Marg, <br />
+                Opposite NTPC office, Block A,
+                <br />
+                <span className="">Sector 33, Noida, Uttar Pradesh 201301</span>
+              </Link>
             </p>
             <ul className="flex space-x-5">
               <li>

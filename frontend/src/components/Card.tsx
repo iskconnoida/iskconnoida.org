@@ -1,5 +1,19 @@
 import { Link } from "react-router-dom";
 
+/**
+ *
+ *
+ * @param {string} props.img header image URI
+ * @param {string} props.title card title
+ * @param {string} props.children card content
+ * @param {boolean} props.dateless show date on card
+ * @param {Date} props.date date
+ * @param {string} props.article "Read More" button URI
+ * @param {string} props.donate "Donate" button URI
+ * @param {string} props.className additional classNames for the card
+ * @param {string} props.imgClass additional classNames for the header image
+ * @return {JSX.Element} Card element
+ */
 export default function Card(props: {
   img: string;
   dateless?: boolean;
@@ -10,7 +24,7 @@ export default function Card(props: {
   children: string;
   className?: string;
   imgClass?: string;
-}) {
+}): JSX.Element {
   let a = "th";
   switch (props.date?.toLocaleString("default", { day: "2-digit" })) {
     case "01":
@@ -25,7 +39,7 @@ export default function Card(props: {
   }
   return (
     <button
-      className={`w-72 bg-white border border-gray-200 rounded-xl h-sm max-h-sm shadow-lg hover:shadow-xl flex flex-col ${props.className}`}
+      className={`w-full max-w-72 bg-white border border-gray-200 rounded-xl h-sm max-h-sm shadow-lg hover:shadow-xl flex flex-col ${props.className}`}
     >
       {props.donate && props.article ? (
         <Link to={props.article} className="h-full w-full">
@@ -108,7 +122,7 @@ export default function Card(props: {
       ) : (
         <div className="p-4 relative -top-14 -mb-14 h-full flex flex-col">
           <Link to={props.article!}>
-            <div className="flex items-center justify-center flex-col bg-violet-500 w-20 h-20 rounded-xl text-white font-semibold border border-white shadow-md shadow-slate-300">
+            <div className="flex items-center justify-center flex-col bg-primary500 w-20 h-20 rounded-xl text-white font-semibold border border-white shadow-md shadow-slate-300">
               <span className="text-2xl">
                 {props.date?.toLocaleString("default", { day: "2-digit" }) + a}
               </span>
@@ -124,7 +138,7 @@ export default function Card(props: {
           <div className="mt-auto flex justify-between">
             <Link
               to={props.article!}
-              className="w-[47.5%] justify-between inline-flex items-center px-3 py-4 text-sm font-medium text-center text-white bg-violet-600 rounded-xl hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300"
+              className="w-[47.5%] justify-between inline-flex items-center px-3 py-4 text-sm font-medium text-center text-white bg-primary600 rounded-xl hover:bg-primary800 focus:ring-4 focus:outline-none focus:ring-primary300"
             >
               Read more
               <svg

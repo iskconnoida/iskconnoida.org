@@ -1,10 +1,16 @@
-export default function Prabhupada() {
+/**
+ *
+ *
+ * @return {JSX.Element} Prabhupada section
+ */
+export default function Prabhupada(): JSX.Element {
   return (
     <>
       <div className="bg-yellow-100">
         <img
           src="/images/vector.webp"
           className="h-96 w-96 -z-10 -mt-40 -mb-56 -ml-40"
+          loading="lazy"
         />
         {screen.availWidth > 640 ? (
           <div className="w-full py-12 items-center flex justify-evenly">

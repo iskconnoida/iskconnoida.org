@@ -1,18 +1,22 @@
+/* eslint-disable react-refresh/only-export-components */
+import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import About from "./pages/About";
-import Donate from "./pages/Donate";
-import EventInfo from "./pages/EventInfo";
-import EventsAndFestivals from "./pages/EventsAndFestivals";
-import Facilities from "./pages/Facilities";
-import FourZeroFour from "./pages/FourZeroFour";
-import Home from "./pages/Home";
-import Media from "./pages/Media";
-import OurServices from "./pages/OurServices";
-import RefundReturns from "./pages/RefundReturns";
-import TermsAndConditions from "./pages/TermsAndConditions";
-import Admin from "./pages/adminPage/Admin";
 
+const About = lazy(() => import("./pages/About"));
+const Donate = lazy(() => import("./pages/Donate"));
+const EventInfo = lazy(() => import("./pages/EventInfo"));
+const EventsAndFestivals = lazy(() => import("./pages/EventsAndFestivals"));
+const Facilities = lazy(() => import("./pages/Facilities"));
+const FourZeroFour = lazy(() => import("./pages/FourZeroFour"));
+const Home = lazy(() => import("./pages/Home"));
+const Media = lazy(() => import("./pages/Media"));
+const OurServices = lazy(() => import("./pages/OurServices"));
+const RefundReturns = lazy(() => import("./pages/RefundReturns"));
+const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
+const Admin = lazy(() => import("./pages/adminPage/Admin"));
+
+/** Use react-router-dom to provide routes to react app */
 const router = createBrowserRouter([
   {
     path: "*",
@@ -64,7 +68,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin",
-    element: <App page={<Admin />} hideLayout={true} />,
+    element: <App page={<Admin />} />,
   },
 ]);
 

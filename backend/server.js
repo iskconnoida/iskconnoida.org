@@ -2,13 +2,15 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import "dotenv/config";
 import express from "express";
-import mongoose from "mongoose";
-import { get404 } from "./controllers/error.js";
+import get404 from "./controllers/error.js";
+import colorRouter from "./routes/colors.js";
 import mailRouter from "./routes/mail.js";
+import db from "./utils/db.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+/** server configs */
 app.use(
   cors({
     origin: [
@@ -32,23 +34,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.json());
 
+/** handle endpoints */
+app.use(colorRouter);
 app.use(mailRouter);
 app.use(get404);
 
-mongoose
-  .connect(
-    "mongodb+srv://ishu:lNwKH7FlCS8wwZBx@cluster0.bbugwp2.mongodb.net/?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    },
-  )
-  .then(() => {
-    app.listen(port, () => {
-      console.log(`Server is running on port ${port}`);
-      console.log("Connected to Database");
-    });
-  })
-  .catch((err) => {
-    console.log(err);
+try {
+  await db.authenticate();
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}.`);
+    console.log("Connected to Database!");
   });
+} catch (error) {
+  console.error(`Unable to connect to database: ${error}`);
+}

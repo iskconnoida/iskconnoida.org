@@ -1,8 +1,14 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, domAnimation, LazyMotion, m } from "framer-motion";
 import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa6";
 import { Link, useLocation, useParams } from "react-router-dom";
 
-const Navbar: React.FC = () => {
+/**
+ *
+ *
+ * @return {JSX.Element} Navbar
+ */
+export default function Navbar(): JSX.Element {
   const location = useLocation();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const isActive = (path: string) => location.pathname === path;
@@ -18,11 +24,11 @@ const Navbar: React.FC = () => {
       >
         Login
       </Link>
-      <span className="md:flex w-[60%] items-center justify-evenly hidden">
+      <span className="md:flex w-3/4 items-center justify-evenly hidden">
         <Link
           to="/"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 px-2 py-1 rounded-full text-shadow-lg shadow-purple-100 ${
-            isActive("/") ? "text-violet-600" : ""
+            isActive("/") ? "text-primary600" : ""
           }`}
         >
           Home
@@ -30,7 +36,7 @@ const Navbar: React.FC = () => {
         <Link
           to="/about"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 px-2 py-1 rounded-full text-shadow-lg shadow-purple-100 ${
-            isActive("/about") ? "text-violet-600" : ""
+            isActive("/about") ? "text-primary600" : ""
           }`}
         >
           About
@@ -38,7 +44,7 @@ const Navbar: React.FC = () => {
         <Link
           to="/services"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 px-2 py-1 rounded-full text-shadow-lg shadow-purple-100 ${
-            isActive("/services") ? "text-violet-600" : ""
+            isActive("/services") ? "text-primary600" : ""
           }`}
         >
           Services
@@ -49,32 +55,37 @@ const Navbar: React.FC = () => {
           onMouseLeave={() => setDropdownOpen(false)}
         >
           <button
-            className={`md:text-base lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full text-shadow-lg shadow-purple-100 ${isActive("/media/gallery") || isActive("/media/kirtans") ? "text-violet-600" : ""}`}
+            className={`md:text-base flex items-center lg:text-xl font-semibold text-gray-600 bg-white px-2 rounded-full text-shadow-lg shadow-purple-100 ${isActive("/media/gallery") || isActive("/media/kirtans") ? "text-primary600" : ""}`}
           >
             Media
+            <FaChevronDown size={12} className="mt-1 ml-1" />
           </button>
           <AnimatePresence>
             {isDropdownOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="absolute right-0 mt-2 w-56 bg-white shadow-lg left-0 rounded-lg shadow-gray-600 border"
-              >
-                <Link
-                  to="/media/gallery"
-                  className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") ? "text-violet-600" : "text-black"}`}
+              <LazyMotion features={domAnimation}>
+                <m.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute right-0 mt-2 w-56 bg-white shadow-lg left-0 rounded-lg shadow-gray-600 border"
                 >
-                  Daily Shri Krishna Darshan
-                </Link>
-                <hr className="mx-2" />
-                <Link
-                  to="/media/kirtans"
-                  className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/kirtans") ? "text-violet-600" : "text-black"}`}
-                >
-                  Kirtans & Lectures
-                </Link>
-              </motion.div>
+                  <Link
+                    to="/media/gallery"
+                    onClick={() => setDropdownOpen(false)}
+                    className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/gallery") ? "text-primary600" : "text-black"}`}
+                  >
+                    Darshan Gallery
+                  </Link>
+                  <hr className="mx-2" />
+                  <Link
+                    to="/media/kirtans"
+                    onClick={() => setDropdownOpen(false)}
+                    className={`block rounded-lg px-4 py-3 hover:bg-gray-200 ${isActive("/media/kirtans") ? "text-primary600" : "text-black"}`}
+                  >
+                    Kirtans & Lectures
+                  </Link>
+                </m.div>
+              </LazyMotion>
             )}
           </AnimatePresence>
         </div>
@@ -82,7 +93,7 @@ const Navbar: React.FC = () => {
           to="/events"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 rounded-full px-2 py-1 text-shadow-lg shadow-purple-100 ${
             isActive("/events") || isActive(`/events/${id}`)
-              ? "text-violet-600"
+              ? "text-primary600"
               : ""
           }`}
         >
@@ -91,7 +102,7 @@ const Navbar: React.FC = () => {
         <Link
           to="/facilities"
           className={`md:text-base lg:text-xl font-semibold text-gray-600 rounded-full px-2 py-1 text-shadow-lg shadow-purple-100 ${
-            isActive("/facilities") ? "text-violet-600" : ""
+            isActive("/facilities") ? "text-primary600" : ""
           }`}
         >
           Facilities
@@ -109,6 +120,4 @@ const Navbar: React.FC = () => {
       </span>
     </div>
   );
-};
-
-export default Navbar;
+}
