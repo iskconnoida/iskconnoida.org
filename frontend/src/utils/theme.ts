@@ -33,7 +33,7 @@ export const initialState: Theme = {
     eightHundred: "#5b21b6",
     nineHundred: "#4c1d95",
   },
-  fetchedAt: new Date(),
+  fetchedAt: new Date("01-01-2000"),
 };
 
 export const getTheme = async () => {

@@ -23,14 +23,6 @@ import {
 export default function Home(): JSX.Element {
   const [themeData, setThemeData] = useState(getStore("ThemeData"));
   useEffect(() => {
-    switch (themeData) {
-      case undefined:
-        setThemeData(initialState);
-        break;
-      case null:
-        setThemeData(initialState);
-        break;
-    }
     async function updateTheme() {
       if (!themeData) {
         const newTheme = await getTheme();
@@ -51,6 +43,14 @@ export default function Home(): JSX.Element {
       setTheme(themeData);
     }
     doChanges();
+    switch (themeData.shades) {
+      case undefined:
+        setThemeData(initialState);
+        break;
+      case null:
+        setThemeData(initialState);
+        break;
+    }
   }, [themeData]);
   return (
     <>
