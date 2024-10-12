@@ -21,37 +21,36 @@ import {
  * @return {JSX.Element} Home page
  */
 export default function Home(): JSX.Element {
-  const [themeData, setThemeData] = useState(getStore("ThemeData"));
+  const [themeData] = useState(getStore("ThemeData"));
   useEffect(() => {
     async function updateTheme() {
       if (!themeData) {
         const newTheme = await getTheme();
-        setThemeData(newTheme);
         setStore("ThemeData", newTheme);
       } else if (
         new Date().getTime() - new Date(themeData.fetchedAt).getTime() >
         24 * 60 * 60 * 1000
       ) {
         const newTheme = await getTheme();
-        setThemeData(newTheme);
         setStore("ThemeData", newTheme);
       }
     }
     async function doChanges() {
-      await updateTheme();
-      setStore("ThemeData", themeData);
-      setTheme(themeData);
+      try {
+        await updateTheme();
+        setTheme(getStore("ThemeData"));
+      } catch {}
     }
     doChanges();
-    switch (themeData.shades) {
-      case undefined:
-        setThemeData(initialState);
-        break;
-      case null:
-        setThemeData(initialState);
-        break;
+    if (
+      themeData === null ||
+      themeData === undefined ||
+      themeData.shades === undefined ||
+      themeData.shades === null
+    ) {
+      setStore("ThemeData", initialState);
     }
-  }, [themeData]);
+  });
   return (
     <>
       <Hero />
