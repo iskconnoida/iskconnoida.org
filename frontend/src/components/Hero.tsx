@@ -100,10 +100,10 @@ export default function Hero(): JSX.Element {
                   View Temple Schedule
                 </button>
               </div>
-              <TempleScheduleModal isOpen={isModalOpen} onClose={closeModal} />
             </m.div>
           </div>
         </m.div>
+        <TempleScheduleModal isOpen={isModalOpen} onClose={closeModal} />
       </LazyMotion>
     </div>
   );
