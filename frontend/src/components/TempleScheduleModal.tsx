@@ -35,7 +35,7 @@ const TempleScheduleModal: React.FC<ModalProps> = ({
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
         transition={{ type: "spring", duration: 0.5 }}
-        className="fixed inset-0 bg-black/50 pt-36 flex items-center justify-center z-50"
+        className="fixed text-center inset-0 bg-black/50 flex items-center justify-center z-50"
         onClick={handleOverlayClick}
       >
         <div className="bg-white w-full max-w-lg flex flex-col py-6 px-4 rounded-lg max-h-[80vh] overflow-y-auto">

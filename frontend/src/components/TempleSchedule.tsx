@@ -143,7 +143,7 @@ export default function TempleSchedule(): JSX.Element {
             (isOpen ? " bg-green-500" : " bg-red-500")
           }
         ></span>
-        <span className="text-lg sm:text-2xl text-center sm:text-left font-semibold">
+        <span className="text-lg sm:text-2xl font-semibold">
           {isOpen ? "OPEN - " : "CLOSED - "}
           {currentText}
         </span>
